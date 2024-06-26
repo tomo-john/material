@@ -1,0 +1,37 @@
+# LaravelをDocker上で起動させる流れ
+
+①DockerDesktopを起動
+→ /mnt/c/Program\ Files/Docker/Docker/Docker\ Desktop.exe
+
+docker-compose up -d
+②Docker起動とコンテナ作成
+→ docker-compose up -d
+
+これでlocalhostでLarevelが表示される
+→ http://localhost/ をブラウザで開いて確認
+
+# phpadmin
+http://localhost:8080/
+
+# コンテナログイン
+docker-compose exec php bash
+
+# DBログイン
+docker-compose exec db bash
+→ user : admin
+→ pass : secret
+
+##########################################################################
+
+起動(作成) : docker-compose up -d
+停止(削除) : docker-compose down
+
+# Dockerdesktop起動とコンテナログイン 
+/mnt/c/Program\ Files/Docker/Docker/Docker\ Desktop.exe
+docker-compose exec php bash
+
+# コンテナログイン後に行う( /var/www/Laravel9TaskList )
+
+php artisan make:controller TaskController
+→コントローラ作成
+→app/Http/Controllers ディレクトリに TaskController.php が作成

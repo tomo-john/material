@@ -1,0 +1,9 @@
+### wsl2/ubuntu関連
+
+# wsl2の現在のディレクトリをエクスプローラーで開く
+explorer.exe .
+
+# cドライブの指定exeを実行(例: Docker Desktop)
+/mnt/c/Program\ Files/Docker/Docker/Docker\ Desktop.exe
+
+
