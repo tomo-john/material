@@ -23,15 +23,24 @@ docker-compose exec db bash
 
 ##########################################################################
 
+### Dockerコマンド
 起動(作成) : docker-compose up -d
 停止(削除) : docker-compose down
+
+# ビルド
+docker-compose build
+→ docker-compose.ymlファイルに基づいて定義されたサービスのDockerイメージをビルドする
+
+docker-compose up -d
+→ docker-compose.ymlファイルに基づいて定義されたサービスをバックグラウンドで起動する
 
 # Dockerdesktop起動とコンテナログイン 
 /mnt/c/Program\ Files/Docker/Docker/Docker\ Desktop.exe
 docker-compose exec php bash
 
-# コンテナログイン後に行う( /var/www/Laravel9TaskList )
+### コンテナログイン後に行できること( /var/www/Laravel9TaskList )
 
+# コントローラ作成
 php artisan make:controller TaskController
-→コントローラ作成
-→app/Http/Controllers ディレクトリに TaskController.php が作成
+→ app/Http/Controllers ディレクトリに TaskController.php が作成
+
