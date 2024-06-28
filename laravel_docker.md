@@ -39,8 +39,17 @@ docker-compose up -d
 docker-compose exec php bash
 
 ### コンテナログイン後に行できること( /var/www/Laravel9TaskList )
+### artisan実行時はプロジェクトディレクトリ直下で実行する
 
 # コントローラ作成
 php artisan make:controller TaskController
 → app/Http/Controllers ディレクトリに TaskController.php が作成
+
+# マイグレーション
+php artisan migrate
+→ databases/migration/以下のマイグレーションファイルの内容で実行される
+
+
+
+
 
