@@ -49,7 +49,6 @@ php artisan make:controller TaskController
 php artisan migrate
 → databases/migration/以下のマイグレーションファイルの内容で実行される
 
-
-
+# モデル作成
 
 
