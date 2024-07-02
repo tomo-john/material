@@ -10,7 +10,7 @@ docker-compose up -d
 これでlocalhostでLarevelが表示される
 → http://localhost/ をブラウザで開いて確認
 
-### phpadmin
+## phpadmin
 http://localhost:8080/
 
 ## コンテナログイン
