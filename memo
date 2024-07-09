@@ -9,3 +9,7 @@ explorer.exe .
 ### ~/.bashrc(プロンプトの設定)
 export PS1='[\u@\e[0;35m\][\W]\[\e[m\]$'
 
+### tmux
+PRE + , : windowに名前
+PRE * w : window一覧
+
