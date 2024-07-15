@@ -41,3 +41,32 @@ memo.md : ファイル名
 
 => iノードには連番が付けられており、`ls -i`でiノード番号を確認することができる
 
+iノード番号とファイル名の対応付けを`リンク`という
+
+リナックスでは1つのiノードに複数のファイル名をリンクさせることも可能(ハードリンク)
+
+windowsのショートカットやmacのエイリアスのようにファイルに別名をつけることも可能(シンボリックリンク)
+
+### lnコマンド
+```
+# ハードリンク
+# ln 元のファイル 作成するリンクファイル
+ln ~/data/images/dog.jpg wanwan1.jpg
+
+# シンボリックリンク
+# ln -s 元のファイル 作成するリンクファイル
+ln -s ~/data/images/dog.jpb wanwan2.jpg
+```
+```
+# ハードリンクとシンボリックリンクの違い
+date > today          # todayファイルを作成
+ln today today.hard   # todayファイルのハードリンクを作成
+ln -s today today.sym # todayファイルのシンボリックリンクを作成
+ls -i                 # iノードを確認
+=> todayとtoday.hardは同じiノード番号、today.symは異なるiノード番号
+
+rm today       # todayファイルを削除してみる
+cat today.hard # ファイル内容が表示される
+cat today.sym  # ファイルありませんエラー(リンク先のtodayを消した為)
+```
+
