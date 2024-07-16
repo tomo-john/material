@@ -18,6 +18,7 @@ export PS1='[\u@\e[0;35m\][\W]\[\e[m\]$'
 ```
 [参考](https://atmarkit.itmedia.co.jp/flinux/rensai/linuxtips/002cngprmpt.html)  
 [参考](https://qiita.com/zaburo/items/9194cd9eb841dea897a0)
+
 ---
 
 ## vim / tmux
@@ -37,9 +38,20 @@ PRE * w : window一覧
 
 ### プロンプト
 ```
+# 引数
 $_ : 直前のコマンドの最後の引数
 !! : 直前のコマンド全体の再実行
 => !!:2 で直前のコマンドの2番目の引数を指定もできる
+
+# カーソル移動
+ctrl + A : 左端へ
+ctrl + E : 右端へ
+
+# 削除系
+ctrl + U : カーソルから行先頭まで削除
+ctrl + K : カーソルから行終端まで削除
+ctrl + W : カーソル左の単語を削除
+
 ```
 ---
 
