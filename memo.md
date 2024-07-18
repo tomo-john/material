@@ -29,8 +29,15 @@ export PS1='[\u@\e[0;35m\][\W]\[\e[m\]$'
 
 ### tmux
 ```
+# 新しいセッション
+tmux new -s 'name'
+
+# アタッチ
+tmux a -t 'name'
+
 PRE + , : windowに名前
 PRE * w : window一覧
+
 ```
 ---
 
