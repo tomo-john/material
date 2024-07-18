@@ -4,6 +4,7 @@ change mode
 - 4 => read : 読み取り
 - 2 => write : 書き込み
 - 1 => execute : 実行
+
 各桁の数値はこれらの値の合計
 
 ```
