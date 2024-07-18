@@ -44,3 +44,4 @@ chmod u+x file
 chmod go-wx file
 => 所有グループ、その他のユーザーから書き込み権限と実行権限を削除
 ```
+
