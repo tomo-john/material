@@ -35,6 +35,10 @@ tmux new -s 'name'
 # アタッチ
 tmux a -t 'name'
 
+# デタッチ
+PRE + d
+
+# window操作
 PRE + , : windowに名前
 PRE * w : window一覧
 
