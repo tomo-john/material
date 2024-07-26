@@ -47,6 +47,10 @@ php artisan make:controller TaskController
 php artisan migrate
 → databases/migration/以下のマイグレーションファイルの内容で実行される
 
-### モデル作成
+############################################################################################
 
+## サービスに関連するコンテナ, イメージ, ボリュームを全て削除する
+```
+docker-compose down -v --rmi all
+```
 
