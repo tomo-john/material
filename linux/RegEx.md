@@ -43,4 +43,13 @@ grep [オプション]　[文字列パターン] [検索対象ファイル]
 
 # 使用例
 
+grep www /etc/services
+=> /etc/servicesファイルから「www」という文字列が含まれる行を表示
+
+grep bash /etc/default/*
+=> /etc/defaultディレクトリ以下のファイルから「bash」が含まれる行を表示
+
+ps aux | grep bash
+=> psの実行結果から「bash」が含まれる行だけを表示
 ```
+
