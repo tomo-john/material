@@ -13,4 +13,11 @@ head -5 /etc/passwd
 ps aux | head -5
 ```
 
+### tail
+ファイルの末尾部分だけを表示(デフォルト10行)
+
+```
+# -f オプションでファイルの末尾をリアルタイムで監視(更新される)
+tail -f /app/logs/xxx.log
+```
 
