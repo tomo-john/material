@@ -18,8 +18,6 @@ docker-compose exec php bash
 
 ## DBログイン
 docker-compose exec db bash
-→ user : admin
-→ pass : secret
 
 ## Dockerコマンド
 起動(作成) : docker-compose up -d
