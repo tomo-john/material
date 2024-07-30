@@ -22,6 +22,18 @@ export PS1='[\u@\e[0;35m\][\W]\[\e[m\]$'
 ---
 
 ### tmux
+PRE(prefix)は `Ctrl + j` に設定
+
+=> 設定は `~/.tmux.conf`
+```
+# prefixをCtrl+jに設定
+set -g prefix C-j
+
+# デフォルトのプリフィックス(Ctrl+b)を解除
+unbind C-b
+
+```
+tmux.memo
 ```
 # 新しいセッション
 tmux new -s 'name'
