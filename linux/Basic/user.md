@@ -73,3 +73,14 @@ groupdel dog
 ### /etc/group
 グループ情報が格納されたファイル
 
+---
+
+### ユーザー追加
+```
+# rootで実行
+useradd john
+passwd john # 設定するパスワード設定を2回入力
+
+/etc/passwd ファイルで追加されたか確認
+```
+
