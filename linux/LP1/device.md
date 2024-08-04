@@ -9,12 +9,17 @@ Linuxはハードウェアのアクセスを抽象化する`デバイスファ�
 
 Linuxカーネルが認識しているデバイスに関する情報の一部は`/procディレクトリ`以下のファイルで確認ができる
 
-|ファイル名|内容|
-|---------------|---------------|
-|/proc/cpuinfo|CPU情報|
-|/proc/interrupts|IRQ情報|
-|/proc/ioports|I/Oアドレス情報|
-|/proc/meminfo|メモリ情報|
-|/proc/bus/usb/*|USBデバイス情報|
-|/prc/bus/pci/*|PCIデバイス情報|
-a
+|ファイル名      |内容|
+|----------------|---------------|
+|/proc/cpuinfo   |CPU情報        |
+|/proc/interrupts|IRQ情報        |
+|/proc/ioports   |I/Oアドレス情報|
+|/proc/meminfo   |メモリ情報     |
+|/proc/bus/usb/xx|USBデバイス情報|
+|/prc/bus/pci/xx |PCIデバイス情報|
+
+デバイス情報を確認するための各種コマンドも用意されている
+
+`lspci` : PCIデバイス情報を表示
+
+
