@@ -1,4 +1,4 @@
-# 入力された数値から合計値と平均値を求める
+# 入力された数値から合計値と平均値を求める(C++)
 
 ```
 // 入力された数値から合計値と平均値を求める
@@ -40,7 +40,7 @@ int main() {
 }
 ```
 
-## include <iostraem>
+## include <iostraem> C++
 
 iostreamは`input output stream`の略 => 標準入出力の機能
 
