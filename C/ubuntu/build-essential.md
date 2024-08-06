@@ -33,11 +33,27 @@ gcc c_sample.c -o c_samle
 ```
 `-o`オプションでコンパイル後に生成される実行ファイル名を指定
 
+C++で記述した`*.cファイル`をgccでコンパイルしようとするとエラーが出る
+
 ## 実行
 
 上記のコンパイルで`c_sample`が生成されている
 
 ```
 ./csample
+```
+
+---
+
+## C++の場合
+
+```
+# 事前にC++で cp_sample.cpp ファイルを作成
+
+# コンパイル
+g++ cp_sample.cpp -o cp_sample
+
+# 実行
+./cp_sample.cpp
 ```
 
