@@ -24,7 +24,7 @@ int main() {
   avg = (float)sum / n;
 
   printf("合計: %d\n", sum);
-  printf("平均: %f\n", avg);
+  printf("平均: %.2f\n", avg);
 
   return 0;
 
