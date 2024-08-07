@@ -8,9 +8,16 @@ int main(){
   printf("数値を入力して下さい: ");
   scanf("%d", &n);  
 
-  //
+  // 桁数を求める
+  int digi = 0;
+  int tmp = n;
 
-  printf("出力結果: %d\n", n);
+  while (tmp > 0){
+    tmp /= 10;
+    digi += 1;
+  }
+
+  // printf("出力結果: %d\n", result);
   
   return 0;
 }
