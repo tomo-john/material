@@ -4,20 +4,19 @@
 
 int main(){
 
-  int n = 0;
+  int n, reverse = 0;
   printf("数値を入力して下さい: ");
   scanf("%d", &n);  
 
-  // 桁数を求める
-  int digi = 0;
   int tmp = n;
 
   while (tmp > 0){
+    int digit = tmp % 10;
+    reverse = reverse * 10 + digit;
     tmp /= 10;
-    digi += 1;
   }
 
-  // printf("出力結果: %d\n", result);
+  printf("出力結果: %d\n", reverse);
   
   return 0;
 }
