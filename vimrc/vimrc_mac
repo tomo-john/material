@@ -1,3 +1,4 @@
+```
 syntax on
 
 set number
@@ -14,3 +15,4 @@ set autoindent
 set autoindent
 set expandtab
 set clipboard=unnamed
+```
