@@ -59,3 +59,65 @@ graphical.targetにランレベル5で必要であったすべてのサービス
 
 graphocal.targe　<= multi-user.target <= basic.target と紐づけられている
 
+## systemctlによるサービスの管理
+
+systemdでは `systemctl` コマンドでサービス管理を行う
+
+```
+systemctl サブコマンド [Unit名] [-t 種類]
+```
+
+systemctlコマンドの主なサブコマンド
+
+|サブコマンド      |説明                                                 |
+|------------------|-----------------------------------------------------|
+|start             |サービス起動                                         |
+|stop              |サービス終了                                         |
+|restart           |サービス再起動                                       |
+|reload            |サービス設定を再読み込み                             |
+|status            |サービス稼働状況を表示                               |
+|is-active         |サービスが稼働しているかを確認                       |
+|enable            |システム起動時にサービスを自動起動                   |
+|disable           |システム起動時にサービスを自動起動しない             |
+|mask              |指定したUnitをマスクし手動でも起動できないようにする |
+|unmask            |指定したUnitのマスクを解除する                       |
+|list-dependencies |Unitの依存関係を表示する                             |
+|list-units        |起動しているすべてのUnitと状態を表示                 |
+|list-unit-files   |すべてのUnitを表示                                   |
+|reboot            |システムを再起動                                     |
+|poweroff          |システムをシャットダウン                             |
+
+```
+# メールサーバーのPostfixサービスを起動
+systemctl start postfix.service
+
+# Postfixサービスの稼働状況を表示
+systemctl status postfix.service
+
+# Postfixサービスが稼働しているか確認
+systemctl is-active postfix.service
+=> active # active: 稼働 / inactive: 稼働してない
+
+# Postfixサービスがシステム起動時に自動起動しないように設定
+systemctl disable postfix.service
+=> rm `/etc/systemd/system ...
+```
+
+enable, disableでは/etc/systemd/systemディレクトリ以下のファイルが操作されている
+
+オリジナルの設定ファイルは`/usr/lib/systemd/systemディレクトリ`もしくは
+
+`/lib/systemd/systemディレクトリ`に配置されている
+
+例として、/etc/systemd/system/multi-user.target.wantsディレクトリ以下を見ると、
+
+multi-user.targetに含まれるUnitを確認できる
+
+```
+# サービスの一覧を表示
+systemctl list-unit-files -t service
+
+# システム起動時に自動起動するサービス一覧を表示
+systemctl list-unit-files -t service --state=enabled
+```
+
