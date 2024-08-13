@@ -91,3 +91,22 @@ dnf upgrade package-name  # updateでも同じ
 dnf clearn all
 ```
 
+### Zypperを使用したパッケージ管理
+
+openSUSEでもRPMパッケージが使われるが、パッケージ管理には`zypper`コマンドを使う
+
+多くのサブコマンドには短い名前が用意されている(install => `in` と省略できる)
+
+パッケージ名はワイルドカードを使って指定も可能
+
+```
+# gitパッケージのインストール
+zypper in git
+
+# yastで始まる名前のパッケージを全てインストール
+zypper in yast*
+
+# ディストリビューションをアップグレード(dist-upgrade
+zypper dup
+```
+
