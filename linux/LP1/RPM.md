@@ -74,3 +74,20 @@ YUMを使った管理は`yum`コマンドで行う
 |groups list    |パッケージグループをリスト表示                 |
 |groups install |指定したグループのパッケージをインストール     |
 
+### dnfコマンド
+
+これまでにyumを採用していたディストリビューションではyumの後継として`dnf`コマンドが使用されてきている
+
+=> 基本的に使い方はyumと同じ
+
+```
+# インストール
+dnf install package-name
+
+# アップデート
+dnf upgrade package-name  # updateでも同じ
+
+# キャッシュのクリア
+dnf clearn all
+```
+
