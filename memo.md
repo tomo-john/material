@@ -16,9 +16,16 @@ explorer.exe .
 ```
 export PS1='\u@\e[0;35m\][\W]\[\e[m\]$'
 ```
-[参考](https://atmarkit.itmedia.co.jp/flinux/rensai/linuxtips/002cngprmpt.html)  
-[参考](https://qiita.com/zaburo/items/9194cd9eb841dea897a0)
 
+### ~/.zshrc(2024/8/15) 
+```
+# alias
+alias ll='ls -lG'
+alias ls='ls -G'
+
+# prompt
+PS1='%n@%F{magenta}[%1~]%f$ '
+```
 ---
 
 ### tmux
