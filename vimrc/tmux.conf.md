@@ -1,3 +1,4 @@
+```
 # prefix
 set -g prefix C-j
 unbind C-b
@@ -15,4 +16,5 @@ bind -r l select-pane -R
 
 # coloer
 set-option -g status-bg "color255"
+```
 
