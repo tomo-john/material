@@ -1,0 +1,7 @@
+sed 's/dog/super_dog/g' sample.text
+
+sed '1,3s/^/>> /' sample.text
+
+sed 'y/dog/123/' sample.text 
+
+sed -f sedscript sample.text 
