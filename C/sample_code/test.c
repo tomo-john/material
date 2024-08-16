@@ -2,8 +2,9 @@
 
 int main(void)
 {
-  int a;
-  printf("%d\n", (int)sizeof(a));
+  char c;
+  c = 0x41;
+  printf("%c\n", c);
   return 0;
 }
 
