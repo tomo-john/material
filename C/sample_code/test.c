@@ -1,10 +1,4 @@
 #include <stdio.h>
+#define KEY_A 0x41
 
-int main(void)
-{
-  char c;
-  c = 0x41;
-  printf("%c\n", c);
-  return 0;
-}
-
+int main(void){printf("%c\n", KEY_A);}
