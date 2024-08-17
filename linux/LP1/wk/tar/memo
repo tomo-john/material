@@ -1,0 +1,3 @@
+tar czvf test.tar.gz sample* dir
+
+tar xzvf test.tar.gz
