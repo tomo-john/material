@@ -16,5 +16,8 @@ bind -r l select-pane -R
 
 # coloer
 set-option -g status-bg "color255"
+
+# clock
+set-option -g clock-mode-colour white
 ```
 
