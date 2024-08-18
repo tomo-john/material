@@ -4,13 +4,11 @@
 ```
 explorer.exe .
 ```
----
 
 ### cドライブの指定exeを実行(例: Docker Desktop)
 ```
 /mnt/c/Program\ Files/Docker/Docker/Docker\ Desktop.exe
 ```
----
 
 ### ~/.bashrc(プロンプトの設定)
 ```
@@ -25,36 +23,6 @@ alias ls='ls -G'
 
 # prompt
 PS1='%n@%F{magenta}[%1~]%f$ '
-```
----
-
-### tmux
-PRE(prefix)は `Ctrl + j` に設定
-
-=> 設定は `~/.tmux.conf`
-```
-# prefixをCtrl+jに設定
-set -g prefix C-j
-
-# デフォルトのプリフィックス(Ctrl+b)を解除
-unbind C-b
-
-```
-tmux.memo
-```
-# 新しいセッション
-tmux new -s 'name'
-
-# アタッチ
-tmux a -t 'name'
-
-# デタッチ
-PRE + d
-
-# window操作
-PRE + , : windowに名前
-PRE * w : window一覧
-
 ```
 ---
 
