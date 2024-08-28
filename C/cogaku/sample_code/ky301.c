@@ -8,5 +8,5 @@ int main(void){
   printf("名前を入力してください(MAX49バイト): ");
   scanf("%s", sz1 );
 
-  printf("あなたの名前は %s さんですね\n", sz1);
+  printf("あなたの名前は %s さんですね\n", sz1); // 入力した名前が表示される
 }
