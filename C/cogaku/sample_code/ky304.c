@@ -4,7 +4,7 @@
 void main(void);
 
 void main(void){
-  char sz1[50] = {'H', 'e', 'l', 'l', 'o', '\0'};
+  char sz1[50] = {'L', 'i', 'n', 'u', 'x', '\0'};
 
   printf("%s\n", sz1);      // sz1の内容
 
