@@ -2,13 +2,22 @@
 #include <stdio.h>
 
 int main(void){
-  printf("[%d]\n", 28);              // [28]
-  printf("[%5d]\n", 28);             // [   28] => 最小5桁
+  char c1[] = "john";
+  char c2[] = {'j', 'o', 'h', 'n', '\0'};
 
-  printf("[%s]\n", "Hello John!");   // [Hello John!]
-  printf("[%15s]\n", "Hello John!"); // [    Hello John!] => 最小15桁
-  printf("[%.5s]\n", "Hello John!"); // [Hello] => 最大5桁
+  printf("c1: %s\n", c1); // john
+  printf("c2: %s\n", c2); // john
 
-  printf("[%f]\n", 123.45678);       // [123.456780]
-  printf("[%8.3f]\n", 123.45678);    // [ 123.457]
+  printf("c2[2] : %c\n", c2[2]);  // h
+  printf("&c2[2]: %s\n", &c2[2]); // hn => c2[2]以降が表示される
+
+  char *p1 = &c2[0];
+  char *p2 = &c2[2];
+
+  printf("&c2[0] のアドレスの値: %s\n", p1); // john
+  printf("&c2[2] のアドレスの値: %s\n", p2); // hn
+
+  printf("&c2 のアドレス       : %p\n", &c2);    // 0x7fffe660ff73
+  printf("&c2[0] のアドレス    : %p\n", &c2[0]); // 0x7fffe660ff73
+  printf("&c2[2] のアドレス    : %p\n", &c2[2]); // 0x7fffe660ff75
 }
