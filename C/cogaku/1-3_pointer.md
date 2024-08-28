@@ -22,11 +22,11 @@ void main(void);
 void main(void){
   char sz1[50] = {'L', 'i', 'n', 'u', 'x', '\0'};
 
-  printf("%s\n", sz1);      // sz1の内容
+  printf("%s\n", sz1);      // Linux: sz1の内容
 
-  printf("%x\n", &sz1[0]);  // sz1の1番目のアドレス
+  printf("%x\n", &sz1[0]);  // 9f655bf0: sz1の1番目のアドレス
 
-  printf("%x\n", sz1);      // sz1のポインタ
+  printf("%x\n", sz1);      // 9f655bf0: sz1のポインタ
 }
 ```
 
