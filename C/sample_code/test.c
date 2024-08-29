@@ -2,11 +2,9 @@
 #include <stdio.h>
 
 int main(void){
-  int a = 10;  // aという変数を作成し、10を代入
-  int *p = &a; // ポインタpにaのアドレスを代入
+  char a1[10] = "john";
+  char a2[10] = {'j', 'o', 'h', 'n', '\0'};
 
-  printf("%d\n", a);  // 10
-  printf("%p\n", &a); // 0x7ffeb3a82f5c : aのアドレス
-  printf("%p\n", p);  // 0x7ffeb3a82f5c : pに格納されたアドレス(aのアドレス)
-  printf("%d\n", *p); // 10 : pが指している値 = aの値
+  printf("a1: %s\n", a1);
+  printf("a2: %s\n", a2);
 }
