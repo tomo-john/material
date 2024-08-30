@@ -1,4 +1,12 @@
 #include <stdio.h>
-#define KEY_A 0x41
 
-int main(void){printf("%c\n", KEY_A);}
+int main(){
+  char *p1;
+  p1 = "ABCDEF";
+
+  printf("p1: %s\n", p1);
+  printf("*p1(%%p): %p\n", (void*)p1);
+  printf("*p1(%%c): %c\n", *p1);
+
+  return 0;
+}
