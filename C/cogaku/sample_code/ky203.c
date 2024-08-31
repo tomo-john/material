@@ -1,5 +1,4 @@
 // 入力された数字を10, 16, 8進数で表示
-
 #include <stdio.h>
 
 int main(void){
