@@ -1,7 +1,0 @@
-dog
-
-rabbit
-
-bear
-
-slime
