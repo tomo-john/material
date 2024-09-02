@@ -15,24 +15,16 @@ int main(){
   sprintf(unTest.szCode, "1234567890ABCDEFGHI");
 
   // 各メンバを表示
-  printf("Code = <%.20s>\n", unTest.szCode);
-  printf("Code1 = <%.5s>\n", unTest.stTest2.szCode1);
-  printf("Code2 = <%.10s>\n", unTest.stTest2.szCode2);
+  printf("Code = <%.20s>\n", unTest.szCode);           // Code = <1234567890ABCDEFGHI>
+  printf("Code1 = <%.5s>\n", unTest.stTest2.szCode1);  // Code1 = <12345>
+  printf("Code2 = <%.10s>\n", unTest.stTest2.szCode2); // Code2 = <67890ABCDE>
 
   // Code1[0]を'Z'へ変更
   unTest.stTest2.szCode1[0] = 'Z';
 
   // 各メンバを表示
-  printf("Code = <%.20s>\n", unTest.szCode);
-  printf("Code1 = <%.5s>\n", unTest.stTest2.szCode1);
-  printf("Code2 = <%.10s>\n", unTest.stTest2.szCode2);
+  printf("Code = <%.20s>\n", unTest.szCode);           // Code = <Z234567890ABCDEFGHI>
+  printf("Code1 = <%.5s>\n", unTest.stTest2.szCode1);  // Code1 = <Z2345>
+  printf("Code2 = <%.10s>\n", unTest.stTest2.szCode2); // Code2 = <67890ABCDE> 
 }
 
-/*
-Code = <1234567890ABCDEFGHI>
-Code1 = <12345>
-Code2 = <67890ABCDE>
-Code = <Z234567890ABCDEFGHI>
-Code1 = <Z2345>
-Code2 = <67890ABCDE>
-*/
