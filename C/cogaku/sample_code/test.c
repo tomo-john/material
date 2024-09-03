@@ -1,22 +1,26 @@
 #include <stdio.h>
 
-// 構造体の定義
-struct DOG {
-    char name[50];
-    int age;
+struct Animal {
+    char type; // 'd' for dog, 'c' for cat
+    union {
+        int dogAge;  // For dogs, we store age
+        int catLives; // For cats, we store remaining lives
+    } info;
 };
 
 int main() {
-    struct DOG myDog = {"john", 10};       // 構造体変数の宣言と初期化
-    struct DOG *myDogPtr = &myDog;         // 構造体ポインタの宣言と初期化
+    struct Animal myPet;
 
-    // 直接アクセス
-    printf("名前: %s\n", myDog.name); // john
-    printf("年齢: %d\n", myDog.age);  // 10
+    // 犬を設定
+    myPet.type = 'd';
+    myPet.info.dogAge = 5; // 犬の年齢を5歳に設定
+    printf("Animal type: %c, Age: %d\n", myPet.type, myPet.info.dogAge);
 
-    // ポインタを使ったアクセス
-    printf("名前: %s\n", myDogPtr->name); // john
-    printf("年齢: %d\n", myDogPtr->age);  // 10
+    // 同じメモリ領域を使用して猫の情報を設定
+    myPet.type = 'c';
+    myPet.info.catLives = 9; // 猫の残りの命を9に設定
+    printf("Animal type: %c, Lives: %d\n", myPet.type, myPet.info.catLives);
 
     return 0;
 }
+
