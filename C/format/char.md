@@ -22,6 +22,14 @@ int main(){
 ## ASCIIコード
 char型の文字を'%d'で出力するとその文字のASCIIコードが表示される
 ```c
+#include <stdio.h>
+
+int main(){
+  char c1 = 'A';
+  printf("%%cで出力: %c\n", c1);       // A
+  printf("%%dで出力: %d\n", c1);       // 65
+  printf("%%dで出力(+1): %d\n", c1+1); // 66
+}
 
 ```
 
@@ -53,4 +61,15 @@ char c1[10] = "john";
 char c1[] = {`j`, `o`, `h`, `n`, `\0`};
 ```
 文字列を出力する際の変換指定子は`s`
+
+```c
+#include <stdio.h>
+
+int main(){
+  char c1[] = "john";
+  char c2[] = {'j', 'o', 'h', 'n', '\0'};
+  printf("c1: %s\n", c1);
+  printf("c2: %s\n", c2);
+  }
+```
 
