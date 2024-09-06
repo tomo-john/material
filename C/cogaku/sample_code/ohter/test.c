@@ -1,8 +1,9 @@
 #include <stdio.h>
 
+void Function1(void){
+  printf("john\n");
+}
+
 int main(){
-  char c1 = 'A';
-  printf("%%cで出力: %c\n", c1);
-  printf("%%dで出力: %d\n", c1);
-  printf("%%dで出力(+1): %d\n", c1+1);
+  Function1();
 }
