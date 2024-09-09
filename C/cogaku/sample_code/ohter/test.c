@@ -5,7 +5,9 @@ int function(int n);
 int main(){
   int n1;
   int n2;
-  n1 = 1;
+
+  printf("数値を入力: ");
+  scanf("%d", &n1);
 
   n2 = function(n1);
 
@@ -13,6 +15,6 @@ int main(){
 }
 
 int function(int n){
-  n += 1;
+  n *= n ;
   return n;
 }
