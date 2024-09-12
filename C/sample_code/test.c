@@ -1,10 +1,16 @@
 // テスト用
 #include <stdio.h>
 
-int main(void){
-  char a1[10] = "john";
-  char a2[10] = {'j', 'o', 'h', 'n', '\0'};
+void changeValue(int *p){
+  *p = 28;
+}
 
-  printf("a1: %s\n", a1);
-  printf("a2: %s\n", a2);
+int main(){
+  int n = 10;
+  printf("変更前のnの値: %d\n", n);
+
+  changeValue(&n);
+  printf("変更後のnの値: %d\n", n);
+
+  return 0;
 }
