@@ -1,16 +1,20 @@
 // テスト用
 #include <stdio.h>
 
-void changeValue(int *p){
-  *p = 28;
-}
-
 int main(){
-  int n = 10;
-  printf("変更前のnの値: %d\n", n);
-
-  changeValue(&n);
-  printf("変更後のnの値: %d\n", n);
-
-  return 0;
+  int i;
+  for(i = 1; i <= 100; i++){
+    if(i % 15 == 0){
+      printf("%d: FizzBuzz\n", i);
+    }
+    else if(i % 5 == 0){
+      printf("%d: Buzz\n", i);
+    }
+    else if(i % 3 == 0){
+      printf("%d: Fizz\n", i);
+    }
+    else{
+      printf("%d: John\n", i);
+    }
+  }
 }
