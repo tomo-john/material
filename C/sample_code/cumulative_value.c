@@ -1,4 +1,4 @@
-// テスト用
+// 累積値
 #include <stdio.h>
 
 int main(){
