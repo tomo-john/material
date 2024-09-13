@@ -2,14 +2,9 @@
 #include <stdio.h>
 
 int main(){
-  int n;
-  printf("数値を入力: ");
-  scanf("%d", &n);
-  int i;
-  int sum = 0;
+  char c1[100];
+  printf("名前を教えて下さい: ");
+  scanf("%s", c1);
 
-  for(i = 1; i <= n; i++){
-    sum += i;
-  }
-  printf("1から%dの累積値は: %d\n", n, sum);
+  printf("Hello, %s!\n", c1);
 }
