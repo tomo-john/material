@@ -6,6 +6,7 @@ int main() {
   char* time_str;
   struct tm* local_time;
   struct tm* gmt_time;
+  char* time_str2;
 
   // 現在時刻の取得
   current_time = time(NULL);
@@ -18,6 +19,9 @@ int main() {
 
   // UTC形式の時刻に変換
   gmt_time = gmtime(&current_time);
+
+  // struct tmを文字列に変換
+  time_str2 = asctime(local_time);
 
   if(current_time != -1){
     printf("現在の時間(1970年からの経過秒数): %ld\n", current_time);
@@ -45,6 +49,10 @@ int main() {
             gmt_time->tm_hour,
             gmt_time->tm_min,
             gmt_time->tm_sec);
+  }
+
+  if(time_str2 != NULL){
+    printf("現在の時間(文字列形式その2): %s", time_str2);
   }
 
 	return 0;
