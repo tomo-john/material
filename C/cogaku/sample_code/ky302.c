@@ -14,14 +14,12 @@ int main(){
   printf("1番目の文字を入力してください: ");
   scanf("%s", stinp);
   printf("%sが入力されるまで: %.3fsec\n", stinp, 
-          (float)((clock()-stime)/CLOCKS_PER_SEC)
-        );
+          (float)((clock() - stime) / CLOCKS_PER_SEC));
 
   printf("2番目の文字を入力してください: ");
   scanf("%s", stinp);
   printf("%sが入力されるまで: %.3fsec\n", stinp, 
-          (float)((clock()-stime)/CLOCKS_PER_SEC)
-        );
+          (float)((clock() - stime) / CLOCKS_PER_SEC));
  
- return 0;
+  return 0;
 }
