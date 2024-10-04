@@ -2,32 +2,22 @@
 #include <time.h>
 
 int main(){
-    time_t stime, etime;
-    char stinp[80];
+  clock_t start_time, end_time;
+  double cpu_time_used;
 
-    // 開始時刻を取得
-    stime = time(NULL);
-    if (stime == (time_t)-1) {
-        printf("time関数を使用できません\n");
-        return 1;
-    }
+  // 開始時刻を取得
+  start_time = clock();
 
-    // 1番目の入力
-    printf("1番目の文字を入力してください: ");
-    scanf("%s", stinp);
+  // 時間計測する処理
+  for(long i = 0; i < 1000000000; i++);
 
-    // 終了時刻を取得
-    etime = time(NULL);
-    printf("%sが入力されるまで: %.3f秒\n", stinp, difftime(etime, stime));
+  // 終了時刻を取得
+  end_time = clock();
 
-    // 2番目の入力
-    stime = time(NULL); // 新しい開始時刻を取得
-    printf("2番目の文字を入力してください: ");
-    scanf("%s", stinp);
+  // 実行時間を計算
+  cpu_time_used = ((double)(end_time - start_time)) / CLOCKS_PER_SEC;
 
-    // 終了時刻を取得
-    etime = time(NULL);
-    printf("%sが入力されるまで: %.3f秒\n", stinp, difftime(etime, stime));
+  printf("実行時間: %f秒\n", cpu_time_used);
 
-    return 0;
+  return 0;
 }
