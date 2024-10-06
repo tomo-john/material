@@ -20,4 +20,12 @@ int main(){
   printf("%s, %s = %d\n", szstr, szstr2, nrtn);
   nrtn = strcmp(szstr, szstr3);
   printf("%s, %s = %d\n", szstr, szstr3, nrtn);
+
+  printf("strncmpで比較\n");
+  nrtn = strncmp(szstr, szstr1, 1);
+  printf("%s, %s(1バイト) = %d\n", szstr, szstr1, nrtn);
+  nrtn = strncmp(szstr, szstr1, 2);
+  printf("%s, %s(2バイト) = %d\n", szstr, szstr1, nrtn);
+
+  return 0;
 }
