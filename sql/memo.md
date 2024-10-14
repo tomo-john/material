@@ -16,3 +16,9 @@
 \copy table_name to file_name
 ```
 
+## SQL
+
+```sql
+select * from table_name;
+```
+
