@@ -19,3 +19,27 @@ RDBMSはデータの一貫性、整合性、効率的な検索および更新を
 - UPDATE: データの更新
 - DELETE: データの削除
 
+```sql
+-- データベースの作成
+CREATE DATABASE sample_db;
+
+-- テーブルの作成
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(50),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- データの挿入
+INSERT INTO users (username) VALUES ('john_doe');
+
+-- データの取得
+SELECT * FROM users;
+
+-- データの更新
+UPDATE users SET username = 'jane_doe' WHERE id = 1;
+
+-- データの削除
+DELETE FROM users WHERE id = 1;
+```
+
