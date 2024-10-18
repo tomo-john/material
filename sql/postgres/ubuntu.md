@@ -23,12 +23,9 @@ sudo service postgresql start
 sudo -i -u postgres 
 psql
 ```
-`\q`, `exit`で抜ける
+`\q(Ctrl + D)`, `exit`で抜ける
 
-### PostgreSQLのステータス確認
-```
-sudo service postgresql status
-```
+---
 
 # ユーザー作成
 PosgtreSQLユーザー(psql)で手動でユーザーを作成することも可能
@@ -54,4 +51,55 @@ ALTER USER john WITH SUPERUSER;
 ```
 psql -U john
 ```
+下記のエラーが出た
+```
+psql: error: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL:  Peer authentication failed for user "john"
+```
+PostgreSQLの認証方式が`peer`に設定されており、そのために`john`ユーザーでの接続ができない
+
+Peer認証では、PostgreSQLはシステムのLinuxユーザー名と同じ名前のPosgreSQLユーザーを期待する
+
+- 回避策1: `pg_hba.conf`ファイルの編集
+
+  ```
+  sudo vim /etc/postgresql/14/main/pg_hba.conf
+  ```
+  
+  `peer`を`md5`もしくは`password`に変更する
+
+  ```
+  local   all             all                                     peer
+  ```
+
+  変更後はPostgreSQLサービスを再起動
+
+  ```
+  sudo service postgresql restart
+  ```
+
+- 回避策2: Ubuntuユーザー名と同じユーザー名を作成
+
+  `whoami`コマンドでユーザー名確認
+
+  ユーザー作成、管理者権限付与(今回実施)
+
+  ```
+  sudo -i -u postgres
+  psql
+
+  create user tomo;
+  alter user tomo with superuser;
+  ```
+
+  これでデータベースに接続できる
+
+  ```
+  psql -d postgres
+  ```
+
+PostgreSQLはデフォルトでユーザー名と同じ名前のデータベースに接続しようとするため、
+
+この時点では`psql`だけでは`database "tomo" does not exist`エラーが出る
+
+---
 
