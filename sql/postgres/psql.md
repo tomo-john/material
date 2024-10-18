@@ -92,7 +92,7 @@ CREATE TABLE テーブル名(
 
 2.簡単なテーブル作成の例
 ```
-CREATE TABLE employees (
+CREATE TABLE users (
   id SERIAL PRIMARY KEY,
   name VARCHAR(100) NOT NULL,
   age INTEGER,
@@ -103,4 +103,9 @@ CREATE TABLE employees (
 - `name`: 100文字までの文字列で、`NOT NULL`制約があるので必ず必要
 - `age`: 整数型(`INTEGER`)で年齢を格納
 - `date_of_birth`: 日付型(`DATE`)で生年月日を格納
+
+3.テーブル削除
+```sql
+DROP TABLE users;
+```
 
