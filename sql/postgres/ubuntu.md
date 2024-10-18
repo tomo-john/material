@@ -86,7 +86,9 @@ Peer認証では、PostgreSQLはシステムのLinuxユーザー名と同じ名�
   ```
   sudo -i -u postgres
   psql
+  ```
 
+  ```sql
   create user tomo;
   alter user tomo with superuser;
   ```
@@ -102,4 +104,14 @@ PostgreSQLはデフォルトでユーザー名と同じ名前のデータベー�
 この時点では`psql`だけでは`database "tomo" does not exist`エラーが出る
 
 ---
+
+# データベースの作成
+
+postgresユーザーでPostgreSQLシェルに入った後に
+
+```sql
+CREATE DATABASE tomo OWNER tomo;
+```
+
+これで`psql`コマンドでデータベース`tomo`に接続が可能
 
