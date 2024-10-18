@@ -25,6 +25,42 @@ ALTER USER john WITH SUPERUSER;
 
 ## データベース
 ```sql
+-- データベース tomo を作成
 CREATE DATABASE tomo OWNER tomo;
 ```
+
+## psqlコマンド
+```
+psql option databasename
+```
+- `-U`: 接続するPostgreSQLユーザーを指定
+  ```
+  psql -U john
+  ```
+
+- `-d`: 接続するデータベースを指定
+  ```
+  psql -d mydb
+  ```
+
+- `-h`: データベースサーバーのホスト名を指定(デフォルトではローカルホスト)
+  ```
+  psql -h 192.168.1.100
+  ```
+
+- `-p`: PostgreSQLサーバーのポート番号を指定(デフォルトでは5432)
+  ```
+  psql -p 5433
+  ```
+
+- `-f`: SQLスクリプトファイルを指定し、その内容を実行
+  ```
+  psql -f script.sql
+  ```
+
+- `-l`: データベース一覧表示
+  ```
+  psql -l
+  ```
+
 
