@@ -91,4 +91,16 @@ CREATE TABLE テーブル名(
 - 制約: 必要に応じての制約
 
 2.簡単なテーブル作成の例
+```
+CREATE TABLE employees (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  age INTEGER,
+  date_of_birth DATE
+);
+```
+- `id`: 自動的に番号が振られる`SERIAL`型で`PRIMARY KEY`として指定
+- `name`: 100文字までの文字列で、`NOT NULL`制約があるので必ず必要
+- `age`: 整数型(`INTEGER`)で年齢を格納
+- `date_of_birth`: 日付型(`DATE`)で生年月日を格納
 
