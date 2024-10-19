@@ -3,14 +3,18 @@
 int main(){
   FILE *file;
 
-  file = fopen("example.txt", "r");
+  file = fopen("sample.txt", "r");
 
   if(file == NULL){
     perror("Error opening file");
     return -1;
   }
 
-  // ファイル操作など行う
+  int ch = fgetc(file);
+  while(ch != EOF){
+    putchar(ch);
+    ch = fgetc(file);
+  }
 
   fclose(file);
 
