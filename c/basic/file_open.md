@@ -158,3 +158,17 @@ int main(){
 
 C言語では、配列名はその配列の先頭要素のアドレスを指すため、`name`という名前で`&name[0]`(最初の文字のアドレス)と同じ意味
 
+## fread
+- 用途: バイナリデータをファイルから読込む
+- 定義: `size_t fread(void *ptr, size_t size, size_t count, FILE *stream);`
+- 引数:
+  - `ptr`: 読込んだデータを格納するバッファ
+  - `size`: 各要素のサイズ(バイト数)
+  - `count`: 読込む要素の数
+- 戻り値: 実際に読込まれた要素の数
+- 使用例:
+  ```c
+  int arr[10];
+  fread(arr, sizeof(int), 10, file;
+  ```
+
