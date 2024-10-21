@@ -56,7 +56,7 @@ int main(){
 }
 ```
 
-# ファイル読込み
+# ファイル読み書き
 
 - `fgetc`  : 現在のファイル位置から一文字読込む
 - `fputc`  : 現在のファイル位置に一文字書込む
@@ -66,4 +66,31 @@ int main(){
 - `fprintf`: フォーマット付きでファイルに書込む
 - `fread`  : バイナリデータをファイルから読込む
 - `fwrite` : バイナリデータをファイルに書込む
+
+## fgetc
+- 用途: 1文字をファイルから読込む
+- 定義: `int fgetc(FILE *stream);`
+- 戻り値: 読み取った文字(整数型)を返す。ファイルの終わりに達した場合は`EOF`を返す
+- 使用例:
+  ```c
+  FILE *file = fopen("sample.txt", "r");
+  int ch = fgetc(file);
+  while(ch != EOF){
+    putchar(ch);
+  }
+  ```
+
+## fgets
+- 用途: 1行をファイルから読込む
+- 定義: `char *fgets(char *str, int n, FILE *stream);`
+- 引数:
+  - `str`: 読込んだ文字列を格納するバッファ
+  - `n`: 読込む最大文字数(ヌル終端を含む)
+- 戻り値: 読込んだ文字列のポインタ。エラーやEOFの場合`NULL`
+- 使用例:
+  ```c
+  char buffer[100];
+  fgets(buffer, sizeof(buffer), file);
+  ```
+
 
