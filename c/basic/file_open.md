@@ -92,5 +92,25 @@ int main(){
   char buffer[100];
   fgets(buffer, sizeof(buffer), file);
   ```
+- 使用例2:
+  ```c
+  #include <stdio.h>
 
+  int main(){
+    char name[50];
+
+    printf("Enter your name.: ");
+
+    if(fgets(name, sizeof(name), stdin) != NULL){
+      printf("Hello, %s", name);
+    } else {
+      printf("Error reading input.\n");
+    }
+
+    return 0;
+  }
+  ```
+  - `name`: 入力値を格納するためのバッファ
+  - `sizeof(name)`: 読込む最大文字数、ここでは50バイトまで読込むことが可能
+  - `stdin`: 標準出力を指定
 
