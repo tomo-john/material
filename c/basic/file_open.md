@@ -129,6 +129,32 @@ int main(){
   ```
 可変長引数の使用例
 ```c
+#include <stdio.h>
+
+int main(){
+  FILE *file = fopen("sample.txt", "r");
+
+  int age;
+  float height;
+  char name[50];
+  
+  // sample.txtの内容が、"25, 2.8 John" の場合
+  int itemsRead = fscanf(file, "%d %f %s", &age, &height, name);
+  
+  if(itemsRead == 3){
+    printf("Age: %d\n", age);
+    printf("Height: %.1f\n", height);
+    printf("Name: %s\n", name);
+  }
+
+  fclose(file);
+  return 0;
+}
 
 ```
+`fscanf`はデフォルトで半角スペース(空白文字)、タブ、改行を区切り文字として扱う
+
+`name`は文字列を格納するための配列(`char name[50];`)
+
+C言語では、配列名はその配列の先頭要素のアドレスを指すため、`name`という名前で`&name[0]`(最初の文字のアドレス)と同じ意味
 
