@@ -54,6 +54,8 @@ id:3:initdefault:
 - `init 0`や`init6`のように`init`コマンドでランレベル変更が可能
 - `shutdown`, `reboot`コマンドでも操作は可能
 
+---
+
 # systemd
 `systemd`はSysVinitに代わる最新のinitシステムで、多くの現代的なLinuxディストリビューションで採用されている
 
@@ -92,4 +94,14 @@ systemdは、システムのさまざまなユニットを順次並列に起動�
 SysVinitのランレベルに対応する概念が systemdでは`ターゲット(Target)`
 
 ターゲットはシステムの特定の状態を表し、複数のユニットをまとめて管理する
+
+2.2 ユニットファイル
+
+systemdでは、すべてのサービスやプロセスはユニットファイルによって管理される
+
+ユニットファイルは通常、`/etc/systemd/system`や`/lib/systemd/system/`に配置される
+
+各ユニットファイルには、そのサービス設定が記述されている
+
+## 3.systemctlコマンド
 
