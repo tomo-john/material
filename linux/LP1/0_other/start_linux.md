@@ -95,6 +95,12 @@ SysVinitのランレベルに対応する概念が systemdでは`ターゲット
 
 ターゲットはシステムの特定の状態を表し、複数のユニットをまとめて管理する
 
+- `graphical.target`: GUIを起動するマルチユーザーモード(ランレベル5相当)
+- `multi-user.target`: CLIのみのマルチユーザーモード(ランレベル3相当)
+- `rescue.target`: シングルユーザーモード(ランレベル1相当)
+- `poweroff.target`: システム停止(ランレベル0相当)
+- `reboot.target:`: システムの再起動(ランレベル6相当)
+
 2.2 ユニットファイル
 
 systemdでは、すべてのサービスやプロセスはユニットファイルによって管理される
@@ -104,4 +110,23 @@ systemdでは、すべてのサービスやプロセスはユニットファイ�
 各ユニットファイルには、そのサービス設定が記述されている
 
 ## 3.systemctlコマンド
+systemdを管理するための主要コマンドが`systemctl`
+
+3.1 サービスの管理
+- サービスの開始: `sudo systemctl start <service>`
+- サービスの停止: `sudo systemctl stop <service>`
+- サービスの再起動: `sudo systemctl restart <service>`
+- サービスのステータス確認: `sudo systemctl status <service>`
+
+3.2 サービスの自動起動設定
+- 自動起動の有効化: `sudo systemctl enable <service>`
+- 自動起動の無効化: `sudo systemctl disable <service>`
+
+3.3 ターゲットの管理
+- 現在のターゲット確認: `systemctl get-default`
+- ターゲットの変更: `sudo systemctl isolate <target>`
+
+3.4 ログの確認
+- ジャーナルログの表示: `journalctl`
+- 特定のサービスログ表示: `journalctl -u <service>`
 
