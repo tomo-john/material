@@ -36,3 +36,33 @@ Red Hatディストリビューションは、Red Hat社が開発したLinuxデ�
 
 商業・産業向けに安定性・信頼性・セキュリティが求められる環境での使用が重視されている
 
+## パッケージ管理ツール
+`RPM(Red Hat Package Manager)`, `YUM(Yellowdog Updater Modified)`, `DNF(Dandified YUM)`が使用される
+
+パッケージファイルの拡張子は`.rpm`
+
+- RPM
+
+  `.rpm`ファイルを扱い、個別にインストール・削除・アップグレードを行う
+
+  依存関係の自動解決はしない
+
+  `sudo rpm -ihv package.rpm`
+
+-  YUM
+
+  RPMの上位に位置するパッケージ管理ツール
+
+  インターネット上のリポジトリからパッケージを直接取得するため、一般的なインストールが用意
+
+  `sudo yum install package_name`
+
+- DNF
+
+  YUMの次世代バージョンとして開発され、Red Hat系の最新ディストリビューションで使用されている
+
+  YUM同様に依存関係を自動解決し、RPMの上位に位置するがより高速で効率的に動作する
+
+  `sudo dnf install package_name`
+
+
