@@ -141,3 +141,24 @@ case $animal in
 esac
 ```
 
+## ループ構造
+Bashでは`for`, `while`, `until`の3つのループが基本的な構文
+
+`for`: 指定したリストや範囲に対して繰り返し処理を行う
+```
+for 変数名 in リスト; do
+  # 各要素に対して実行する処理
+done
+```
+```
+for i in 1 2 3 4 5; do
+  echo "number is $i"
+done
+```
+数値範囲を指定する場合は`{開始..終了}`
+```
+for i in {1..5}; do
+  echo "number is $i"
+done
+```
+
