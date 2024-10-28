@@ -190,3 +190,16 @@ until [ $i -gt 5 ]; do
 done
 ```
 
+ループの制御コマンドには`break`, `continue`がある
+- `break`: ループを中断して抜ける
+- `continue`: 現在の反復をスキップし、次の反復へ進む
+
+```
+for i in {1..5}; do
+  if [ $i -eq 3 ]; then
+    break
+  fi
+  echo "john $i"
+done
+```
+
