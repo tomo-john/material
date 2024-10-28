@@ -15,3 +15,29 @@ test(){
 test 1 2 3
 echo
 
+is_even(){
+  if [ $(($1 % 2)) -eq 0 ]; then
+    return 0 # even
+  else
+    return 1 # odd
+  fi
+}
+
+is_even 28
+if [ $? -eq 0 ]; then
+  echo "even john"
+else
+  echo "odd john"
+fi
+echo
+
+global_var="john"
+
+dog(){
+  echo "$global_var: $1"
+}
+
+dog "bow"
+echo "global_var: $global_var"
+echo
+
