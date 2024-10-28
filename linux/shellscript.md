@@ -164,15 +164,29 @@ done
 
 `while`: 指定した条件が真の間、処理を繰り返す
 ```
-while [条件式]; do
+while [ 条件式 ]; do
   # 条件が真の間、実行する処理
 done
 ```
 ```
 i=1
-while [ $i -le 5]; do
-  echo "nubmer is $i"
+while [ $i -le 5 ]; do
+  echo "number is $i"
   i=$(($i + 1))
+done
+```
+
+`until`: `while`と逆に指定した条件が偽の間、処理を繰り返す
+```
+until [ 条件式 ]; do
+  # 条件が偽の間、実行する処理
+done
+```
+```
+i=1
+until [ $i -gt 5 ]; do
+  echo "number is $i"
+  i=$((i + 1))
 done
 ```
 
