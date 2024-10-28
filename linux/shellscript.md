@@ -162,3 +162,17 @@ for i in {1..5}; do
 done
 ```
 
+`while`: 指定した条件が真の間、処理を繰り返す
+```
+while [条件式]; do
+  # 条件が真の間、実行する処理
+done
+```
+```
+i=1
+while [ $i -le 5]; do
+  echo "nubmer is $i"
+  i=$(($i + 1))
+done
+```
+
