@@ -6,3 +6,9 @@ echo
 
 read -p "-pオプションでメッセージ表示できる: " input2
 echo "$input2"
+echo
+
+read -rp "pathを入力: " path
+echo "$path"
+echo
+
