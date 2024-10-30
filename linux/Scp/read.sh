@@ -12,9 +12,9 @@ read -rp "No.3 pathを入力: " path
 echo "$path"
 echo
 
-echo "No.4 複数の単語を入力(スペース区切り): "
-read -a array
+read -p "No.4 複数の単語を入力(スペース区切り): " -a array
 for e in "${array[@]}"; do
   echo $e
 done
+
 
