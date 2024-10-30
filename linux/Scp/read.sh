@@ -17,4 +17,7 @@ for e in "${array[@]}"; do
   echo $e
 done
 
+read -sp "No.5 パスワードを入力(非表示): " password
+echo "$password"
+echo
 
