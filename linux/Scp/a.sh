@@ -1,7 +1,5 @@
 #!/bin/bash
-if read -t 5 -p "5秒以内に何か入力して下さい: " something; then
-  echo "入力値は: $something"
-else
-  echo "タイムアウトです"
-fi
-
+default_name="じょん"
+read -p "名前を決めて下さい(デフォルト名は「じょん」です: " name
+name="${name:-$default_name}"
+echo "決定した名前は $name です"
