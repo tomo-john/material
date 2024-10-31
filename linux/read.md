@@ -83,3 +83,29 @@ else
 fi
 ```
 
+## 複数の変数に分割して読込む
+
+```shell
+echo "スペース区切りで3つ何かを入力: "
+read input1 input2 input3
+echo "$input1"
+echo "$input2"
+echo "$input3"
+```
+この場合、`john is dog`のような入力はそれぞれ、`input1=john`, `input2=is`, `input3=dog`となる
+
+`john is super dog`のように変数より数が多い場合は`input3`に`super dog`のように残りがまとめて代入される
+
+=> `-a`オプションで配列として格納される点との違いに注意
+
+## デフォルト値の設定
+
+```shell
+default_name="じょん"
+read -p "名前を決めて下さい(デフォルト名は「じょん」です: " name
+name="${name:-$default_name}"
+echo "決定した名前は $name です"
+```
+-  `name="${name:-$default_name}"` => もし変数`name`が空の場合、`$default_name`の値を`name`に代入する
+- `:-`は変数が空または未定義の場合に代わりの値を返すというBashの特殊な構文
+
