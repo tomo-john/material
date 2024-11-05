@@ -237,4 +237,7 @@ GRUB Legacy(旧版)とGRUB2(最新版)の2種類が存在する
 - カスタム設定は`40_custom`ファイルに記述するのが一般的
 
 4. GRUBの主要コマンド
+- `update-grub`: `grub.cfg`を再作成し、`/etc/default/grub`や`/etc/grub.d/`の設定を反映する
+- `grub-install`: GRUBをディスク(`/dev/sda`など)にインストールするコマンド
+
 
