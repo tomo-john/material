@@ -1,12 +1,12 @@
 #!/bin/bash
 # Environment Variables
 
-FILE=tmp
+VAR=tmp
 
 echo 'START: 環境変数確認'
 echo
 
-cat << EOF > $FILE
+cat << EOF > $VAR
 EDITOR
 HISTFILE
 HISTFILESIZE
@@ -23,9 +23,8 @@ TERM
 USER
 EOF
 
-for line in $(cat $FILE); do
-  echo line: $line
+for  var in $(cat $VAR); do
+  echo $var: ${!var}
 done
 
-
-rm $FILE
+rm $VAR
