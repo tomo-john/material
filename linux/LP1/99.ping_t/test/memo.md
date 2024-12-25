@@ -13,5 +13,9 @@ cat -n file.txt
 # 空行にも番号振る
 nl -b a file.txt
 cat -b file.txt
+
+# ブレース展開
+echo {a,b,c}
+cp log{,.bk}
 ```
 
