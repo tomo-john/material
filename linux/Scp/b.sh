@@ -1,10 +1,13 @@
 #!/bin/bash
 
-default_name="じょん"
+DIR=wk
 
-read -p "名前を決めて下さい(デフォルト名は「じょん」です: " name
+# 作業ディレクトリ初期化
+if [ -d $DIR ]; then
+  rm -r $DIR
+fi
 
-name="${name:-$default_name}"
+mkdir $DIR
+cd $DIR
 
-echo "決定した名前は $name です"
-
+touch a
