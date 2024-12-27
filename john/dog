@@ -1,0 +1,19 @@
+#!/bin/bash
+
+CMDNAME=dog
+CMDDIR=~/material/john
+LOGDIR=$CMDDIR/log
+LOGFILE=$LOGDIR/$CMDNAME.log
+DATE=`date "+%Y%m%d %H:%M:%S"`
+SOUND=${1:-"bowbow"} # 引数がない場合はデフォルトで"bowbow"
+
+if [ ! -d "$LOGDIR" ]; then
+  mkdir "$LOGDIR"
+fi
+
+if [ ! -f "$LOGFILE" ]; then
+  touch "$LOGFILE"
+fi
+
+echo "$SOUND $DATE" | tee -a "$LOGFILE"
+
