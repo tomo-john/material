@@ -27,7 +27,7 @@ docker run -it --name ubuntu-container my-ubuntu
 
 ```
 # ボリュームをマウントする場合
-docker run -it --name ubuntu-container -v ~/material/docker/volumes/data:/data my-ubuntu
+docker run -it --name ubuntu-container -v ~/material/docker/ubuntu/volumes/data:/data my-ubuntu
 ```
 
 ### 停止
