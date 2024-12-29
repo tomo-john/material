@@ -1,4 +1,6 @@
-# CnetOS
+# CnetOS Dockerfile
+# Lpic1, RHELベースの環境学習用
+
 FROM centos:7
 
 # パッケージのインストール
@@ -6,9 +8,11 @@ RUN yum -y update && yum install -y \
     vim \
     curl \
     git \
-    sudo \
+    sudo && \
+    yum clean all && \
+    rm -rf /var/cache/yum
 
-# ユーザー作成
+# ユーザー作成とsudo権限を付与
 RUN useradd -m -s /bin/bash john && \
     echo "john:password" | chpasswd && \
     usermod -aG wheel john
