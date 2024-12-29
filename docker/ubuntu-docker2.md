@@ -45,7 +45,7 @@ USER john
 
 ```
 # Dockerfileが保存されている場所で実行する
-docker build -t my-ubuntu-env .
+docker build -t my-ubuntu .
 ```
 
 - `-t`: 作成されるイメージに名前を付けるオプション
@@ -54,11 +54,20 @@ docker build -t my-ubuntu-env .
 ## 新しいイメージを使ってコンテナを立ち上げる
 
 ```
-docker run -it my-ubuntu-env
+docker run -it --name ubuntu-container v ~/material/docker/volumes/data:/data my-ubuntu
 ```
 
+- `-i`: 標準入力を有効にする(対話的な操作)
+- `-t`: 仮装端末を割り当てる(ターミナルを使えるようにする)
+- `--name`: コンテナに名前を付ける
+- `-v`: ボリュームをマウントする
+
+## 停止した(exitで抜けた)コンテナに再度入る
+
 ```
-# ボリュームをマウントする場合
-docker run -it -v ~/material/docker/vokumes/data:/data my-ubuntu-env
+docker start -ai ubuntu-container
 ```
+
+- `-a`: コンテナの標準出力と標準エラー出力をターミナルに表示
+- `-i`: インタラクティブに起動(ユーザーの入力を受け付ける・リアルタイムでの対話)
 
