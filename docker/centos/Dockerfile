@@ -1,9 +1,9 @@
-# CnetOS Dockerfile
+# almalinux Dockerfile
 # Lpic1, RHELベースの環境学習用
 
-FROM centos:7
+FROM almalinux:8
 
- パッケージのインストール
+# パッケージのインストール
 RUN yum -y update && yum install -y \
     vim \
     curl \
@@ -20,3 +20,5 @@ RUN useradd -m -s /bin/bash john && \
 # デフォルトの作業ディレクトリ
 WORKDIR /home/john
 
+# johnになる
+USER john
