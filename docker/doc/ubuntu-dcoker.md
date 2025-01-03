@@ -120,7 +120,7 @@ docker build -t my-ubuntu .
 ## 新しいイメージを使ってコンテナを立ち上げる
 
 ```
-docker run -it --name ubuntu-container v ~/material/docker/volumes/data:/data my-ubuntu
+docker run -it --name ubuntu-container -v ~/material/docker/volumes/data:/data my-ubuntu
 ```
 
 - `-i`: 標準入力を有効にする(対話的な操作)
