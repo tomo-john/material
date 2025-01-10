@@ -13,6 +13,8 @@ GRUB(GRand Unified Bootloader)とGTUB2はLinuxを起動するためのブート�
 
 GRUBの設定ファイルは`/boot/grub/menu.lst` => 手動で編集が可能。変更後は即座に反映。
 
+ディストリビューションによっては`/boot/grub/grub.conf`の場合もあり。
+
 ## GRUB2
 
 GRUB2の設定ファイルは`/boot/grub/grub.cfg` => このファイルを直接編集することはない。
