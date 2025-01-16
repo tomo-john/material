@@ -1,0 +1,33 @@
+const image = document.getElementById('image');
+const step = 10; // 1回の移動量
+let x = window.innerWidth / 2 - 50;  // 初期位置x
+let y = window.innerHeight / 2 - 50; // 初期位置y
+
+// 画像位置更新関数
+function updatePosition(){
+  image.style.left = `${x}px`;
+  image.style.top = `${y}px`;
+}
+
+// キー押下時のイベントリスナー
+window.addEventListener('keydown', (event) => {
+  switch (event.key) {
+    case 'ArrowUp': // ↑
+      y -= step;
+      break;
+    case 'ArrowDown': // ↓
+      y += step;
+      break;
+    case 'ArrowLeft': // ←
+      x -= step;
+      break;
+    case 'ArrowRight': // →
+      x += step;
+      break;
+  }
+  updatePosition();
+});
+
+// 初期位置の設定
+updatePosition();
+
