@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+#canvas {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+#image {
+  position: absolute;
+  width: 100px;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
