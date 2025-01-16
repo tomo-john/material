@@ -18,5 +18,6 @@ body {
   top: 0;
   left: 0;
   transform: none;
+  transition: top 0.1s ease, left 0.1s ease;
 }
 
