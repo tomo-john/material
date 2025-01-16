@@ -26,8 +26,13 @@ window.addEventListener('keydown', (event) => {
       if ( x < window.innerWidth - imageSize ) x += step;
       break;
   }
+
+  // 画面外にいかないように位置を修正
+  x = Math.max(0, Math.min(x, window.innerWidth - imageSize));
+  y = Math.max(0, Math.min(y, window.innerHeight - imageSize));
   updatePosition();
 });
+
 
 // 初期位置の設定
 updatePosition();
