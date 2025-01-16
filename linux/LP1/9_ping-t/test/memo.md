@@ -1,21 +1,38 @@
+# memo
+
+## xargs
+
 ```
-# xaargs
+# file.txtに記述されているファイルが作成(touch)される
 cat file.txt | xargs touch
+
+# fileA, fileBが作成(touch)される
 echo "fileA fileB" | xargs touch
+```
 
-# 標準出力を標準エラー出力にリダイレクト
-echo "Error Message" 1>&2
+## nl
 
+```
 # 空行に番号振らない
 nl file.txt
 cat -n file.txt
 
-# 空行にも番号振る
+# 空行に番号振る
 nl -b a file.txt
 cat -b file.txt
+```
 
-# ブレース展開
-echo {a,b,c}
+## 標準出力を標準エラー出力にリダイレクト
+
+```
+echo "Error Message" 1>&2
+```
+
+## ブレーズ展開
+
+```
+cat {a,b,c}
+
 cp log{,.bk}
 ```
 
