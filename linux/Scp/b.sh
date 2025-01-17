@@ -1,13 +1,9 @@
 #!/bin/bash
+# 算術式確認
 
-DIR=wk
-
-# 作業ディレクトリ初期化
-if [ -d $DIR ]; then
-  rm -r $DIR
+if (( 2 < 8 )); then
+  echo "じょーん"
+else
+  echo "No じょん"
 fi
 
-mkdir $DIR
-cd $DIR
-
-touch a
