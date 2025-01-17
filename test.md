@@ -73,5 +73,5 @@
 `:dog:` => :dog:
 `:sparkles:` => :sparkles:
 
-superdog:dog::sparkles:
+superdog :dog::sparkles:
 
