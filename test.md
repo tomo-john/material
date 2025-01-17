@@ -56,7 +56,7 @@
 ![代替テキスト](画像URL)
 ```
 
-![代替テキスト](/home/tomo/material/html/images/image.jpeg)
+![代替テキスト](html/images/image.jpeg)
 
 ## 引用
 
