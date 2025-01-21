@@ -210,12 +210,13 @@ chmod 754 file
 chown [新しい所有者]:[新しいグループ] ファイル名
 ```
 
-`:`は`,`でも代用できるが、一部環境では使用できない場合もあるので、基本的に`:`を使用する。
+`:`は`.`でも代用できるが、一部環境では使用できない場合もあるので、基本的に`:`を使用する。
 
 
 ```
 # 所有者をjohn、所有グループをdogsに変更
 chown john:dogs file
+chown john.dogs file
 ```
 
 ### 所有者のみ、所有グループのみの変更も可能
@@ -228,7 +229,7 @@ chown john file
 chown :dogs file
 
 # 所有グループのみdogsに変更(非推奨)
-chown ,dogs file
+chown .dogs file
 ```
 
 ### オプション
