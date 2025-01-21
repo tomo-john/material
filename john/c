@@ -1,0 +1,46 @@
+#!/bin/bash
+
+##################################
+# カレンダー表示 (GNU版/BSD版両対応)
+##################################
+
+# 現在日時を取得
+Y=$(date +%Y)
+M=$(date +%m)
+YM="$Y / $M"
+
+# 曜日を定義
+days=" Mon Tue Wed Thu Fri Sat Sun"
+width="${#days}"
+
+# カレンダー上部を表示
+echo; printf "%*s\n" $(((${#YM} + $width) / 2)) "$YM"
+echo; echo $days
+
+# GNU版とBSD版の判別
+if date --version >/dev/null 2>&1; then
+  # GNU版: `date --version`が成功する
+  days_in_month=$(date -d "$Y-$M-01 +1 month -1 day" "+%d")
+  first_day=$(date -d "$Y-$M-01" "+%u")
+else
+  # BSD版: macOSの場合
+  days_in_month=$(date -v1d -v+1m -v-1d "+%d")
+  first_day=$(date -v1d "+%u")
+fi
+
+# 最初の曜日に対応する空白を出力
+for ((i = 1; i < first_day; i++)); do
+  printf "    "
+done
+
+# 日付をループで出力
+for ((day = 1; day <= days_in_month; day++)); do
+  printf "%3d " "$day" # 日付を3桁で表示
+  # 曜日が日曜日(7)なら改行
+  if (( (day + first_day - 1) % 7 == 0 )); then
+    echo
+  fi
+done
+
+echo; echo
+
