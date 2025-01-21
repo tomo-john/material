@@ -9,13 +9,13 @@ GRUB(GRand Unified Bootloader)とGTUB2はLinuxを起動するためのブート�
 - 初期RAMディスクのロード(initramfs): カーネルが利用する必要なドライバやモジュールを提供
 - 制御の移譲: カーネルに制御を渡して、ブートローダの役割を終える。
 
-## GRUB
+## GRUB(GRUB Legacy) ver0.9x
 
 GRUBの設定ファイルは`/boot/grub/menu.lst` => 手動で編集が可能。変更後は即座に反映。
 
 ディストリビューションによっては`/boot/grub/grub.conf`の場合もあり。
 
-## GRUB2
+## GRUB2 ver1.9x以降
 
 GRUB2の設定ファイルは`/boot/grub/grub.cfg` => このファイルを直接編集することはない。
 
