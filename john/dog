@@ -1,5 +1,8 @@
 #!/bin/bash
+# スクリプトテスト用
+# コマンド実行時刻、引数またはデフォルト値を標準出力+ログファイルに書き込み
 
+# 変数設定
 CMDNAME=dog
 CMDDIR=~/material/john
 LOGDIR=$CMDDIR/log
@@ -7,13 +10,15 @@ LOGFILE=$LOGDIR/$CMDNAME.log
 DATE=`date "+%Y%m%d %H:%M:%S"`
 SOUND=${1:-"bowbow"} # 引数がない場合はデフォルトで"bowbow"
 
+# ログディレクトリ作成
 if [ ! -d "$LOGDIR" ]; then
-  mkdir "$LOGDIR"
+  mkdir -p "$LOGDIR" || { echo "ログディレクトリの作成に失敗しました。"; exit 1; }
 fi
 
+# ログファイル実行
 if [ ! -f "$LOGFILE" ]; then
   touch "$LOGFILE"
 fi
 
-echo "$SOUND $DATE" | tee -a "$LOGFILE"
+echo "$DATE $SOUND" | tee -a "$LOGFILE"
 
