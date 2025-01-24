@@ -38,3 +38,29 @@ for file in "$(pwd)"/*; do
 done
 ```
 
+---
+
+# dirname
+
+指定されたパスからディレクトリ部分だけを抽出するコマンド。
+
+```
+# dirnameの場合
+dirname /home/tomo/test.txt # => /home/tomo
+
+# basenameの場合
+basename /home/tomo/test.txt # => test.txt
+```
+
+dirnameは`パスの最後のスラッシュ(/以降)を取り除く`動作をする。
+
+```
+dirname /home/tomo # => /home
+```
+
+### whichコマンドと合わせてコマンドのディレクトリ名部分だけを抽出
+
+```
+dirname $(which ls)
+```
+
