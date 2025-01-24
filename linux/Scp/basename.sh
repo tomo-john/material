@@ -1,6 +1,10 @@
 #!/bin/bash
-for file in `pwd`/*; do
+for file in "$(pwd)"/*; do
   filename=$(basename "$file")
-  echo "ファイル名: $filename"
+  if [ -d "$file" ]; then
+    echo "ディレクトリ名: $filename"
+  elif [ -f "$file" ]; then
+    echo "ファイル名: $filename"
+  fi
 done
 
