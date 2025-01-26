@@ -1,4 +1,5 @@
 # Red Hat
+
 Red Hatディストリビューションは、Red Hat社が開発したLinuxディストリビューションの1つ
 
 特に商業環境での利用を前提としたエンタープライズ向けのLinux
@@ -32,11 +33,13 @@ Red Hatディストリビューションは、Red Hat社が開発したLinuxデ�
   Fedoraの成果は後にRHELへと取り込まれることが多い
 
 ## Enterprise
+
 企業や大規模組織向けの用途を指し、特に業務システムやデータベース、サーバーなど
 
 商業・産業向けに安定性・信頼性・セキュリティが求められる環境での使用が重視されている
 
 ## パッケージ管理ツール
+
 `RPM(Red Hat Package Manager)`, `YUM(Yellowdog Updater Modified)`, `DNF(Dandified YUM)`が使用される
 
 パッケージファイルの拡張子は`.rpm`
