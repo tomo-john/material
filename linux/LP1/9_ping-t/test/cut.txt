@@ -1,0 +1,6 @@
+1,101,john,dog
+2,102,pyonkichi,rabbit
+3,103,mocomoca,bear
+4,104,john2,dog
+5,105,superjohn,dog
+6,106,minimoca,bear
