@@ -1,8 +1,32 @@
-# yum
+# RPM系パッケージ管理ツール
 
-yum(Yellowdog Updater Modified)は主にRHEL(Red Hat Enterprise Linux)系のディストリビューションで使用されるパッケージ管理ツール。
+RPMはRed Hat Package Managerの略で、もともとはRed Hatが開発したパッケージ管理システム。
 
-パッケージのインストール、更新、削除、検索、情報取得などを行うことができる。
+RHEL(Red Hat Enterprise Linux)系のパッケージ管理に使用される。
+
+RPM形式のパッケージ管理ツールには`RPMツール`、`YUMツール`がある。
+
+# RPMツール
+
+設定ファイルは`/usr/lib/rpm/rpmrc`。
+
+RPM系パッケージを管理する基本的なツールで主なコマンドは以下の2つ。
+
+- rpmコマンド: パッケージのインストール、アンインストールなど基本的なパッケージ管理を行うコマンド
+
+  => Debian系での`dpkg`とほぼ同等
+
+- rpm2cpio: RPM系パッケージをcpio形式のアーカイブに変換するコマンド
+
+## rpmコマンド
+
+
+
+# YUMツール
+
+YUM(Yellowdog Updater Modified)はパッケージのインストール、更新、削除、検索、情報取得などを行うことができる。
+
+設定ファイルは`/etc/yum.conf`、パッケージの取得元(リポジトリ)は`/etc/yum.repos.d`ディレクトリ内のファイルで設定する。
 
 yumはRHEL8以降では`dnf(Dandified YUM)`に置き換えられており、ほとんどのコマンドはyumの代わりにdnfを使って実行できる。
 
