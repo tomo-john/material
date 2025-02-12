@@ -32,3 +32,36 @@ dd if=/dev/urandom of=test_4kb bs=1K count=4
 
 => 空のディスク領域の確保やデバイスのクリアに使用できる
 
+## 使用例: USBメモリやディスクを丸ごとバックアップ
+
+```
+dd if=/dev/sda of=usb.backup.img bs=4M status=progress
+```
+
+countを指定しなかった場合、`if=`の終わり(EOF)まで全コピーする。
+
+この場合`/dev/sda`がUSBメモリがマウントされている前提。=> 本来はlsblkコマンドなどで確認する
+
+USBが16GBなら16GB、32GBなら32GBまるごとコピーされる。
+
+通常、USBやHDDのバックアップでは`count`を指定しないことが多い。
+
+## 使用例: バックアップしたディスクイメージを書き出す
+
+```
+dd if=usb.backup.img of=/dev/sda bs=4M status=progress
+```
+
+`of=/dev/sda`の箇所は間違えるとディスクが上書きされるので要注意。
+
+
+## 使用例: HDDやSDDの完全消去(データ復旧できないようにする)
+
+```
+dd if=/dev/urandom of=/dev/sda bs=1M status=progress
+```
+
+`/dev/sda`がシステムのディスクの場合の例。
+
+`/dev/urandom`を使用することでランダムなデータで埋め尽くす。(復旧困難)
+
