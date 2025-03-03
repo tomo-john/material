@@ -105,3 +105,16 @@ yumはRHEL8以降では`dnf(Dandified YUM)`に置き換えられており、ほ�
 | grouplist                   | パッケージグループの一覧表示                                             |
 | groupinstall グループ       | パッケージグループのインストール                                         |
 
+## YUMの設定ファイル
+
+YUMの全体的な設定ファイルは`/etc/yum.conf`だが、個々のリポジトリの設定は`/etc/yum.repos.d`ディレクトリ内に、リポジトリごとに独自のファイル(拡張子`.repo`)を作成して記述する。
+
+複数の設定ファイルを活用する仕組みにより、新規リポジトリの追加や特定のリポジトリの設定制御が容易に行える。
+
+YUMには組み込み変数が用意されており、yumコマンドや設定ファイル内で使用が可能。
+
+=> 設定ファイル内のパッケージ取得用URLには`$releasever`や`$basearch`など
+
+- $releasever: Red Hat Enterprise Linuxでリリースされたバージョンから名づけられている(releseとver)
+- $basearch: システムのベースとなるアーキテクチャ(CPUの種類)から名づけられている(baseとarch)
+
