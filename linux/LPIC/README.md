@@ -1,4 +1,4 @@
 # LPIC
 
-LPIC学習用
+LPIC学習用:dog:
 
