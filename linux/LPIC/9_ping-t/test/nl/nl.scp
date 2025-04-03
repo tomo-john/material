@@ -1,0 +1,33 @@
+#!/bin/bash
+# nlコマンドtest
+
+FILE=test.txt
+
+cat << EOF > $FILE
+john1
+john2
+
+john3
+
+EOF
+
+clear
+
+echo "nl オプションなしで実行 => デフォルトでは空行に番号を付けない (cat -bと同じ)"
+nl $FILE
+echo
+read -n 1 -s -p "Please Enter for Next Step: "
+clear
+
+echo "nl -b t を実行 => これも空行に番号を付ない (cat -bと同じ)"
+echo
+nl -b t $FILE
+echo
+read -n 1 -s -p "Please Enter for Next Step: "
+clear
+
+echo "nl -b a を実行 => これは空行に番号を付ける (cat -nと同じ)"
+echo
+nl -b a $FILE
+echo
+
