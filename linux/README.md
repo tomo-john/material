@@ -1,4 +1,4 @@
 # linux
 
-Linux :dog: :sparles:
+Linux :dog: :sparkles:
 
