@@ -1,9 +1,12 @@
 #!/usr/bin/perl
 # perlテスト用
 
-print "何か入力をしてください(入力後にEnter): ";
-my $input = <STDIN>; # 入力を受け取る
-chomp($input);       # 改行コードを取り除く
+my $filename = "sample.txt";
+open(my $fh, "<", $filename) or die "ファイルを開けません!: $!";
 
-print "こんにちは。入力内容は: $input です。\n";
+while (my $line = <$fh>) {
+  chomp($line);
+  print "読み込み内容: $line\n";
+}
 
+close($fh);
