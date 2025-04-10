@@ -25,7 +25,7 @@ PRE + D
 # window操作
 PRE + C : 新規window
 PRE + , : windowに名前
-PRE * W : window一覧
+PRE + W : window一覧
 
 # window移動
 PRE + N : 次のwindow
