@@ -1,0 +1,8 @@
+This text file is for command validation. 
+
+Write various words.
+
+The dog's bark is a woof.
+
+John is terrific dog.
+
