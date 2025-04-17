@@ -46,3 +46,11 @@ export PS1='\u@\e[0;35m\][\W]\[\e[m\]$'
 - 2.キャッシュからファイルを削除 => `git rm --cached file` (ディレクトリの場合は`-r`をつける)
 - 3.変更をcommitしてpush
 
+## コミットメッセージ
+
+push前に直前のを修正したい:
+
+```
+git commit --amend
+```
+
