@@ -1,5 +1,5 @@
 # Vim swap & backup files
-*.swap
+*.swp
 *.swo
 *~
 
