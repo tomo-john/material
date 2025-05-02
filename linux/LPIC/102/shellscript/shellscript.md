@@ -38,3 +38,64 @@ bash sample.sh dog john
 
 戻り値は特別な変数の`$?`に格納され、コマンドを実行するたびに初期化される。
 
+---
+
+# その他めも
+
+## スクリプト内でよく使用するコマンド
+
+| コマンド    | 説明                                                     |
+|-------------|----------------------------------------------------------|
+| test 条件式 | 条件式が真なら0、偽なら0以外を返す => `[ 条件式 ]`が主流 |
+| seq         | 連続した数値の自動生成                                   |
+| let         | 変数に計算した値を代入できる(算術式の評価)               |
+| read        | 入力受付(変数に代入)・ファイル読み込みも可能             |
+
+
+## if
+
+```
+if [ "$age" -lt 2 ]; then    # 2未満 
+  echo "まだ子犬だね"
+elif [ "$age" -le 10 ]; then # 10以下
+  echo "まだ若い犬だね"
+else
+  echo "You are super dog!"  # 10より大きい(上の2つの条件をどちらも満たさない)
+fi
+```
+
+## case
+
+```
+case $1 in
+  1) echo one ;;
+  2) echo two ;;
+  3) echo three dogs ;;
+  *) echo please choice 1 2 3 ;;
+esac
+```
+
+## for
+
+```
+for name in john pyonkichi mocomoca
+do
+  echo "My name is $name"
+
+  if [ $name = john ]; then
+    echo "じょーん"
+  fi
+done
+```
+
+## while
+
+```
+count=1
+while [ $count -le 10 ] # 10以下の間は真
+do
+  echo $count           # 今のcountの値を表示
+  let count=count+1     # countの値に1プラス
+done
+```
+
