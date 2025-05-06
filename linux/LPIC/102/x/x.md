@@ -37,8 +37,16 @@ X.Orgの設定は`/etc/X11/xorg.conf`のほか、`/etc/X11/xorg.conf.d`以下に
 
 xfsを使用する環境では、`xorg.conf`の`Files`セクションで接続先サーバとポート番号を指定する。
 
+---
+
 ## ログファイル
 
 - `/var/log/Xorg.0.log` : Xのログファイル
 - `~/.xsession-errors` : デスクトップアプリケーションのログファイル
+
+---
+
+## Xサーバーの起動
+
+`startx` => `xinit` => `~/.xinitrc` or `/etc/X11/xinit/xinitrc` => `ウィンドウマネージャー`が起動
 
