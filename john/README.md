@@ -8,7 +8,7 @@
 
 - 1 : シェルの設定ファイル(`~/.bashrc`など)を編集
 - 2 : 設定ファイルの末尾に追加したいパスを追加(例: `export PATH="$PATH:$HOME/material/john"`)
-- 3 : 設定を反映(`source ~.bashrc`)
+- 3 : 設定を反映(`source ~/.bashrc`)
 
 ## exportコマンドについて
 
