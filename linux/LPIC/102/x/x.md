@@ -19,7 +19,7 @@ X.Orgの設定は`/etc/X11/xorg.conf`のほか、`/etc/X11/xorg.conf.d`以下に
 
 `xorg.conf`は複数のセクションから構成されている。
 
-=> `セクション名`から`EndSection`までの範囲にそれぞれのセクション用途ごとに設定が記述される
+=> セクションは`Section "セクション名"`から`EndSection`までの範囲にそれぞれのセクション用途ごとに設定が記述される
 
 | セクション   | 説明                                             |
 |--------------|--------------------------------------------------|
@@ -32,6 +32,16 @@ X.Orgの設定は`/etc/X11/xorg.conf`のほか、`/etc/X11/xorg.conf.d`以下に
 | Modes        | ビデオモードの設定                               |
 | Screen       | ディスプレイの色深度(表示色数)や画面サイズの設定 |
 | ServerLayout | 入出力デバイスとスクリーンの指定                 |
+
+```
+# /etc/X11/xorg.confの例
+Section "ServerLayout"
+  Identidier      "X.org Configured"
+  Screen       0  "Screen0" 0 0
+  InputDevice     "Mouse0" "CorePointer"
+  InputDevice     "Keyboard0" "CoreKeyboard"
+EndSection
+```
 
 フォントをネットワーク経由で利用できるよう、フォントサーバxfs(X FONT Server)が使用されることがある。
 
