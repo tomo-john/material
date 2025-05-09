@@ -36,6 +36,6 @@ export TZ="Asia/Tokyo"
 
 この設定を全ユーザーで利用するには、`/etc/timezone`ファイルに`Asia/Tokyo`と設定をしておく。
 
-- `tzselect` : 対話形式で一覧からタイムゾーンの設定値を設定・確認
+- `tzselect` : 対話形式で一覧からタイムゾーンの設定値を確認する
 - `tzconfig` : `/etc/localtime`, `/etc/timezone`の値をまとめて変更(古い形式で非推奨) => 現在は`dpkg-reconfigure tzdate`(Debian系)
 

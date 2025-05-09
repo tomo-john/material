@@ -88,3 +88,22 @@ user add -m -s /bin/bash -g staff -G dog,rabbit john
 | -l         | パスワードをロックして一時的に無効化する |
 | -u         | パスワードをロックを解除する             |
 
+---
+
+# 対話型ログインの禁止
+
+対話型ログインを禁止するには、ログインシェルを`/bin/false`または`/sbin/nologin`に設定する。
+
+- `/bin/false` : 実行後にすぐに終了ステータス`1(失敗)`を返すので実質的にログインを防ぐ
+- `/sbin/nologin` : ログイン拒否専用の処理を行う
+
+ログインシェルの変更は`usermod -s`や`chsh -s`で行う。
+
+- `usermod -s` : 既存ユーザーのログインシェルの変更をするオプション(`-s`はuseraddでも使用可能)
+- `chsh -s` : シェル変更専用のコマンド(change shellの略)
+
+```
+usermod -s /bin/false john
+chsh -s /sbin/nologin john
+```
+
