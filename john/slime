@@ -1,4 +1,29 @@
 #!/bin/bash
+# 引数に指定した名称で *.mdファイルを新規作成
 
-echo "( ^ω^ )"
+NAME="$1"
+
+# 引数がない場合はメッセージ表示
+if [ -z "$NAME" ]; then
+  echo "引数を入れるじょーん: "
+  exit 1
+fi
+
+FILE="${NAME}.md"
+
+# すでにファイルが存在すれば作成しない
+if [ -e "$FILE" ]; then
+  echo "すでにファイルが存在するじょーん: $FILE"
+  exit 1
+fi
+
+# ファイル作成
+{
+  echo "# $NAME"
+} > "$FILE"
+
+echo "$FILEを作成したじょーん: "
+
+# vimで開く
+vim "$FILE"
 
