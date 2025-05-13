@@ -1,4 +1,4 @@
 # perl
 
-Perl学習用 :dog:
+:dog: Perl関連 :dog:
 
