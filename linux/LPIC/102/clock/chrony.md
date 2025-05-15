@@ -1,6 +1,6 @@
 # Chrony
 
-Chronyはntpd/ntpdateの代替えとなるNTPサーバー/クライアントソフトウェア。
+Chrony(クローニー)はntpd/ntpdateの代替えとなるNTPサーバー/クライアントソフトウェア。
 
 - `chronyd` : デーモンプロセス
 - `chronyc` : クライアントコマンド
