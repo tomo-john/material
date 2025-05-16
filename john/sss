@@ -1,0 +1,27 @@
+#!/bin/bash
+# GitHubの特定のディレクトリ以下からランダムな.mdファイルを選択しChromeで表示
+# WSL2専用・Mac不可
+
+MAIN_DIR="/home/tomo/material"
+CHOICE_DIR="linux/LPIC/102"
+GITHUB_BASE_URL="https://github.com/tomo-john/material/tree/main/$CHOICE_DIR"
+
+cd "$MAIN_DIR/$CHOICE_DIR"
+
+DIRS=($(find . -maxdepth 1 -type d ! -name '.' -exec basename {} \;))          # echo "${DIRS[@]}"
+RANDOM_DIR=${DIRS[$RANDOM % ${#DIRS[@]}]}                                      # $RANDOMはBashの特殊環境変数: 0～32767までの疑似乱数
+MD_FILES=($(find "$RANDOM_DIR" -maxdepth 1 -name "*.md" -exec basename {} \;)) # echo ${MD_FILES[@]}
+
+if [ ${#MD_FILES[@]} -eq 0 ]; then
+  echo "Not File!: $RANDOM_DIRに.md "
+  exit 1
+fi
+
+RANDOM_MD=${MD_FILES[$RANDOM % ${#MD_FILES[@]}]}
+
+URL="$GITHUB_BASE_URL/$RANDOM_DIR/$RANDOM_MD"
+
+cmd.exe /c start chrome "$URL"
+
+echo "Opend: $URL"
+
