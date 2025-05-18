@@ -17,7 +17,7 @@ CREATE TABLE テーブル名 ( カラム名 型式, ... );
 
 ```sql
 CREATE TABLE users (
-  id SERIAL PIMARY KEY,
+  id SERIAL PRIMARY KEY,
   name TEXT
 );
 ```
@@ -27,19 +27,19 @@ CREATE TABLE users (
 ## カラムの追加
 
 ```sql
-ALTER TABLE users ADD COLUMNM age INTERGER;
+ALTER TABLE users ADD COLUMN age INTEGER;
 ```
 
 ## カラムの型を変更
 
 ```sql
-ALTER TABLE users ALTER COLMUN age TYPE BIHINT;
+ALTER TABLE users ALTER COLUMN age TYPE BIGINT;
 ```
 
 ## カラムの削除
 
 ```sql
-ALTER TABLE users DROP COLMUN age;
+ALTER TABLE users DROP COLUMN age;
 ```
 
 ## テーブル名の変更
