@@ -2,17 +2,17 @@
 # 本日日付.mdファイル(YYYYMMDD.md)作成と編集
 
 DATE=$(date +%Y%m%d)
-FILE=$DATE.md
+FILE=${DATE}.md
 
 if [ -f "$FILE" ]; then
-  echo "すでに$FILEファイルが存在します: "
+  echo "すでに${FILE}ファイルが存在します: "
 else
   touch "$FILE"
-  echo "$FILEファイルを作成しました: "
+  echo "${FILE}ファイルを作成しました: "
 fi
 
 
-echo -n "$FILEを編集しますか？(編集する場合は「y」を入力): "
+echo -n "${FILE}を編集しますか？(編集する場合は「y」を入力): "
 read FLG
 
 if [[ "$FLG" = "y" || "$FLG" = "Y" ]]; then
