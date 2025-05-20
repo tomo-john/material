@@ -11,6 +11,7 @@
 | nmcli       | NetworkManagerを操作するCLIツール・ネットワーク設定など               | [nmcli](network_manager.md)               |
 | ping        | 疎通確認・指定したホストへICMPパケットを送信                          | [ping](ping_traceroute.md)                |
 | traceroute  | 指定したホストまでの経路表示                                          | [traceroute](ping_traceroute.md)          |
+| tracepath   | 指定したホストまでの経路表示                                          | [tracepath](ping_traceroute.md)           |
 | hostnamectl | ホスト名の設定・確認                                                  | [hostnamectl](hostnamectl.md)             |
 | hostname    | ホスト名の設定・確認                                                  | [hostname](hostnamectl.md)                |
 
@@ -19,4 +20,9 @@
 - netstat -atu
 - ss -stu
 - lsof -i
+
+## その他
+
+- nmap : ポートスキャン(ホストを指定)
+- fuser -n : ポートを開いているプロセス(PID)を => `fuser -n tcp 8080`みたいに使う
 

@@ -44,3 +44,20 @@ hostnamectl set-hostname john2
 
 => これはrootのみ
 
+---
+
+# hostnamectlとhostnname
+
+| 比較項目            | `hostname`                            | `hostnamectl`                                 |
+|---------------------|---------------------------------------|-----------------------------------------------|
+| 対応                | 古いLinuxでも使える                   | `systemd` 採用ディストリで使用                |
+| 設定の永続性        | 一時的（再起動で元に戻る）            | 永続的（再起動後も有効）                      |
+| バックエンド        | カーネルの `sethostname()` を直接操作 | `systemd-hostnamed` を使う                    |
+| `/etc/hostname`     | 直接書き換えない                      | 書き換える                                    |
+| その他の情報も設定  | 不可                                  | ホスト名以外も設定可能（例：アイコン名など）  |
+
+```
+sudo hostname dog                 # 再起動で元に戻る
+sudo hostnamectl set-hostname dog # 永続的
+```
+
