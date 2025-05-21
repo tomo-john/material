@@ -14,6 +14,10 @@
 | tracepath   | 指定したホストまでの経路表示                                          | [tracepath](ping_traceroute.md)           |
 | hostnamectl | ホスト名の設定・確認                                                  | [hostnamectl](hostnamectl.md)             |
 | hostname    | ホスト名の設定・確認                                                  | [hostname](hostnamectl.md)                |
+| host        | 名前解決                                                              | [host](dns.md)                            |
+| dig         | 名前解決(hostより詳しい)                                              | [dig](dns.md)                             |
+| nslookup    | 名前解決(hostよりちょっと詳しい)                                      | [nslookup](dns.md)                        |
+
 
 ## 開いているポートを確認
 
