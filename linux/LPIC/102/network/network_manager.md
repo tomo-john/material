@@ -67,3 +67,13 @@ nmcli connection add type ethernet ifnama enp03s con-name eth1
 nmcli connection modify eth1 ipv4.method auto
 ```
 
+`nmcli networking connectivity`で表示されるネットワークの接続状態:
+
+| 状態    | 説明                                                           |
+|---------|----------------------------------------------------------------|
+| full    | インターネットにアクセス可能なネットワークに接続している       |
+| portal  | インターネットにアクセスする前の`captive portal`の状態         |
+| limited | ネットワークに接続しているが、インターネットにアクセスできない |
+| none    | どのネットワークにも接続していない                             |
+| unknown | 接続状態が見つからない                                         |
+
