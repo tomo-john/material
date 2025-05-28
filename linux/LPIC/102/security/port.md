@@ -55,3 +55,5 @@ fuser -n tcp 8080
 
 => 8080番ポートを開いているPIDが確認できる
 
+=> [fuser](../other/fuser.md)
+
