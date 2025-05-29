@@ -1,10 +1,22 @@
 # NetworkManager
 
-RedHat系ではネットワークを管理するサブシステムとして`NetworkManager`が導入されている。
+NetworkManagerは動的にネットワークを管理する仕組み。
+
+様々なディストリビューションで採用されており、Red Hat Enterprise Linux 6では標準のネットワーク設定として導入されている。
+
+システムで検出されたネットワークデバイスは自動でNetWorkManagerによって管理され、DHCPサーバーが有効な環境であればDHCPによって動的なIPアドレスが割り当てられる。
+
+また特定のインターフェースをNetWorkManagerで管理しないように設定することもできる。
+
+NetworkManagerはユーザーの設定を認識し、その指示に従う。
+
+=> 静的IPアドレスの設定や特定のDNSサーバーの指定がある場合、それらは優先される
 
 `nmcli`コマンドを使用してネットワークの設定、接続の管理、状態の確認を行う。
 
-## nmcli
+---
+
+# nmcli
 
 ```
 nmcli オブジェクト [コマンド]
@@ -61,13 +73,16 @@ nmcli オブジェクト [コマンド]
   - wifi hotspot : Wi-Fiホットスポットを作成
   - wifi rescan : Wi-Fiアクセスポイントを再検索
 
+---
+
+### 接続eth1を追加し、DHCPでIP設定
+
 ```
-# 接続eth1を追加し、DHCPでIP設定
 nmcli connection add type ethernet ifnama enp03s con-name eth1
 nmcli connection modify eth1 ipv4.method auto
 ```
 
-`nmcli networking connectivity`で表示されるネットワークの接続状態:
+### nmcli networking connectivityで表示されるネットワークの接続状態
 
 | 状態    | 説明                                                           |
 |---------|----------------------------------------------------------------|
