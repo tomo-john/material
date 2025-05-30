@@ -92,3 +92,8 @@ nmcli connection modify eth1 ipv4.method auto
 | none    | どのネットワークにも接続していない                             |
 | unknown | 接続状態が見つからない                                         |
 
+### 似てるけど全然違う
+
+- nmcli networking connectivity : ネットワークの接続状態を表示 => 実際にインターネットに出れるかどうか
+- nmcli connection show : 接続状況を表示 => 登録されているネットワーク接続設定を一覧表示
+
