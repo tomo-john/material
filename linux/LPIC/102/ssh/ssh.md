@@ -136,3 +136,22 @@ ssh -f -N -L 10110:john.example.net:110 john@john.example.net
 - -N : 転送のみを指示
 - -L : ローカルポートフォワーディングの設定(`-L [ローカルポート]:[転送先ホスト]:[転送先ポート]`)
 
+---
+
+# SSHに関する主なファイル
+
+| 種類         | SSHクライアント     | SSHサーバー(sshd)             |
+|--------------|---------------------|-------------------------------|
+| 設定ファイル | /etc/ssh/ssh_config | /etc/ssh/sshd_config          |
+| 秘密鍵       | ~/.ssh/id_rsa       | /etc/ssh/ssh_host_rsa_key     |
+| 公開鍵       | ~/.ssh/id_rsa.pub   | /etc/ssh/ssh_host_rsa_key.pub |
+| 鍵認証リスト | ~/.ssh/known_hosts  | ~/.ssh/authorized_keys        |
+
+### ホスト認証
+
+- クライアントの`~/.ssh/known_hosts`にサーバーの`/etc/ssh/ssh_host_rsa_key.pub`を登録
+
+### ユーザー認証時
+
+- サーバーの`~/.ssh/authorized_keys`にクライアントの`~/.ssh/id_rsa.pub`を登録
+
