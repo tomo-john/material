@@ -71,10 +71,16 @@ ifconfig eth0 down
 
 # ifup / ifdown
 
-指定してネットワークインターフェースを有効、無効にする(古い)コマンド。
+ifupとifdownは、設定ファイルに基づいて、指定したインターフェースを有効・無効にするコマンド。
 
-- `ifup` : 有効
-- `ifdown` : 無効
+設定ファイルの名称や格納場所、形式はディストリビューションごとに異なる。
+
+- Red Hat系: `/etc/sysconfig/network-scripts/ifcfg-<インターフェース名>`
+- Debian系: `/etc/network/interfaces`
+
+Debian系のifup, ifdownコマンドには`-a`オプションがるがRed Hat系にはない。
+
+=> `-a`オプション : `/etc/network/interfaces`でautoフラグが設定されたNICを対象とする
 
 ---
 

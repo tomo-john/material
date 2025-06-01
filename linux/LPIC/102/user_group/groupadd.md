@@ -6,7 +6,7 @@
 
 ```
 # dogグループを作成
-group dog
+groupadd dog
 ```
 ---
 
@@ -21,6 +21,15 @@ group dog
 # dogグループ名をsuperdogsに変更
 groupmod -n dog superdogs
 ```
+
+```
+# animalsグループのGIDを700に変更
+groupmod -g 700 animals
+```
+
+グループIDを変更しても、ファイルやディレクトリの所有権にセットされているGIDは変更されない。
+
+アクセス権を失う可能性があることには注意が必要。
 
 ---
 
