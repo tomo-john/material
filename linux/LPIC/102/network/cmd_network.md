@@ -8,6 +8,7 @@
 | ifdown      | ネットワークインターフェースの無効化                                  | [ifconfig](ifconfig.md)                   |
 | route       | ルーティングテーブルの操作・表示                                      | [route](route.md)                         |
 | netstat     | ネットワーク機能のさまざまな情報表示(開いているポート確認など)        | [netstat](netstat.md)                     |
+| ss          | netstatの後継コマンド(ネットワークのソケット情報を表示)               | [ss](netstat.md)                          |
 | nmcli       | NetworkManagerを操作するCLIツール・ネットワーク設定など               | [nmcli](network_manager.md)               |
 | ping        | 疎通確認・指定したホストへICMPパケットを送信                          | [ping](ping_traceroute.md)                |
 | traceroute  | 指定したホストまでの経路表示                                          | [traceroute](ping_traceroute.md)          |
