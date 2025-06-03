@@ -9,3 +9,35 @@
 | /etc/resolv.conf       | ドメイン名やDNSサーバーの指定                                                      |
 | /etc/service           | サービス名とポート番号の対応付け                                                   |
 
+---
+
+# /etc/hosts
+
+名前解決に用いられるシンプルなテキストファイル。
+
+1行に1つのIPアドレスがあり、そのIPアドレスと続くホスト名とを関連づけている。
+
+IPアドレスはIPv4, IPv6どちらも指定が可能。
+
+現在は名前解決にDNSが広く用いられている為、/etc/hostsは補助的な役割を果たしている。
+
+`/etc/nsswitch.conf`の設定で、`hosts: files dns`のようにしておけば、まず`/etc/hosts`が参照され、次にDNSが参照されるという順番になる。
+
+```
+IPアドレス ホスト名 ホスト名(別名) ...
+```
+
+=> IPアドレスの右になる、最も左のホスト名が正式名となる。
+
+### 設定例
+
+```
+# IPv4の例
+127.0.0.1       localhost
+192.168.1.100   webserver.local  web
+
+# IPv6の例
+::1             localhost ip6-localhost ip6-loopback
+fe80::1         ipv6host
+```
+
