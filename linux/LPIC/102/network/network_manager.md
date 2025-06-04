@@ -97,3 +97,19 @@ nmcli connection modify eth1 ipv4.method auto
 - nmcli networking connectivity : ネットワークの接続状態を表示 => 実際にインターネットに出れるかどうか
 - nmcli connection show : 接続状況を表示 => 登録されているネットワーク接続設定を一覧表示
 
+---
+
+# nm-connection-editor
+
+Networkmanagerは、GUI操作で容易にネットワークの設定ができる。
+
+設定画面は`nm-connection-editor`コマンドで起動する。
+
+# nmtui
+
+nmtuiは`curses`(カーシス: UNIX向け端末制御ライブラリ)ベースのテキストユーザーインターフェース(TUI)。
+
+コマンドラインから`nmtui`コマンドで起動する。
+
+`TUI`はGUIやCLIとは異なり、テキストの組み合わせで画像を構成し、ボタンやメニューをキーボードで移動して操作する。
+
