@@ -73,8 +73,6 @@ nmcli オブジェクト [コマンド]
   - wifi hotspot : Wi-Fiホットスポットを作成
   - wifi rescan : Wi-Fiアクセスポイントを再検索
 
----
-
 ### 接続eth1を追加し、DHCPでIP設定
 
 ```
@@ -96,6 +94,14 @@ nmcli connection modify eth1 ipv4.method auto
 
 - nmcli networking connectivity : ネットワークの接続状態を表示 => 実際にインターネットに出れるかどうか
 - nmcli connection show : 接続状況を表示 => 登録されているネットワーク接続設定を一覧表示
+
+### Wi-Fi関連
+
+- nmcli radio wifi : Wi-Fiの状態を表示
+- nmcli radio wifi on/off : Wi-Fi接続の有効化/無効化  
+- nmcli device wifi list : Wi-Fiアクセスポイントの表示
+- nmcli device wifi connect SSID : 指定したSSIDのWi-Fiアクセスポイントに接続
+- nmcli device wifi rescan : Wi-Fiアクセスポイントの再検索
 
 ---
 
