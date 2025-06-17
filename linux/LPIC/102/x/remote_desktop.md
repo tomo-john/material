@@ -43,7 +43,7 @@ WindowsのデスクトップをLinuxデスクトップに表示したい場合�
 
 ## SPICE
 
-SPICE(Simple Protocol for Indenpendet Computing Environment)は、RDPと同様の画面転送プロトコル。
+SPICE(Simple Protocol for Indenpendent Computing Environment)は、RDPと同様の画面転送プロトコル。
 
 => オープンソースで開発されている
 
