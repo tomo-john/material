@@ -14,6 +14,7 @@
 | [index_number.md](index_number.md)       | 指数計算                  |
 | [inverse_matrix.md](inverse_matrix.md)   | 逆行列・連立方程式        |
 | [math.md](math.md)                       | 算数・数学の基礎          |
+| [mips.md](mips.md)                       | MIPS                      |
 | [probability.md](probability.md)         | 確率・順列・組合せ        |
 | [uptime.md](uptime.md)                   | 稼働率(MTBF・MTTR)・RASIS |
 
