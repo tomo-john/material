@@ -58,3 +58,9 @@
 
 OSSとして提供されている`Eclipse`などがある。
 
+# XML
+
+XML(eXtensible Markup Language)はHTMLとは異なり、独自で定義したタグを使って記述ができるマークアップ言語。
+
+HTMLはWebページを作成するのに対し、XMLはWeb上でデータを交換することが主な用途。
+
