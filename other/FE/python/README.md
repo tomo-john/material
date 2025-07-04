@@ -8,3 +8,25 @@ Pythonはデータ分析、AI・機械学習、Web開発などなどいろんな
 
 他のプログラミング言語に比べて構文がシンプルでコードが読みやすいらしい :dog:
 
+---
+
+## 目次
+
+| ファイル               | 説明                     |
+|------------------------|--------------------------|
+| [print.md](print.dm)   | print関連                |
+| [python.md](python.md) | python基礎知識(いろいろ) |
+
+## pythonスクリプト
+
+| ファイル                             | 説明                     |
+|--------------------------------------|--------------------------|
+| [binary_search.py](binary_search.py) | 2分探索法                |
+| [bubble_sort.py](bubble_sort.py)     | バブルソート             |
+| [fizzbuzz.py](fizzbuzz.py)           | FizzBuzz                 |
+| [for.py](for.py)                     | for文(基本)              |
+| [hello_python.py](hello_python.py)   | 初めの1歩                |
+| [print.py](print.py)                 | print文                  |
+| [linear_search.py](linear_search.py) | 線形探索法(リニアサーチ) |
+| [test.py](test.py)                   | テスト用                 |
+
