@@ -21,5 +21,5 @@ Software Life Cycle Process : SLCPはソフトウェアが企画から保守ま�
 
 5つのプロセス : `企画 => 要件定義 => 開発 => 運用 => 保守`
 
-### [詳細](SLCP.md)
+[詳細はここ :dog: ](SLCP.md)
 
