@@ -4,7 +4,7 @@
 
 ---
 
-- [データ転送](data_transfer.m) : パリティチェック・CRC方式
+- [データ転送](data_transfer.md) : パリティチェック・CRC方式
 - [IPアドレス](IP.md) : IPv6・NAPTなど
 - [MACアドレス](mac_address.md) : MACアドレスは48ビット16進数表記
 - [サブネットマスク](subnet_mask.md) : CIDR記法(/24のやつ)
