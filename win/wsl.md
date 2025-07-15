@@ -1,6 +1,6 @@
-# WSL
+# WSL関連
 
-Windows Subsystem for Linux
+Windows Subsystem for Linux :dog:
 
 ## wsl2の現在のディレクトリをエクスプローラーで開く
 
