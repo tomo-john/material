@@ -14,7 +14,7 @@ Pythonはデータ分析、AI・機械学習、Web開発などなどいろんな
 
 | ファイル               | 説明                     |
 |------------------------|--------------------------|
-| [print.md](print.dm)   | print関連                |
+| [print.md](print.md)   | print関連                |
 | [python.md](python.md) | python基礎知識(いろいろ) |
 
 ## Pythonスクリプト
