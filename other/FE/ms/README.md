@@ -4,6 +4,8 @@
 
 :dog: Management Strategy :dog:
 
+:dog: ビジネスシステムも :dog:
+
 ---
 
 Strategy(ストラテジ)とは`戦略`という意味 :dog:
@@ -16,4 +18,9 @@ Strategy(ストラテジ)とは`戦略`という意味 :dog:
 - [事業戦略のキーワード](bsk.md) : バランススコアカード・KPI
 - [マーケティング](marketing.md) : 4Pと4C
 - [経営管理システム](business_management_system.md) : ERP・CRM・SCM・SFA・ナレッジマネジメント
+
+## ビジネスインダストリ
+
+- [ビジネスシステム](business_system.md) : スマートグリッド・スマートメーター・HEMS
+- [エンジニアリングシステム](engineering_system.md) : かんばん方式・セル生産方式・MRP
 
