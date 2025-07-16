@@ -20,9 +20,9 @@ Fundamental Information Technology Engineer Examination
 | [プロジェクトマネジメント](./pm/) | PMBOK                            |
 | [サービルマネジメント](./sm/)     | ITIL                             |
 | [システム戦略](./ss/)             | 情報システム戦略・企画・要件定義 |
-| [経営戦略](./ms/)                 | 作成中 :dog:                     |
-| [その他ドキュメント](./doc/)      | いろいろ                         |
-| [Python](./python/)               | パイソン触ってみた               |
+| [経営戦略](./ms/)                 | ストラテジ                       |
+| [その他ドキュメント](./doc/)      | いろいろ :desert_island:         |
+| [Python](./python/)               | パイソンさわってみた :dog:       |
 
 ## :pushpin: プロジェクト管理
 
