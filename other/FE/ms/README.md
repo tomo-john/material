@@ -12,4 +12,8 @@ Strategy(ストラテジ)とは`戦略`という意味 :dog:
 
 - [経営戦略](management_strategy.md) : SWOT分析・バランススコアカード・SCM
 - [全社戦略](corporate_strategy.md) : PPM・プロダクトライフサイクル
+- [事業戦略](business_strategy.md) : コトラーの競争戦略・バリューチェーン分析
+- [事業戦略のキーワード](bsk.md) : バランススコアカード・KPI
+- [マーケティング](marketing.md) : 4Pと4C
+- [経営管理システム](business_management_system.md) : ERP・CRM・SCM・SFA・ナレッジマネジメント
 
