@@ -42,7 +42,7 @@
 
 ## MRP
 
-MRP(Material Requirements Planning : 資材所要量計画)とは、製品の生産計画に合わせて必要な資材の量を求め、資材の手配を行う手法です。
+MRP(Material Requirements Planning : 資材所要量計画)とは、製品の生産計画に合わせて必要な資材の量を求め、資材の手配を行う手法。
 
 資材とは、材料・部品・中間製品(仕掛品)など。
 
