@@ -23,4 +23,6 @@ Strategy(ストラテジ)とは`戦略`という意味 :dog:
 
 - [ビジネスシステム](business_system.md) : スマートグリッド・スマートメーター・HEMS
 - [エンジニアリングシステム](engineering_system.md) : かんばん方式・セル生産方式・MRP
+- [e-ビジネス](e_business.md) : BtoB系・CGM・ICタグ・ロングテール
+- [組み込みシステム・IoT](iot.md) : 閉域網・BLE・LPWA・エッジコンピューティング 
 
