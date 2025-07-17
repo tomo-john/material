@@ -2,6 +2,16 @@
 
 Windows Subsystem for Linux :dog:
 
+## Cドライブからwslのubuntuへ
+
+パス : `\\wsl$\Ubuntu`
+
+=> `\\wsl$`直下は見れず、その下のディストリビューション名以下を確認できる
+
+```
+cd \\wsl$\Ubuntu\home\tomo
+```
+
 ## wsl2の現在のディレクトリをエクスプローラーで開く
 
 ```
