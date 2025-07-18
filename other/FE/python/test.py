@@ -1,18 +1,14 @@
-# 正の整数(10進数)を2進数に変換
+sum = 0
 
-decimal = 255
-binary = 2
-quotient = decimal // binary
-remainder = decimal % binary
+for i in range(1, 6):
+  for j in range(1, i+1):
+    if (i + j) % 2 ==0:
+      sum = sum + (i * j)
 
-result = []
-result.insert(0, remainder)
+print(sum)
 
-while quotient > 0:
-  decimal = quotient
-  quotient = decimal // binary
-  remainder = decimal % binary
-  result.insert(0, remainder)
+animals = ["dog", "rabbit", "bear"]
 
-print(result)
+for i in range(len(animals)):
+  print(f"{i}番目は{animals[i]}")
 
