@@ -14,6 +14,7 @@ Fundamental Information Technology Engineer Examination
 | ディレクトリ                      | 内容                             |
 |-----------------------------------|----------------------------------|
 | [基礎論理](./basic_logic/)        | 基礎論理(基礎理論)               |
+| [アルゴリズム](./algorithm/)      | アルゴリズムとプログラミング     |
 | [データベース](./db/)             | データベース・SQL                |
 | [ネットワーク](./network/)        | ネットワーク関連                 |
 | [情報セキュリティ](./is/)         | 情報セキュリティ                 |
@@ -22,7 +23,7 @@ Fundamental Information Technology Engineer Examination
 | [サービルマネジメント](./sm/)     | ITIL                             |
 | [システム戦略](./ss/)             | 情報システム戦略・企画・要件定義 |
 | [経営戦略](./ms/)                 | ストラテジ                       |
-| [企業と法務](./cl/)               | 作成中 :dog:                     |
+| [企業と法務](./corporate_legal/)  | 企業活動・法務                   |
 | [その他ドキュメント](./doc/)      | いろいろ :desert_island:         |
 | [Python](./python/)               | パイソンさわってみた :dog:       |
 
