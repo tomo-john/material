@@ -11,7 +11,7 @@
 - [OR・IE](or_ie.md) : パレート図とABC分析・線形計画法などの6つの分析ツール
 - [損益分岐点](break_even_point.md) : 会計用語・損益分岐点の計算方法
 - [財務諸表](financial_statements.md) : 貸借対照表・損益計算書・キャッシュフロー計算書
-
+- [資産管理](asset_management.md) : 先入先出法・減価償却
 - [法務](legal.dm) : 未着手 :dog:
 
 ### 参考サイト
