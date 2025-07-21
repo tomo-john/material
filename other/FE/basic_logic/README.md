@@ -5,6 +5,7 @@
 ---
 
 - [データの単位](data.md) : データの単位・小数
+- [小数部](decimal.md) : 有限小数・無限小数
 - [補数](complement.md) : 負の2進数・2の補数
 - [シフト演算](shift_operation.md) : 論理シフト・算術シフト・シフト演算での計算
 - [論理演算系めも](logical_operation.md) : ビット操作・真理値表・加算器
