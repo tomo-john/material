@@ -16,3 +16,12 @@ a = b / c => c = b / a
 a = b / (c x d) => c = b / (a x d)
 ```
 
+---
+
+## 参考サイト :dog:
+
+- [確率](https://bellcurve.jp/statistics/course/6339.html)
+- [正規分布](https://bellcurve.jp/statistics/course/7797.html)
+- [数列の極限](https://rikeilabo.com/limit-of-the-sequence)
+- [ニュートン法](https://manabitimes.jp/math/733#3)
+
