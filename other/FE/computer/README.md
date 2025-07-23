@@ -6,7 +6,7 @@
 
 - [CPU](cpu.md) : クロック周波数・MIPS
 - [MIPS](mips.md) : MIPS
-- [主記憶装置](memory.md) : 未 :dog:
+- [主記憶装置](memory.md) : 主記憶装置・レジスタ
 - [ヒット率](hit.md) : ヒット率(キャッシュメモリ)
 - [入出力インターフェース](input_output.md) : USB・dpi
 - [システム構成](system_coonfiguration.md) : 未 :dog:
