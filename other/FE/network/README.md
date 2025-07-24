@@ -11,6 +11,8 @@
 - [通信プロトコル](protocol.md) : OSI基本参照モデル・TCP/IP
 - [MIME](MIME.md) : メールのやつ・S/MIMEも
 
+- [VPN](VPN.md) : VPN・インターネットVPN
+
 ---
 
 ## 回線(伝送路) / 伝送効率・伝送時間
