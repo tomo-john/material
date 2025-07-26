@@ -14,3 +14,5 @@
 - [OS](os.md) : OSの4つの機能・その他OS関連
 - [PCM](pcm.md) : PCM
 
+- [disk](disk.md) : 磁気ディスク
+
