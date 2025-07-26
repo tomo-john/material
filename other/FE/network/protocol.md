@@ -10,7 +10,6 @@ OSI基本参照モデル(Open Systems Interconnection Basic Reference Model)と�
 
 ISO(International Organization for Standardization : 国際標準化機構)により作られた通信のルール。
 
-
 | 階層 | 名称                 | 主な役割・例                                        |
 |------|----------------------|-----------------------------------------------------|
 | 7    | アプリケーション層   | ユーザーの操作やアプリとネットの接点(例：HTTP, FTP) |
