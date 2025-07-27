@@ -8,6 +8,7 @@
 - [Java](Java.md) : Javaを含む用語たち
 - [オーダー量](order.md) : オーダー量・log 
 - [2分探索法](binary_search.md) : バイナリサーチ
+- [線形探索法](linear_search.md) : リニアサーチ
 
 - [関数](function.md) : 関連関連
 
