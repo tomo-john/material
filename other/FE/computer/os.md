@@ -4,10 +4,10 @@ OS(Operating System)とは、アプリケーションソフトウェアとハー
 
 ## OSの4つの機能 (作成予定)
 
-- [ジョブ管理](job_management.md) : スプーリング・バッファ
-- [タスク管理](task_management.md) : マルチタスク・タスクスケジューリング
-- [記憶管理](memory_managemtn.md) : 仮想記憶管理・ページング方式・ページフォールト
-- [データ管理](data_managemtnt.md) : ファイルシステム・バックアップ
+- [ジョブ管理](os_job_management.md) : スプーリング・バッファ
+- [タスク管理](os_task_management.md) : マルチタスク・タスクスケジューリング
+- [記憶管理](os_memory_managemtn.md) : 仮想記憶管理・ページング方式・ページフォールト
+- [データ管理](os_data_managemtnt.md) : ファイルシステム・バックアップ
 
 ## リアルタイムOS(RTOS)
 
