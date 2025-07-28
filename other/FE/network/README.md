@@ -14,6 +14,7 @@
 - [VPN](VPN.md) : VPN・インターネットVPN
 - [IPsec](IPsec.md) : IP Security プロトコル
 - [ウェルノウンポート](well_known_port.md) : ウェルノウンポート一覧
+- [スプリッタ](splitter.md) : ADSL回線
 
 ---
 
