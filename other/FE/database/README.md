@@ -6,7 +6,9 @@
 - [データベース管理システム](dbms.md)
 - [SQL(データ操作)](sql.md)
 
+
 - [定義域(ドメイン)](domain.md)
+- [関係代数演算](relational_algebra_operations.md)
 
 ---
 
