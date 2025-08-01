@@ -10,6 +10,7 @@
 - [データ関連用語](data.md)
 - [定義域(ドメイン)](domain.md)
 - [関係代数演算](relational_algebra_operations.md)
+- [SQLインジェクション](injection.md)
 
 ---
 
