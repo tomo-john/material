@@ -14,6 +14,7 @@
 - [OS](os.md) : OSの4つの機能・その他OS関連
 - [PCM](pcm.md) : PCM
 
+- [address](address.md) : アドレス指定方式
 - [disk](disk.md) : 磁気ディスク
 - [SATA](sata.md) : シリアルATA
 - [ポーリング制御](polling.md) : ポーリング制御
