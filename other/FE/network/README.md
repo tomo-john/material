@@ -11,6 +11,7 @@
 - [通信プロトコル](protocol.md) : OSI基本参照モデル・TCP/IP
 - [MIME](MIME.md) : メールのやつ・S/MIMEも
 
+- [class](class.md) : IPアドレスのクラス
 - [VPN](VPN.md) : VPN・インターネットVPN
 - [IPsec](IPsec.md) : IP Security プロトコル
 - [ウェルノウンポート](well_known_port.md) : ウェルノウンポート一覧
