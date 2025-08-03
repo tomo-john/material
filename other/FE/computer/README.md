@@ -15,6 +15,7 @@
 - [PCM](pcm.md) : PCM
 
 - [disk](disk.md) : 磁気ディスク
+- [SATA](sata.md) : シリアルATA
 - [ポーリング制御](polling.md) : ポーリング制御
 
 ---
