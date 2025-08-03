@@ -9,9 +9,12 @@
 
   <!-- 親要素1 -->
   <div class="parent">
-    <div class=child>A</div>
-    <div class=child>B</div>
-    <div class=child>C</div>
+    <?php
+      $items = ['A', 'B', 'C', 'D']; // セミコロン忘れない
+      foreach ($items as $item) {
+        echo "<div class='child'>{$item}</div>";
+      }
+    ?>
   </div>
   
 </body>
