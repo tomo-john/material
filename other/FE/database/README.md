@@ -11,6 +11,7 @@
 - [スキーマ](schema.md)
 - [定義域(ドメイン)](domain.md)
 - [関係代数演算](relational_algebra_operations.md)
+- [ビュー](view.md)
 - [埋め込みSQL](embedded_sql.md)
 - [NoSQL](no_sql.md)
 - [SQLインジェクション](injection.md)
