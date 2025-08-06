@@ -15,6 +15,7 @@
 - [埋め込みSQL](embedded_sql.md)
 - [NoSQL](no_sql.md)
 - [SQLインジェクション](injection.md)
+- [カーソル](cursor.md)
 
 ---
 
