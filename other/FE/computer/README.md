@@ -17,6 +17,7 @@
 - [address](address.md) : アドレス指定方式
 - [disk](disk.md) : 磁気ディスク
 - [SATA](sata.md) : シリアルATA
+- [SDカード](sd_card.md) : SDカード
 - [ポーリング制御](polling.md) : ポーリング制御
 
 ---
