@@ -1,5 +1,7 @@
 .parent {
-  display: flex;
+  display: flex;               /* FlexBox適用 */
+  flex-direction: row;         /* 並べる方向を指定(row, row-reverse, column, column-reverse) */
+  flex-wrap: wrap;             /* 折り返しを指定(nowrap, wrap, wrap-reverse) */
   justify-content: center;
   margin: 10px;
   padding: 10px;

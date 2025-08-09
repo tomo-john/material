@@ -10,7 +10,7 @@
   <!-- 親要素1 -->
   <div class="parent">
     <?php
-      $items = ['A', 'B', 'C', 'D']; // セミコロン忘れない
+      $items = range('A', 'Z'); // セミコロン忘れない
       foreach ($items as $item) {
         echo "<div class='child'>{$item}</div>";
       }
