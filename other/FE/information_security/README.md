@@ -14,4 +14,5 @@
 - [SPF](SPF.md)
 - [メッセージ認証符号](MAC.md)
 - [チャレンジレスポンス方式](challenge_response.md)
+- [XML署名](xml.md)
 
