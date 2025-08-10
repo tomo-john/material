@@ -1,13 +1,17 @@
+.container {
+  display: flex;
+}
+
 .parent {
   display: flex; /* FlexBox適用 */
   flex-direction: row; /* 並べる方向を指定(row, row-reverse, column, column-reverse) */
   flex-wrap: wrap; /* 折り返しを指定(nowrap, wrap, wrap-reverse) */
   justify-content: flex-start; /* 横並びのレイアウト(flex-start, flex-end, space-between, space-around) */
-  /* align-items: flex-start; /* 縦並びのレイアウト(stretch, flex-start, flex-end, center, baseline) */
+  align-items: flex-start; /* 縦並びのレイアウト(stretch, flex-start, flex-end, center, baseline) */
   align-content: flex-start; /* 縦並びのレイアウト(複数行) (stretch, flex-start, flex-end, center, space-between, space-around) */
   margin: 10px;
   padding: 10px;
-  width: 300px;
+  width: 600px;
   height: 600px;
   border: 2px solid #333;
 }

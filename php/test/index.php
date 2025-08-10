@@ -7,15 +7,29 @@
 </head>
 <body>
 
-  <!-- 親要素1 -->
-  <div class="parent">
-    <?php
-      $items = range('A', 'F'); // セミコロン忘れない
-      foreach ($items as $item) {
-        echo "<div class='child'>{$item}</div>";
-      }
-    ?>
+  <div class="container">
+
+    <!-- 親要素1 -->
+    <div class="parent">
+      <?php
+        $items = range('A', 'F'); // セミコロン忘れない
+        foreach ($items as $item) {
+          echo "<div class='child'>{$item}</div>";
+        }
+      ?>
+    </div>
+    
+    <!-- 親要素2 -->
+    <div class="parent">
+      <?php
+        $items = range('1', '6'); // セミコロン忘れない
+        foreach ($items as $item) {
+          echo "<div class='child'>{$item}</div>";
+        }
+      ?>
+    </div>
+
   </div>
-  
+
 </body>
 </html>
