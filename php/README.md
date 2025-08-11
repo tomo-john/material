@@ -1,6 +1,10 @@
 # PHP
 
-PHP :dog: :sparkles:
+PHPに限らずWeb関連なんでも :dog: :sparkles:
 
-HTML, CSS, JavaScript, PHP関連 :cow2:
+- :cow2:
+- HTML
+- CSS
+- JavaScript
+- PHP
 
