@@ -1,4 +1,5 @@
 <?php
+$type = '';
 $result = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $type = $_POST['type'] ?? '';
