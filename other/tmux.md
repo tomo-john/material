@@ -22,6 +22,11 @@ tmux a -t 'name'
 # デタッチ
 PRE + D
 
+# セッション操作
+PRE + S : セッション一覧(選択)
+PRE + ( : セッション移動
+PRE + ) : セッション移動
+
 # window操作
 PRE + C : 新規window
 PRE + , : windowに名前
