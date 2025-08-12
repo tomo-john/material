@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SVG viewBox 実験</title>
+<style>
+  body {
+    font-family: system-ui, sans-serif;
+    background: #f7f8fb;
+    padding: 2rem;
+  }
+  .controls {
+    background: white;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin-bottom: 1rem;
+  }
+  label {
+    display: block;
+    margin: 0.5rem 0;
+  }
+  svg {
+    border: 1px solid #ccc;
+    background: #fafafa;
+    display: block;
+    margin: auto;
+  }
+</style>
+</head>
+<body>
+
+<h1>🐶 SVG viewBox ズーム＆パン 実験</h1>
+
+<div class="controls">
+  <label>
+    ズーム（vbW / vbH）:
+    <input type="range" id="zoom" min="20" max="200" value="100">
+    <span id="zoomVal">100</span>
+  </label>
+  <label>
+    横パン（minX）:
+    <input type="range" id="panX" min="0" max="100" value="0">
+    <span id="panXVal">0</span>
+  </label>
+  <label>
+    縦パン（minY）:
+    <input type="range" id="panY" min="0" max="100" value="0">
+    <span id="panYVal">0</span>
+  </label>
+  <p>
+    SVG表示サイズ: <strong id="svgSize">200 × 200 px</strong><br>
+    現在の scale: <strong id="scaleVal"></strong>
+  </p>
+</div>
+
+<svg id="mysvg" width="200" height="200" viewBox="0 0 100 100">
+  <!-- 背景の格子 -->
+  <defs>
+    <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+      <rect width="10" height="10" fill="white" />
+      <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#ddd" stroke-width="0.5" />
+    </pattern>
+  </defs>
+  <rect x="0" y="0" width="100" height="100" fill="url(#grid)" />
+
+  <!-- メインの図形 -->
+  <rect x="10" y="10" width="80" height="80" fill="#6fb3ff" stroke="#1e88e5" stroke-width="2" />
+  <circle cx="50" cy="50" r="30" fill="rgba(255,0,0,0.3)" stroke="red" stroke-width="2" />
+</svg>
+
+<script>
+const svg = document.getElementById('mysvg');
+const zoom = document.getElementById('zoom');
+const panX = document.getElementById('panX');
+const panY = document.getElementById('panY');
+
+const zoomVal = document.getElementById('zoomVal');
+const panXVal = document.getElementById('panXVal');
+const panYVal = document.getElementById('panYVal');
+const scaleVal = document.getElementById('scaleVal');
+
+function updateViewBox() {
+  const vbW = Number(zoom.value);
+  const vbH = Number(zoom.value); // 正方形に保つ
+  const minX = Number(panX.value);
+  const minY = Number(panY.value);
+
+  // SVGのwidth/height（px）取得
+  const svgCSSWidth = svg.clientWidth;
+  const svgCSSHeight = svg.clientHeight;
+
+  // scale計算（横方向のみ表示）
+  const scale = (svgCSSWidth / vbW).toFixed(2);
+
+  // viewBox 更新
+  svg.setAttribute('viewBox', `${minX} ${minY} ${vbW} ${vbH}`);
+
+  // 表示更新
+  zoomVal.textContent = vbW;
+  panXVal.textContent = minX;
+  panYVal.textContent = minY;
+  scaleVal.textContent = `1 単位 = ${scale} px`;
+}
+
+zoom.addEventListener('input', updateViewBox);
+panX.addEventListener('input', updateViewBox);
+panY.addEventListener('input', updateViewBox);
+
+updateViewBox();
+</script>
+
+</body>
+</html>
