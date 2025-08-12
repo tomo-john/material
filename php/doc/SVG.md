@@ -35,3 +35,52 @@
 | `<polygon>` | 多角形     | `points`                            |
 | `<path>`    | 複雑な図形 | `d`(コマンドでパス指定)             |
 
+## HTMLに埋め込む
+
+`<svg>`要素をHTMLにそのまま書くだけでOK。
+
+```
+<!-- インライン SVG -->
+<svg width="200" height="200" viewBox="0 0 100 100" role="img" aria-label="青い円">
+
+  <!-- 背景の薄い格子 -->
+  <rect x="0" y="0" width="100" height="100" fill="transparent" />
+
+  <!-- ここが円 -->
+  <circle cx="50" cy="50" r="40" fill="#6fb3ff" stroke="#1e88e5" stroke-width="3" />
+
+  <!-- 補助: 中心点の小さなマーク -->
+  <circle cx="50" cy="50" r="1.2" fill="#1e88e5" />
+</svg>
+```
+
+`<svg width="200" height="200" viewBox="0 0 100 100" role="img" aria-label="青い円">`
+
+- `<svg>`: SVG描写エリアの開始タグ
+- `width="" height=""`: HTML上で表示される大きさ(ピクセル単位)
+- `viewBox="0 0 100 100"`: SVG内部の座標系を指定(左上が`(0,0)`、右下が`(100,100)`になる)
+- `role=img`: スクリーンリーダーにこれは画像ですと伝えるためのアクセシビリティ属性
+- `aria-label=""`: 音声読み上げなどで使う画像の説明文
+
+`<rect x="0" y="0" width="100" height="100" fill="transparent" />`
+
+- `<rect>`: 四角形を描くタグ
+- `x="0" y="0"`: 左上の位置(内部座標系の原点)
+- `width="100" height="100"`: 四角形の幅と高さ
+- `fill="transparent"`: 透明塗りつぶし(実際は何も見えないが、座標の確認や背景用途で便利)
+
+`<circle cx="50" cy="50" r="40" fill="#6fb3ff" stroke="#1e88e5" stroke-width="3" />`
+
+- `<circle>`: 円を描くタグ
+- `cx="50" cy="50"`: 円の中心座標(viewBoxの真ん中)
+- `r="40"`: 半径(座標系の単位)
+- `fill`: 塗りつぶしの色
+- `stroke`: 輪郭線の色
+- `stroke-width`: 輪郭線の太さ
+
+`<circle cx="50" cy="50" r="1.2" fill="#1e88e5" />`
+
+- 小さな円(中心マーク)
+- 中心の位置を視覚的に確認するための目印
+- 半径が小さいので点みたいに見える
+
