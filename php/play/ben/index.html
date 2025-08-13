@@ -17,11 +17,14 @@
                 </clipPath>
             </defs>
 
-            <circle class="venn-diagram" cx="100" cy="100" r="75" />
-            
-            <circle class="venn-diagram" cx="180" cy="100" r="75" />
-
-            <circle class="and" cx="180" cy="100" r="75" clip-path="url(#clip-circle1)" />
+            <!-- 塗り専用の円(枠線なし)-->
+            <circle class="fill-a" cx="100" cy="100" r="75" />
+            <circle class="fill-b" cx="180" cy="100" r="75" />
+            <circle class="fill-and" cx="180" cy="100" r="75" clip-path="url(#clip-circle1)" />
+            <!-- 枠線専用の円(塗りなし)-->
+            <circle class="stroke-a" cx="100" cy="100" r="75" />
+            <circle class="stroke-b" cx="180" cy="100" r="75" />
+            <circle class="stroke-and" cx="180" cy="100" r="75" clip-path="url(#clip-circle1)" />
         </svg>
 
         <div class="button-group">

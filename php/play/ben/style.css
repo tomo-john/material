@@ -14,25 +14,27 @@ body {
     gap: 20px;
 }
 
-/* SVGの円の枠線のスタイル */
-.venn-diagram {
+/* 塗り専用円の基本スタイル */
+.fill-a, .fill-b, .fill-and {
+    stroke: none;
+    fill: transparent;
+}
+
+/* 枠線専用円の基本スタイル */
+.stroke-a, .stroke-b, .stroke-and {
+    fill: none;
     stroke: black;
     stroke-width: 2;
-    fill: none; /* 塗りつぶしは無し */
 }
 
-/* 重なり部分の初期スタイル(塗りつぶし無し) */
-.and {
-    fill: none;
-}
-
-/* ANDボタン押されたときに追加されるクラス */
-.show-and .and {
+/* ANDボタン押されたとき */
+.show-and .fill-and {
     fill: #ffe4c4;
 }
 
-/* ORボタン押されたときに追加されるクラス */
-.show-or .venn-diagram {
+/* ORボタン押されたとき */
+.show-or .fill-a,
+.show-or .fill-b {
     fill: #ffd1dc;
 }
 
