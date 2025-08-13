@@ -21,14 +21,19 @@ body {
     fill: none; /* 塗りつぶしは無し */
 }
 
-/* 重なり部分の初期スタイル（塗りつぶし無し） */
-.intersection {
+/* 重なり部分の初期スタイル(塗りつぶし無し) */
+.and {
     fill: none;
 }
 
-/* JavaScriptでクラスが追加されたときに、重なり部分に色を付ける */
-.show-intersection .intersection {
+/* ANDボタン押されたときに追加されるクラス */
+.show-and .and {
     fill: #ffe4c4;
+}
+
+/* ORボタン押されたときに追加されるクラス */
+.show-or .venn-diagram {
+    fill: #ffd1dc;
 }
 
 /* ボタンのスタイル */
