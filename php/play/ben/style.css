@@ -31,6 +31,7 @@ body {
 .fill-a, .fill-b, .fill-and {
     stroke: none;
     fill: transparent;
+    transition: fill 0.3s ease;
 }
 
 /* 枠線専用円の基本スタイル */
@@ -49,6 +50,16 @@ body {
 .show-or .fill-a,
 .show-or .fill-b {
     fill: #ffd1dc;
+}
+
+/* XORボタン押されたとき */
+.show-xor .fill-a,
+.show-xor .fill-b {
+    fill: #ffd1dc;
+}
+
+.show-xor .fill-and {
+    fill: #f0f0f0;
 }
 
 /* ボタンのスタイル */
