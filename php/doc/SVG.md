@@ -35,96 +35,46 @@
 | `<polygon>` | 多角形     | `points`                            |
 | `<path>`    | 複雑な図形 | `d`(コマンドでパス指定)             |
 
-## HTMLに埋め込む
+## HTMLサンプル
 
 `<svg>`要素をHTMLにそのまま書くだけでOK。
 
 ```
-<!-- インライン SVG -->
-<svg width="200" height="200" viewBox="0 0 100 100" role="img" aria-label="青い円">
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>svg test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-  <!-- 背景の薄い格子 -->
-  <rect x="0" y="0" width="100" height="100" fill="transparent" />
+  <svg id="venn"width="1200"height="900">
+    <rect class="rect" x="100" y="100" width="100" height="100"/>
+    <rect class="rect" x="200" y="200" width="100" height="100"/>
+    <rect class="rect" x="300" y="300" width="100" height="100"/>
+    <rect class="john" x="400" y="400" width="100" height="100"/>
+    <circle class="circle" cx="450" cy="450" r="50" />
+  </svg>
 
-  <!-- ここが円 -->
-  <circle cx="50" cy="50" r="40" fill="#6fb3ff" stroke="#1e88e5" stroke-width="3" />
-
-  <!-- 補助: 中心点の小さなマーク -->
-  <circle cx="50" cy="50" r="1.2" fill="#1e88e5" />
-</svg>
+</body>
+</html>
 ```
 
-`<svg width="200" height="200" viewBox="0 0 100 100" role="img" aria-label="青い円">`
+`<svg>`のwidth/heightはキャンバスの大きさを決めるイメージ。
 
-- `<svg>`: SVG描写エリアの開始タグ
-- `width="" height=""`: HTML上で表示される大きさ(ピクセル単位)
-- `viewBox="0 0 100 100"`: SVG内部の座標系を指定(左上が`(0,0)`、右下が`(100,100)`になる)
-- `role=img`: スクリーンリーダーにこれは画像ですと伝えるためのアクセシビリティ属性
-- `aria-label=""`: 音声読み上げなどで使う画像の説明文
+- `width="1200" height="900"` => 横1200px x 縦900pxの描画領域を用紙
+- この中に描く要素(circle, rect, path)は全部この領域内の座標系で置かれる
+- 左上が(0,0)、右下が(1200,900)
 
-`<rect x="0" y="0" width="100" height="100" fill="transparent" />`
+## SVGのCSS
 
-- `<rect>`: 四角形を描くタグ
-- `x="0" y="0"`: 左上の位置(内部座標系の原点)
-- `width="100" height="100"`: 四角形の幅と高さ
-- `fill="transparent"`: 透明塗りつぶし(実際は何も見えないが、座標の確認や背景用途で便利)
+デフォルト値は、`fill: black;`, `stroke: none`なので真っ黒の塗りつぶしの図形が表示される。
 
-`<circle cx="50" cy="50" r="40" fill="#6fb3ff" stroke="#1e88e5" stroke-width="3" />`
-
-- `<circle>`: 円を描くタグ
-- `cx="50" cy="50"`: 円の中心座標(viewBoxの真ん中)
-- `r="40"`: 半径(座標系の単位)
-- `fill`: 塗りつぶしの色
-- `stroke`: 輪郭線の色
-- `stroke-width`: 輪郭線の太さ
-
-`<circle cx="50" cy="50" r="1.2" fill="#1e88e5" />`
-
-- 小さな円(中心マーク)
-- 中心の位置を視覚的に確認するための目印
-- 半径が小さいので点みたいに見える
-
----
-
-# memo
-
-```
-<svg id="interactive-venn" width="300" height="200">
-    <defs>
-        <clipPath id="clip-circle1">
-            <circle cx="100" cy="100" r="75" />
-        </clipPath>
-    </defs>
-
-    <circle class="venn-diagram" cx="100" cy="100" r="75" />
-    
-    <circle class="venn-diagram" cx="180" cy="100" r="75" />
-
-    <circle class="intersection" cx="180" cy="100" r="75" clip-path="url(#clip-circle1)" />
-</svg>
-```
-
-- `<defs>`: 定義専用領域 => ここに書いた要素は表示されないが、他の要素から参照できる
-- `<clipPath>` : クリッピングパス(切り抜き領域)を定義するタグ
-
-=> この`<clipPath>`内で定義した`<circle>`がクリップ形状として使用する円
-
-=> `clip-circle1`は、中心(100,100)・半径75pxの円形の切り抜きマスクになる
-
-```
-<circle class="venn-diagram" cx="100" cy="100" r="75" />
-<circle class="venn-diagram" cx="180" cy="100" r="75" />
-```
-
-中心(100,100)が左の円で中心(180,100)が右側の円で、左の円と重なっている。
-
-```
-<circle class="intersection" cx="180" cy="100" r="75" clip-path="url(#clip-circle1)" />
-```
-
-これが3つ目の円。中心(180,100)・半径75なので、右側の円と同じ。
-
-`clip-path="url(#clip-circle1)"`によって、表示が`clip-circle1`で定義された領域との交差部分だけになる。
-
-結果、この円は右の円のうち、左の円に含まれる部分だけが描写される。
+| プロパティ         | 例                       | 説明                           |
+|--------------------|--------------------------|--------------------------------|
+| `fill`             | `fill: red;`             | 塗りつぶしの色(`none`で透明 )  |
+| `stroke`           | `stroke: black;`         | 枠線の色                       |
+| `stroke-width`     | `stroke-width: 2;`       | 枠線の太さ                     |
+| `stroke-dasharray` | `stroke-dasharray: 5 3;` | 点線(5px線、3px隙間の繰り返し) |
 
