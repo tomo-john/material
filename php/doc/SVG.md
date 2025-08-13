@@ -84,3 +84,47 @@
 - 中心の位置を視覚的に確認するための目印
 - 半径が小さいので点みたいに見える
 
+---
+
+# memo
+
+```
+<svg id="interactive-venn" width="300" height="200">
+    <defs>
+        <clipPath id="clip-circle1">
+            <circle cx="100" cy="100" r="75" />
+        </clipPath>
+    </defs>
+
+    <circle class="venn-diagram" cx="100" cy="100" r="75" />
+    
+    <circle class="venn-diagram" cx="180" cy="100" r="75" />
+
+    <circle class="intersection" cx="180" cy="100" r="75" clip-path="url(#clip-circle1)" />
+</svg>
+```
+
+- `<defs>`: 定義専用領域 => ここに書いた要素は表示されないが、他の要素から参照できる
+- `<clipPath>` : クリッピングパス(切り抜き領域)を定義するタグ
+
+=> この`<clipPath>`内で定義した`<circle>`がクリップ形状として使用する円
+
+=> `clip-circle1`は、中心(100,100)・半径75pxの円形の切り抜きマスクになる
+
+```
+<circle class="venn-diagram" cx="100" cy="100" r="75" />
+<circle class="venn-diagram" cx="180" cy="100" r="75" />
+```
+
+中心(100,100)が左の円で中心(180,100)が右側の円で、左の円と重なっている。
+
+```
+<circle class="intersection" cx="180" cy="100" r="75" clip-path="url(#clip-circle1)" />
+```
+
+これが3つ目の円。中心(180,100)・半径75なので、右側の円と同じ。
+
+`clip-path="url(#clip-circle1)"`によって、表示が`clip-circle1`で定義された領域との交差部分だけになる。
+
+結果、この円は右の円のうち、左の円に含まれる部分だけが描写される。
+
