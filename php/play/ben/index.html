@@ -8,26 +8,28 @@
 <body>
     <div class="container">
         <h1>ベン図シュミレーター 🐶</h1>
-
-        <svg id="venn" width="300" height="200">
+        
+        <!-- キャンパスの大きさ -->
+        <svg id="venn" width="600" height="300">
+                        
             <defs>
                 <clipPath id="clip-circle1">
-                    <circle cx="100" cy="100" r="75" />
+                    <circle cx="220" cy="150" r="125" />
                 </clipPath>
             </defs>
             
             <!-- 枠 -->
-            <rect class="fill-rect" width="280" height="200" />
-            <rect class="stroke-rect" width="280" height="200" />
+            <rect class="fill-rect" width="600" height="300" />
+            <rect class="stroke-rect" width="600" height="300" />
 
             <!-- 塗り専用の円(枠線なし)-->
-            <circle class="fill-a" cx="100" cy="100" r="75" />
-            <circle class="fill-b" cx="180" cy="100" r="75" />
-            <circle class="fill-and" cx="180" cy="100" r="75" clip-path="url(#clip-circle1)" />
+            <circle class="fill-a" cx="220" cy="150" r="125" />
+            <circle class="fill-b" cx="380" cy="150" r="125" />
+            <circle class="fill-and" cx="380" cy="150" r="125" clip-path="url(#clip-circle1)" />
             <!-- 枠線専用の円(塗りなし)-->
-            <circle class="stroke-a" cx="100" cy="100" r="75" />
-            <circle class="stroke-b" cx="180" cy="100" r="75" />
-            <circle class="stroke-and" cx="180" cy="100" r="75" clip-path="url(#clip-circle1)" />
+            <circle class="stroke-a" cx="220" cy="150" r="125" />
+            <circle class="stroke-b" cx="380" cy="150" r="125" />
+            <circle class="stroke-and" cx="380" cy="150" r="125" clip-path="url(#clip-circle1)" />
         </svg>
 
         <div class="button-group">
