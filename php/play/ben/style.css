@@ -12,6 +12,19 @@ body {
     align-items: center;
     min-height: 100vh;
     gap: 20px;
+    border: 1px solid #ccc;
+}
+
+/* 枠 */
+.fill-rect {
+    stroke: none;
+    fill: transparent;
+}
+
+.stroke-rect {
+    fill: none;
+    stroke: black;
+    stroke-width: 2;
 }
 
 /* 塗り専用円の基本スタイル */
@@ -29,7 +42,7 @@ body {
 
 /* ANDボタン押されたとき */
 .show-and .fill-and {
-    fill: #ffe4c4;
+    fill: #ffd1dc;
 }
 
 /* ORボタン押されたとき */
@@ -47,7 +60,16 @@ body {
 button {
     padding: 10px 20px;
     font-size: 16px;
+    color: #333;
+    background: #fff;
     cursor: pointer;
-    border: 1px solid #ccc;
+    border: 1px solid #333;
     border-radius: 5px;
+    transition: all 0.5s 0s ease;
 }
+
+button:hover {
+    background: #333;
+    color: #fff;
+}
+

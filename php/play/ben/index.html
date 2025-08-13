@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <div class="container">
         <h1>ベン図シュミレーター 🐶</h1>
 
@@ -16,6 +15,10 @@
                     <circle cx="100" cy="100" r="75" />
                 </clipPath>
             </defs>
+            
+            <!-- 枠 -->
+            <rect class="fill-rect" width="280" height="200" />
+            <rect class="stroke-rect" width="280" height="200" />
 
             <!-- 塗り専用の円(枠線なし)-->
             <circle class="fill-a" cx="100" cy="100" r="75" />
@@ -30,7 +33,9 @@
         <div class="button-group">
             <button id="and-button">AND</button>
             <button id="or-button">OR</button>
-            <button id="reset-button">リセット</button>
+        </div>
+        <div class="button-group">
+            <button id="reset-button">リセット🐶</button>
         </div>
     </div>
 
