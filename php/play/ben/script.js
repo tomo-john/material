@@ -2,36 +2,47 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     // HTMLから操作したい要素を取得
+    const aButton = document.getElementById('a-button');
+    const bButton = document.getElementById('b-button');
     const andButton = document.getElementById('and-button');
     const orButton = document.getElementById('or-button');
     const xorButton = document.getElementById('xor-button');
     const resetButton = document.getElementById('reset-button');
     const svgElement = document.getElementById('venn');
 
-    // ANDボタンがクリックされたときの処理
+    // Aボタン
+    aButton.addEventListener('click', function() {
+        svgElement.classList.remove('show-a', 'show-b', 'show-and', 'show-or', 'show-xor');
+        svgElement.classList.add('show-a');
+    });
+
+    // Bボタン
+    bButton.addEventListener('click', function() {
+        svgElement.classList.remove('show-a', 'show-b', 'show-and', 'show-or', 'show-xor');
+        svgElement.classList.add('show-b');
+    });
+
+    // ANDボタン
     andButton.addEventListener('click', function() {
-        // 不要なクラスを削除
-        svgElement.classList.remove('show-or', 'show-xor');
-        // SVG要素に 'show-and' というクラスを追加する
+        svgElement.classList.remove('show-a', 'show-b', 'show-and', 'show-or', 'show-xor');
         svgElement.classList.add('show-and');
     });
 
-    // ORボタンがクリックされたときの処理
+    // ORボタン
     orButton.addEventListener('click', function() {
-        svgElement.classList.remove('show-and', 'show-xor');
+        svgElement.classList.remove('show-a', 'show-b', 'show-and', 'show-or', 'show-xor');
         svgElement.classList.add('show-or');
     });
 
-    // XORボタンがクリックされたときの処理
+    // XORボタン
     xorButton.addEventListener('click', function() {
-        svgElement.classList.remove('show-and', 'show-or');
+        svgElement.classList.remove('show-a', 'show-b', 'show-and', 'show-or', 'show-xor');
         svgElement.classList.add('show-xor');
     });
 
-    // 「リセット」ボタンがクリックされたときの処理
+    // 「リセット」ボタン
     resetButton.addEventListener('click', function() {
-        // SVG要素から不要なクラスを削除する
-        svgElement.classList.remove('show-and', 'show-or', 'show-xor');
+        svgElement.classList.remove('show-a', 'show-b', 'show-and', 'show-or', 'show-xor');
     });
     
 });

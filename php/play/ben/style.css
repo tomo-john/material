@@ -41,18 +41,28 @@ body {
     stroke-width: 2;
 }
 
-/* ANDボタン押されたとき */
+/* Aボタン */
+.show-a .fill-a {
+    fill: #ffd1dc;
+}
+
+/* Bボタン */
+.show-b .fill-b {
+    fill: #ffd1dc;
+}
+
+/* ANDボタン */
 .show-and .fill-and {
     fill: #ffd1dc;
 }
 
-/* ORボタン押されたとき */
+/* ORボタン */
 .show-or .fill-a,
 .show-or .fill-b {
     fill: #ffd1dc;
 }
 
-/* XORボタン押されたとき */
+/* XORボタン */
 .show-xor .fill-a,
 .show-xor .fill-b {
     fill: #ffd1dc;
