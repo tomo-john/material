@@ -13,6 +13,7 @@
 - [関数](function.md) : 関連関連
 - [コーディング](coding.md) : プログラムコーディング関連
 - [ソート](sort.md) : データの整列
+- [XML](xml.md) : XML
 
 ---
 
