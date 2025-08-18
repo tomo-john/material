@@ -28,3 +28,19 @@ OSが主記憶の領域の獲得と解放を繰り返していくと、細切れ
 
 主記憶装置の容量を増やすための基盤。
 
+- SIMM(Single Inline Memory Module) : 古い規格
+- DIMM(Dual Inline Memory Module) : 現在主流、サーバーやデスクトップPC
+- SO-DIMM(Small Outline DIMM) : ノートPC用小型版DIMM
+
+## ECCメモリ
+
+Error Checking and Correcting Memory
+
+メモリのデータに誤り(ビット反転など)が起きたときに、エラーを検出・訂正できる機能を持ったメモリ。
+
+主にサーバーやワークステーションで使用される。(信頼性が大事なので)
+
+メモリ内のデータに冗長ビット(パリティビットやECCビット)を付けて管理。
+
+1ビットの誤りは訂正、2ビットの誤りは検出することができる仕組み。(ハミング符号などを利用)
+
