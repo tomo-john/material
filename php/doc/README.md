@@ -24,4 +24,5 @@
 ## Other
 
 - [SVG](SVG.md) : Scalable Vector Graphics
+- [font_awesome](font_awesome.md) : アイコン
 
