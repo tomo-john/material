@@ -19,6 +19,7 @@
 - [HDLC手順](HDLC.md) : High-Level Data Link Control
 - [SDN](SDN.md) : Software-Defined Networking
 - [VoIP](VoIP.md) : Voice over Internet Protocol
+- [xxキャスト](cast.md) : マルチキャスト・ユニキャスト・ブロードキャスト
 - [ネットワーク](network.md) : 基本的なこと
 
 ---
