@@ -2,16 +2,14 @@ body {
   font-family: "Arial", sans-serif;
 }
 
-h1 {
-  color: #2c7be5;
+.container {
+  display: flex;
+  border: solid 1px;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
+.icon-dog {
+  padding: 5px;
+  color: #deb887;
 }
 
-li {
-  margin: 5px 0;
-  font-weight: bold;
-}
+
