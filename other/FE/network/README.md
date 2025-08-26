@@ -14,6 +14,7 @@
 - [class](class.md) : IPアドレスのクラス
 - [VPN](VPN.md) : VPN・インターネットVPN
 - [IPsec](IPsec.md) : IP Security プロトコル
+- [PPP](ppp.md) : ぴーぴーぴー
 - [ウェルノウンポート](well_known_port.md) : ウェルノウンポート一覧
 - [スプリッタ](splitter.md) : ADSL回線
 - [HDLC手順](HDLC.md) : High-Level Data Link Control
