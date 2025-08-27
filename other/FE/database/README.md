@@ -5,6 +5,7 @@
 - [正規化](normalization.md)
 - [データベース管理システム](dbms.md)
 - [SQL(データ操作)](sql.md)
+- [LIKE句](like.md)
 
 
 - [データ関連用語](data.md)
