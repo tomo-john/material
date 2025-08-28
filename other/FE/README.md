@@ -26,6 +26,7 @@ Fundamental Information Technology Engineer Examination
 | [経営戦略](./management_strategy/)                | ストラテジ                       |
 | [企業と法務](./corporate_legal/)                  | 企業活動・法務                   |
 | [その他ドキュメント](./doc/)                      | いろいろ :desert_island:         |
+| [科目B](./B/)                                     | 科目B関連 :skull_and_crossbones: |  
 | [TIL](./til/)                                     | Today I learned :rabbit:         |
 | [イメージ](./images/)                             | 画像置き場 :cow2:                |           
 | [Python](./python/)                               | パイソンさわってみた :dog:       |
