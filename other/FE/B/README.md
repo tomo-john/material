@@ -5,4 +5,5 @@
 ---
 
 - [for](for.md)
+- [other](other.md)
 
