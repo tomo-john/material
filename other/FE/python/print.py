@@ -36,3 +36,7 @@ print(f"円周率は {pi:.2f} です")
 age = 11
 print("じょんは来年、" + str(age) + "歳です")
 
+# データ型の確認
+print(type("Python"))
+print(type(123))
+
