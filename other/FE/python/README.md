@@ -28,6 +28,7 @@ Pythonはデータ分析、AI・機械学習、Web開発などなどいろんな
 | [print.py](print.py)                 | print文                  |
 | [for.py](for.py)                     | for文(基本)              |
 | [dog.py](dog.py)                     | クラスとインスタンス(初) |
+| [write.py](write.py)                 | ファイル書き込み         |
 | [test.py](test.py)                   | テスト用                 |
 
 ### アルゴリズム系
