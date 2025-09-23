@@ -6,7 +6,7 @@
 - [データベース管理システム](dbms.md)
 - [SQL(データ操作)](sql.md)
 - [LIKE句](like.md)
-
+- [サブクエリ](sub_query.md)
 
 - [データ関連用語](data.md)
 - [スキーマ](schema.md)
