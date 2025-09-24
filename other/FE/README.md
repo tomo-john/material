@@ -6,7 +6,7 @@ Fundamental Information Technology Engineer Examination
 
 :dog: 2025/12/31までに受験 :dog:
 
-- 学習期間 : 6 months
+- 学習期間 : 6 months(予定)
 - 学習開始: 20250601〜
 
 ## :label: 目次
@@ -25,6 +25,7 @@ Fundamental Information Technology Engineer Examination
 | [システム戦略](./system_strategy/)                | 情報システム戦略・企画・要件定義 |
 | [経営戦略](./management_strategy/)                | ストラテジ                       |
 | [企業と法務](./corporate_legal/)                  | 企業活動・法務                   |
+| [AI](./AI/)                                       | AI関連
 | [その他ドキュメント](./doc/)                      | いろいろ :desert_island:         |
 | [科目B](./B/)                                     | 科目B関連 :skull_and_crossbones: |  
 | [TIL](./til/)                                     | Today I learned :rabbit:         |
