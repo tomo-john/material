@@ -1,14 +1,24 @@
-sum = 0
 
-for i in range(1, 6):
-  for j in range(1, i+1):
-    if (i + j) % 2 ==0:
-      sum = sum + (i * j)
-
-print(sum)
-
+nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 animals = ["dog", "rabbit", "bear"]
 
-for i in range(len(animals)):
-  print(f"{i}番目は{animals[i]}")
+print(animals[0])
+print(animals[-1])
+print(nums[1:4])
+print(len(animals))
+
+print()
+
+name = "じょん"
+level = 99
+
+print("名前:", name, "レベル:", level,"すごい犬")
+
+print(f"私の犬の名前は{name}で、現在{level}レベルです。")
+
+total = 0
+for num in nums:
+  print(num)
+  total += num
+print(f"合計: {total}")
 
