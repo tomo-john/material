@@ -10,10 +10,10 @@
 
 ## システム戦略
 
-- [情報システム戦略](information_system_strategy.md) : 全体最適化・EA
-- [業務プロセス](business_process.md) : BPR・BPM・BPO・RPA
-- [ソリューションビジネス](solution_business.md) : SOA・IaaS・PaaS・SaaS
-- [システムの活用](using_system.md) : BI・ビックデータ・デジタルリテラシー
+- [情報システム戦略](information_system_strategy.md)
+- [業務プロセス](business_process.md)
+- [ソリューションビジネス](solution_business.md)
+- [システムの活用](using_system.md)
 
 ## システム企画
 
@@ -21,6 +21,6 @@
 
 :dog: 企画 => 要件定義 => 開発 => 運用 => 保守 :dog:
 
-- [企画と要件定義](pr.md) : 企画プロセス・システム化計画・ROI
-- [調達](sourcing.md) : RFI・RFP・CSR調達・グリーン調達
+- [企画と要件定義](pr.md)
+- [調達](sourcing.md)
 
