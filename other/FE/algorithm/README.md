@@ -4,16 +4,15 @@
 
 ---
 
-- [プログラムの性質](program.md) : リカーシブ・リエントラント・リロケータブル・リユーザブル
-- [Java](Java.md) : Javaを含む用語たち
-- [オーダー量](order.md) : オーダー量・log 
-- [2分探索法](binary_search.md) : バイナリサーチ
-- [線形探索法](linear_search.md) : リニアサーチ
-
-- [関数](function.md) : 関連関連
-- [コーディング](coding.md) : プログラムコーディング関連
-- [ソート](sort.md) : データの整列
-- [XML](xml.md) : XML
+- [プログラムの性質](program.md)
+- [Java](Java.md)
+- [オーダー量](order.md)
+- [2分探索法](binary_search.md)
+- [線形探索法](linear_search.md)
+- [関数](function.md)
+- [コーディング](coding.md)
+- [ソート](sort.md)
+- [XML](xml.md)
 
 ---
 
