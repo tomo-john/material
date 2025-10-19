@@ -4,16 +4,16 @@
 
 ---
 
-- [データの単位](data.md) : データの単位・小数
-- [小数部](decimal.md) : 有限小数・無限小数
-- [補数](complement.md) : 負の2進数・2の補数
-- [シフト演算](shift_operation.md) : 論理シフト・算術シフト・シフト演算での計算
-- [論理演算系めも](logical_operation.md) : ビット操作・真理値表・加算器
-- [論理演算系画像](logical_operation_img.md) : 論理演算系の画像(図)
-- [計算式](reverse_polish_notation.md) : 逆ポーランド記法とスタック
-- [オートマン](automan.md) : 状態遷移図・状態遷移表
-- [AI](AI.md) : ニュートラルネットワーク・教師ありなし学習
-- [その他](other.md) : その他いろいろ :dog:
+- [データの単位](data.md)
+- [小数部](decimal.md)
+- [補数](complement.md)
+- [シフト演算](shift_operation.md)
+- [論理演算系めも](logical_operation.md)
+- [論理演算系画像](logical_operation_img.md)
+- [計算式](reverse_polish_notation.md)
+- [オートマン](automan.md)
+- [AI](AI.md)
+- [その他](other.md)
 
 ---
 
