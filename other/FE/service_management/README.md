@@ -6,12 +6,12 @@
 
 ---
 
-- [ITIL](ITIL.md) : ITIL
-- [サービスレベル管理(SLM)](SLM.md) : SLM, SLA, 可用性管理
-- [サービスデスク](service_desk.md) : 既知の誤り・インシデント管理・ローカルサービスデスク
-- [ファシリティマネジメント](facility.md) : 設備(建物)・サージ
-- [システム監査](system_audit.md) : システム監査と情報セキュリティ監査の違い
-- [内部統制](internal_control.md) : コーポレートガバナンス(企業統治)
+- [ITIL](ITIL.md)
+- [サービスレベル管理(SLM)](SLM.md)
+- [サービスデスク](service_desk.md)
+- [ファシリティマネジメント](facility.md)
+- [システム監査](system_audit.md)
+- [内部統制](internal_control.md)
 
 ## 参考URL
 
