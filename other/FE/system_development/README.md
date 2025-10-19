@@ -8,15 +8,15 @@
 
 ---
 
-- [SLCP](slcp.md) : 企画・要件定義・開発・運用・保守
-- [DFD](dfd.md) : データフローダイアグラム
-- [モジュール](module.md) : モジュール結合度
-- [オブジェクト指向](object.md) : UML・汎化と特化
-- [テスト](test.md) : ホワイトボックス・ブラックボックス
-- [ソフトウェア開発モデル](software.md) : ウォーターフォールモデル・アジャイル開発・スクラム
+- [SLCP](slcp.md)
+- [DFD](dfd.md)
+- [モジュール](module.md)
+- [オブジェクト指向](object.md)
+- [テスト](test.md)
+- [ソフトウェア開発モデル](software.md)
 
 ---
 
-- [アジャイル開発](agile_development.md) : アジャイル開発
-- [UML図](uml.md) : オブジェクト指向でよく使用されるやつ
+- [アジャイル開発](agile_development.md)
+- [UML図](uml.md)
 
