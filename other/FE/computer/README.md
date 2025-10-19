@@ -4,21 +4,20 @@
 
 ---
 
-- [CPU](cpu.md) : クロック周波数・MIPS
-- [MIPS](mips.md) : MIPS
-- [主記憶装置](memory.md) : 主記憶装置・レジスタ
-- [ヒット率](hit.md) : ヒット率(キャッシュメモリ)
-- [入出力インターフェース](input_output.md) : USB・dpi
-- [システム構成](system_coonfiguration.md) : フォールトトレラント・RAID
-- [稼働率](uptime.md) : MTBF・MTTR・RASIS
-- [OS](os.md) : OSの4つの機能・その他OS関連
-- [PCM](pcm.md) : PCM
-
-- [address](address.md) : アドレス指定方式
-- [disk](disk.md) : 磁気ディスク
-- [SATA](sata.md) : シリアルATA
-- [SDカード](sd_card.md) : SDカード
-- [ポーリング制御](polling.md) : ポーリング制御
+- [CPU](cpu.md)
+- [MIPS](mips.md)
+- [主記憶装置](memory.md)
+- [ヒット率](hit.md)
+- [入出力インターフェース](input_output.md)
+- [システム構成](system_coonfiguration.md)
+- [稼働率](uptime.md)
+- [OS](os.md)
+- [PCM](pcm.md)
+- [address](address.md)
+- [disk](disk.md)
+- [SATA](sata.md)
+- [SDカード](sd_card.md)
+- [ポーリング制御](polling.md)
 
 ---
 
