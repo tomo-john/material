@@ -12,11 +12,14 @@ Pythonはデータ分析、AI・機械学習、Web開発などなどいろんな
 
 ## 目次
 
-| ファイル               | 説明                     |
-|------------------------|--------------------------|
-| [python.md](python.md) | python基礎知識(いろいろ) |
-| [print.md](print.md)   | print関連                |
-| [list.md](list.md)     | 配列(リスト)関連         |
+| ファイル                       | 説明                     |
+|--------------------------------|--------------------------|
+| [python.md](python.md)         | pythonとは               |
+| [print.md](print.md)           | print関連                |
+| [list.md](list.md)             | 配列(リスト)関連         |
+| [dictionary.md](dictionary.md) | 辞書                     |
+| [if.md](if.md)                 | if(条件分岐)             |
+| [for.dm](for.md)               | for(繰り返し)            |
 
 ## Pythonスクリプト
 
