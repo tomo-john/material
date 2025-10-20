@@ -23,25 +23,5 @@ Pythonはデータ分析、AI・機械学習、Web開発などなどいろんな
 
 ## Pythonスクリプト
 
-### 基礎構文系
-
-| ファイル                             | 説明                     |
-|--------------------------------------|--------------------------|
-| [hello_python.py](hello_python.py)   | 初めの1歩                |
-| [print.py](print.py)                 | print文                  |
-| [for.py](for.py)                     | for文(基本)              |
-| [dog.py](dog.py)                     | クラスとインスタンス(初) |
-| [write.py](write.py)                 | ファイル書き込み         |
-| [test.py](test.py)                   | テスト用                 |
-
-### アルゴリズム系
-
-| ファイル                                   | 説明                     |
-|--------------------------------------------|--------------------------|
-| [fizzbuzz.py](fizzbuzz.py)                 | FizzBuzz                 |
-| [digi_to_bin.py](digi_to_bin.py)           | 10進数 => 2進数          |
-| [binary_converter.py](binary_converter.py) | 10進数 => 2進数(引数)    |
-| [binary_search.py](binary_search.py)       | 2分探索法                |
-| [bubble_sort.py](bubble_sort.py)           | バブルソート             |
-| [linear_search.py](linear_search.py)       | 線形探索法(リニアサーチ) |
+- [scp](./scp/)
 
