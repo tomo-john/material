@@ -23,3 +23,8 @@ print(my_dog_info)
 del my_dog_info["おもちゃ"]
 print(my_dog_info)
 
+# for文
+
+for key, value in my_dog_info.items():
+  print(f"キー: {key}, 値: {value}")
+
