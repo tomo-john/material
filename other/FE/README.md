@@ -9,6 +9,10 @@ Fundamental Information Technology Engineer Examination
 - 学習期間 : 6 months(予定)
 - 学習開始: 20250601〜
 
+## :dog: 受験日決定 :dog
+
+- 2025/11/1 10:00
+
 ## :label: 目次
 
 | ディレクトリ                                      | 内容                             |
