@@ -44,3 +44,9 @@ my_dog_info["レベル"] = 100
 del my_dog_info["おもちゃ"]
 ```
 
+## 辞書とfor文の組み合わせ
+
+- キーだけ : `for key in my_dog_info:`
+- 値だけ: `for value in my_dog_info.values():`
+- キーと値のペア: `for key, value in my_dog_info.items():`
+
