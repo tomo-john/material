@@ -19,7 +19,8 @@ Pythonはデータ分析、AI・機械学習、Web開発などなどいろんな
 | [list.md](list.md)             | 配列(リスト)関連         |
 | [dictionary.md](dictionary.md) | 辞書                     |
 | [if.md](if.md)                 | if(条件分岐)             |
-| [for.dm](for.md)               | for(繰り返し)            |
+| [for.md](for.md)               | for(繰り返し)            |
+| [def.md](def.md)               | 関数                     |
 
 ## Pythonスクリプト
 
