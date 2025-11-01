@@ -11,7 +11,7 @@ Fundamental Information Technology Engineer Examination
 
 ## :dog: 受験日決定 :dog
 
-- 2025/11/1 10:00
+- 2025/11/1 10:00 => pass :dog:
 
 ## :label: 目次
 
@@ -39,4 +39,15 @@ Fundamental Information Technology Engineer Examination
 ## :pushpin: プロジェクト管理
 
 [FE-Study](https://github.com/users/tomo-john/projects/2)
+
+---
+
+## 結果
+
+2025/11/1 10:00 受験
+
+- 科目A: 735
+- 科目B: 650
+
+=> pass :dog:
 
