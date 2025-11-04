@@ -2,17 +2,18 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>PHP最初の一歩🐶</title>
+  <title>test</title>
 </head>
 <body>
-  <h1>
+  <p>
     <?php
-      // コメント🐶
+      // ここはこめんと
       $name = "じょん";
       $age = 2;
-      echo "こんにちは、" . $name . "🐶!</br>";
-      echo "年齢は " . $age . " 歳だわん";
+      echo "私の名前は" . $name . "です。</br>";
+      echo "年齢は " . $age . " 歳です。</br>";
+      echo "私の名前は" . $name . "です。</br>年齢は" . $age . "歳です。";
     ?>
-  </h1>
+  </p>
 </body>
 </html>
