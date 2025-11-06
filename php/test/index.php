@@ -6,15 +6,10 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <p>
-    <?php
-      // ここはこめんと
-      $name = "じょん";
-      $age = 2;
-      echo "私の名前は" . $name . "です。</br>";
-      echo "年齢は " . $age . " 歳です。</br>";
-      echo "私の名前は" . $name . "です。</br>年齢は" . $age . "歳です。";
-    ?>
-  </p>
+  <form action="greeting.php" method="POST">
+    <label>お名前:</label>
+    <input type="text" name="name">
+    <input type="submit" value="あいさつする">
+  </form>
 </body>
 </html>
