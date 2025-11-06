@@ -1,9 +1,11 @@
 <?php
-$name = "じょん"; // グローバル変数
-
-function greet() {
-  global $name; // これで関数内でも使える
-  echo "こんにちわん、{$name}さん</br>";
+// static変数
+function counter() {
+  static $count = 0; // 初回だけ初期化される
+  $count++;
+  echo "count = $count</br>";
 }
 
-greet();
+counter(); // 1
+counter(); // 2
+counter(); // 3
