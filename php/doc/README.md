@@ -51,6 +51,7 @@
 | [演算子関連](./php/operator.md)                   | null合体演算子             |
 | [テンプレート構文](./php/template_syntax.md)      | HTMLとPHP混ぜるとき        |
 | [PHP関数](./php/php_function.md)                  | htmlspecialchars()とか     |
+| [POSTとGET](./php/post_get.md)                    | データの送る方法           |
 | [PHP組み込みWebサーバー](./php/php_server.md)     | `php -S`のやつ             |
 
 ## Laravel
