@@ -1,4 +1,5 @@
 # doc
+
 :dog: Web関連ドキュメント :dog:
 
 | 言語                        | Webでの役割              |
@@ -47,6 +48,9 @@
 | [スコープ](./php/scope.md)                        | 変数の有効範囲             |
 | [フォーム連携](./php/form.md)                     | POSTとバリデーション       |
 | [フォームの入力内容保持](./php/form_2.md)         | エラー時に再表示           |
+| [演算子関連](./php/operator.md)                   | null合体演算子             |
+| [テンプレート構文](./php/template_syntax.md)      | HTMLとPHP混ぜるとき        |
+| [PHP関数](./php/php_function.md)                  | htmlspecialchars()とか     |
 | [PHP組み込みWebサーバー](./php/php_server.md)     | `php -S`のやつ             |
 
 ## Laravel
