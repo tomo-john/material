@@ -6,5 +6,5 @@ PHPに限らずWeb関連なんでも :dog: :sparkles:
 - HTML
 - CSS
 - JavaScript
-- PHP
+- PHP / Laravel
 
