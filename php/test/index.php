@@ -6,27 +6,10 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h2>問合せフォームのサンプル</h2>
-
-  <!-- エラーがあれば受け取る -->
-  <?php
-  $errors = $_GET['errors'] ?? [];
-  $old = $_GET['old'] ?? [];
-  ?>
-  
-  <!-- エラーがあったときの処理 -->
-  <?php if (!empty($errors)): ?>
-    <div style="color:red;">
-      <ul>
-        <?php foreach ($errors as $e): ?>
-          <li><?=htmlspecialchars($e, ENT_QUOTES, 'UTF-8') ?></li>
-        <?php endforeach; ?>
-      </ul>
-    </div>
-  <?php endif; ?>
+  <h2>test🐶</h2>
 
   <!-- フォーム入力-->
-  <form action="form_receive.php" method="post">
+  <form action="receive.php" method="post">
     <label>ユーザー名:</label>
     <input type="text" name="name" value="<?= htmlspecialchars($old['name'] ?? '', ENT_QUOTES, 'UTF-8') ?>"><br><br>
 
