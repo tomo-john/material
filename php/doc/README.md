@@ -53,6 +53,8 @@
 | [テンプレート構文](./php/template_syntax.md)      | HTMLとPHP混ぜるとき        |
 | [PHP関数](./php/php_function.md)                  | htmlspecialchars()とか     |
 | [POSTとGET](./php/post_get.md)                    | データの送る方法           |
+| [フォーム(3ステップ)](./php/form_3step.md)        | 入力・確認・完了画面       |
+| [フォーム(session)](./php/form_session.md)        | Sessionで「戻る」          |
 | [PHP組み込みWebサーバー](./php/php_server.md)     | `php -S`のやつ             |
 
 ## Laravel
