@@ -56,6 +56,7 @@
 | [フォーム(3ステップ)](./php/form_3step.md)        | 入力・確認・完了画面       |
 | [フォーム(session)](./php/form_session.md)        | Sessionで「戻る」          |
 | [PHP組み込みWebサーバー](./php/php_server.md)     | `php -S`のやつ             |
+| [bin2hex](./php/bin2hex.md)                       | var_dumpとramdom_bytesも   |
 
 ## Laravel
 
