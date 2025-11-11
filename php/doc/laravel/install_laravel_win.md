@@ -1,4 +1,4 @@
-# Laravel
+# Laravelの教科書(バージョン12対応)
 
 ## PHPの役割
 
