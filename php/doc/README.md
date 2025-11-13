@@ -58,8 +58,10 @@
 | [ファイルアップロード](./php/upload.md)           | ファイルアップロードの基本 |
 | [ファイルアップロード変数](./php/file.md)         | `$_FILE`関連               |
 | [path操作](./php/path_op.md)                      | mkdir, basename            |
+| [ファイル読み書き](./php/write_read.md)           | `file_xxx_contents()`      |
 | [PHP組み込みWebサーバー](./php/php_server.md)     | `php -S`のやつ             |
 | [bin2hex](./php/bin2hex.md)                       | var_dumpとramdom_bytesも   |
+| [nl2br](./php/nl2br.md)                           | 改行文字に改行タグ         |
 
 ## Laravel
 
