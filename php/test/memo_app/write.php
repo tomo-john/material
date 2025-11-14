@@ -1,7 +1,23 @@
 <?php
-$file_name = htmlspecialchars($_POST['file_name'], ENT_QUOTES, 'UTF-8');
-$content = nl2br(htmlspecialchars($_POST['content'], ENT_QUOTES, 'UTF-8'));
+session_start();
 
-echo "保存フィアル名: " . $file_name . "<br>";
-echo "メモ内容:<br> " . $content . "<br>";
+$notices = [];
 
+$file_name = $_SESSION['data']['file_name'];
+$content = $_SESSION['data']['content'];
+unset($_SESSION['data']);
+
+$dir_name = "storage";
+if (!is_dir($dir_name)) {
+  mkdir($dir_name, 0777, true);
+}
+
+$destination = $dir_name . "/" . $file_name;
+
+file_put_contents($destination, $content);
+
+$notices[] = '書き込みが完了しました🐶';
+$_SESSION['notices'] = $notices;
+
+header('Location: index.php');
+exit;
