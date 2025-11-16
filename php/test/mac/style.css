@@ -1,2 +1,7 @@
 @charset "utf-8";
 
+input[type="submit"]:hover {
+  color: #fff;
+  background-color: #eb6100;
+}
+

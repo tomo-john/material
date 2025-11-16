@@ -11,7 +11,7 @@ if (!is_numeric($times)) {
 <html lang="js">
 <head>
   <meta charset="UTF-8">
-  <link ref="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
   <title>john app🐶</title>
 </head>
 <body>
@@ -21,7 +21,7 @@ if (!is_numeric($times)) {
     <label>input your name🐶:</label><br>
     <input type="text" name="name" placeholder="例: じょん"><br><br>
     <label>input times🐶:</label><br>
-    <input tyoe="text" name="times" lpaceholder="例: 10"><br><br>
+    <input type="text" name="times" placeholder="例: 10"><br><br>
     <input type="submit" value="go🐶"><br>
   </form>
   <hr>
