@@ -8,7 +8,7 @@ if (!is_numeric($times)) {
 ?>
 
 <!DOCTYPE html>
-<html lang="js">
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css">
