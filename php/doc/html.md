@@ -1,43 +1,110 @@
 # HTML
 
-## 基本タグ
+HyperText Markup Language
 
-| タグ        | 説明                                      |
-|-------------|-------------------------------------------|
-| `<h1>`      | heading : 見出し(h1〜h6)                  |
-| `<p>`       | paragraph : 段落(ひとかたまりの文章)      |
-| `<br>`      | break : 改行(閉じタグいらない)            |
-| `<ul>`      | unordered list(`<li>`)                    |
-| `<ol>`      | ordered list(`<li>`)                      |
-| `<dl>`      | description list(`<dt>`, `<dd>`)          |
-| `<a>`       | anchor : href属性でリンク先など           |
-| `<img>`     | image : src属性で画像ファイルの場所を指定 |
-| `<table>`   | table : thead, tbody, tr                  |
-| `<address>` | address : 連絡先や問い合わせ先など        |
+## 基本テンプレート
 
-### anchor
+```html
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  ...
+</head>
+<body>
+  ...
+<body>
+</html>
+```
 
-- `<a href="xxxx">` : リンク先の指定
-- `<a href="tel:080-XXXX-XXXX">` : 電話番号用のリンク
-- `<a href="xxxx" target="_blank">` : リンク先を別タブで開く
+1. `<!DOCTYPE html>`
 
-### table
+HTMLタグではなく、ブラウザに対するHTML文書である宣言。
 
-表をあらわすには複数のタグを組みわわせる。
+2. `<html lang="ja">`
 
-- 1. `<tabel>〜</table>`で1番外側を囲む
-- 2. 表の見出し行全体を`<thead>〜</thead>`、見出し行の各セルを`<th>`、内容全体を`<tbody>`で囲む
-- 3. 表の単一行は`<tr>`で囲む
+`<html>`で始まり、`</html>`で終わるまでがWebページ全体ですよという範囲を示す。
 
+`lang="ja"`の部分は言語(language)は日本語(Japanese)ですよという属性。
 
+3. `<head>`
 
-## テキストにニュアンスを与えるタグ
+`<head>`から`</head>`の部分はページそのものには表示されない裏方の設定情報を入れる場所。
 
-| タグ       | 説明                                                                                         |
-|------------|----------------------------------------------------------------------------------------------|
-| `<em>`     | 文章に強調のニュアンス
-| `<strong>` | 警告の文章など、緊急性・深刻性・重大性・非常に強い重要性など                                 |
-| `<mark>`   | 検索結果の文章内で関連性がある箇所(検索ワード)や引用文内で読者の注意をひきたい箇所など       |
-| `<i>`      | 心の中の声や技術用語・思考など、周りの文章とは質が違うことを表すのに使う                     |
-| `<b>`      | 記事のリード文やレビュー文中での商品名など、意味的な関連はつけないが注目させたいテキストなど |
+4. `<meta charset="UTF-8">`
+
+このファイルの文字はUTF-8で読込んでねという記述。
+
+5. `<link rel= ...>`
+
+`<link>`タグでは外部ファイルとを関連付ける記述。
+
+この例なら読込むCSSファイルを指定している。
+
+## headタグ
+
+### お決まりのやつ :dog:
+
+- CSS: `<link rel="stylesheet" href="...">`
+- JS: `<script src="...">`
+- ブラウザのタブに表示するタイトル: `<title>...</title>`
+
+### 他にも :dog: :dog:
+
+1. スマホ対応のおまじない。
+
+```
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
+
+スマホ画面の横幅(`device-width`)をページの横幅として使ってね。
+
+最初のズーム倍率(`intial-scale`)は1.0倍(=ズームなし)にしてねという意味。
+
+2. 検索結果の説明文
+
+```
+<meta name="description" content="このページは犬がWebアプリケーション開発を学ぶページです。">
+```
+
+この`content`に書いた文章が、Googleなどの検索表示でタイトル下に表示される説明文になる。
+
+3. OGPタグ(SNSシェアされたときの見た目)
+
+```
+<meta property="og:title" content="Webアプリケーション開発の基礎レッスン">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://example.com/index.php">
+<meta property="og:image" content="https://example.com/images/ogp.png">
+<meta property="og:description" content="Webアプリケーション開発の基礎を学ぶための練習ページです。">
+```
+
+`Open Graph Protocol`略してOGPと呼ばれる設定。
+
+サイトのURLがLINEやXなどのSNSでシェアされたとき:
+
+- `og:title`: どのタイトルを表示するか
+- `og:image`: どの画像を表示するか
+- `og:description`: どの説明文を表示するか
+
+...をSNS側に細かく指示するためのタグ。
+
+4. ファビコン
+
+```
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<!-- またはPNG画像など -->
+<link rel="icon" href="images/icon.png" type="image/png">
+```
+
+`<title>`タグで設定したタイトルの横に表示される小さな画像(アイコン)を指定。
+
+Favorite icon(お気に入りのアイコン)を略してファビコン。
+
+5. `<style>`タグと`<script>`タグ
+
+`link`や`src`で外部ファイルを読込む代わりにCSSやJSを直接書込むためのタグ。
+
+ちょっとしたテストの時とかに便利。
 
