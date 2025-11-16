@@ -1,5 +1,10 @@
 <?php
 $name = $_POST['name'] ?? '';
+$times = $_POST['times'] ?? '';
+
+if (!is_numeric($times)) {
+  $times = 1;
+}
 ?>
 
 <!DOCTYPE html>
@@ -14,12 +19,16 @@ $name = $_POST['name'] ?? '';
 
   <form action="index.php" method="post">
     <label>input your name🐶:</label><br>
-    <input type="text" name="name" placeholder="例: じょん">
+    <input type="text" name="name" placeholder="例: じょん"><br><br>
+    <label>input times🐶:</label><br>
+    <input tyoe="text" name="times" lpaceholder="例: 10"><br><br>
     <input type="submit" value="go🐶"><br>
   </form>
   <hr>
   <?php if (!empty($name)): ?>
-    <?php echo $name; ?>
+    <?php for ($i = 1; $i <= $times; $i++): ?>
+      <ul><li><?php echo $name; ?></li></ul>
+    <?php endfor; ?>
   <?php endif; ?>
 </body>
 </html>
