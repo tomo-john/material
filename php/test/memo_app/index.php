@@ -48,12 +48,12 @@ $files = glob('./storage/*');
   <?php endif; ?>
 
   <form action="confirm.php" method="post">
-    <label>保存ファイル名: </label>
-    <input type="text" name="file_name" placeholder="例: dog.txt" 
+    <label for="file_name">保存ファイル名: </label>
+    <input id="file_name" type="text" name="file_name" placeholder="例: dog.txt" 
           value="<?= htmlspecialchars($old_input['file_name'] ?? '', ENT_QUOTES, 'UTF-8'); ?>"><br><br>
 
-    <label>メモ:</label><br>
-    <textarea name="content" rows="20" cols="120" placeholder="ここにメモ入力してね🐶"><?php echo htmlspecialchars($old_input['content'] ?? '', ENT_QUOTES, 'UTF-8'); ?></textarea><br><br>
+    <label for="content">メモ:</label><br>
+    <textarea id="content" name="content" rows="20" cols="120" placeholder="ここにメモ入力してね🐶"><?php echo htmlspecialchars($old_input['content'] ?? '', ENT_QUOTES, 'UTF-8'); ?></textarea><br><br>
 
     <input type="submit" value="保存する🐶">
   </form>
