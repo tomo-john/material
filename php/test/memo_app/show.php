@@ -15,8 +15,13 @@ $content = nl2br(file_get_contents($file));
   <?php echo $content; ?>
   <br><br>
   <form action="delete.php" method="post">
-    <input type="hidden" name="file" value="<?php echo $file; ?>">
+    <input type="hidden" name="file" value="<?php echo $file_name; ?>">
     <input type="submit" value="削除">
+  </form>
+  <br>
+  <form action="edit.php" method="post">
+    <input type="hidden" name="file" value="<?php echo $file_name; ?>">
+    <input type="submit" value="編集">
   </form>
 
   <br><br>
