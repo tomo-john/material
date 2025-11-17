@@ -20,7 +20,7 @@ $content = nl2br(file_get_contents($file));
   </form>
   <br>
   <form action="edit.php" method="post">
-    <input type="hidden" name="file" value="<?php echo $file_name; ?>">
+    <input type="hidden" name="file" value="<?php echo $file; ?>">
     <input type="submit" value="編集">
   </form>
 

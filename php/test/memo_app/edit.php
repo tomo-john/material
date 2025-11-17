@@ -8,19 +8,20 @@ if (isset($_SESSION['errors'])) {
   $errors = [];
 }
 
-if (!empty($_POST['file'])) {
-  $file = $_POST['file'];
-} else {
+if (isset($_SESSION['file_name'])) {
   $file = $_SESSION['file_name'];
-};
+  unset($_SESSION['file_name']);
+} else {
+  $file = $_POST['file'];
+}
 
 $file_name = basename($file);
-$distination = 'storage/' . $file;
 
-if (!empty($_SESSION['old_content'])) {
+if (isset($_SESSION['old_content'])) {
   $content = $_SESSION['old_content'];
+  unset($_SESSION['old_content']);
 } else {
-  $content = file_get_contents($distination);
+  $content = file_get_contents($file);
 }
 
 ?>
@@ -49,4 +50,8 @@ if (!empty($_SESSION['old_content'])) {
   </form>
   <br>
   <hr>
+  <br>
+  <a href="index.php">戻る🐶</a>
 
+<body>
+</html>

@@ -56,7 +56,7 @@ $content = nl2br(htmlspecialchars($_POST['content'], ENT_QUOTES, 'UTF-8'));
   <br><br>
 
   <form action="confirm.php" method="post">
-    <input type="hidden" name="file_name" value="<?php echo $file_name; ?>">
+    <input type="hidden" name="file_name" value="<?php echo $_POST['file_name']; ?>">
     <input type="hidden" name="content" value="<?php echo htmlspecialchars($_POST['content'], ENT_QUOTES, 'UTF-8'); ?>">
     <input type="submit" name="back" value="修正する🐶">
     <input type="submit" name="ok" value="OK🐶">
