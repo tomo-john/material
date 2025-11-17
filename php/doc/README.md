@@ -20,6 +20,7 @@
 | [画像](./html/img.md)                             | 画像を読み込んで表示       |
 | [input](./html/input.md)                          | `<input>`タグいろいろ      |
 | [textareaの罠](./html/textarea.md)                | value属性を持たない        |
+| [label](./html/label.md)                          | 名札(ラベル)をつける       |
 
 ## CSS
 
