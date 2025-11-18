@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+body {
+  background-image: url(images/bg.png);
+}
+
+.error-list li {
+  color: red;
+  font-weight: bold;
+}
