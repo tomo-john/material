@@ -8,3 +8,14 @@ body {
   color: red;
   font-weight: bold;
 }
+
+.cal {
+  width: 500px;
+  padding: 10px;
+  border: 2px solid black;
+}
+
+.result {
+  color: blue;
+  font-weight: bold;
+}

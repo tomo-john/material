@@ -4,6 +4,8 @@ session_start();
 $errors = [];
 $old_num_1 = '';
 $old_num_2 = '';
+$num_1 = '';
+$num_2 = '';
 $result = '';
 
 if (isset($_SESSION['errors'])) {
@@ -15,9 +17,16 @@ if (isset($_SESSION['errors'])) {
   unset($_SESSION['old_num_2']);
 }
 
-if (isset($_SESSION['result'])) {
-  $result = $_SESSION['result'];
+if (isset($_SESSION['data'])) {
+  $num_1  = $_SESSION['data'][0];
+  $op     = $_SESSION['data'][1];
+  $num_2  = $_SESSION['data'][2];
+  $result = $_SESSION['data'][3];
+  unset($_SESSION['data']);
 }
+
+var_dump($_SESSION);
+
 ?>
 
 <!DOCTYPE html>
@@ -36,7 +45,7 @@ if (isset($_SESSION['result'])) {
     <?php endforeach ?>
   <?php endif; ?>
 
-  <form action="check.php" method="post">
+  <form class="cal" action="check.php" method="post">
     <label for="input_1">数値を入力してね🐶:</label><br>
     <input id="input_1" type="number" name="num_1" placeholder="例: 2" value="<?php echo $old_num_1 ?>">
     <select name="op">
@@ -55,7 +64,10 @@ if (isset($_SESSION['result'])) {
   <h2>結果表示エリア</h2>
 
   <?php if (!empty($result)): ?>
-    <p><?php echo '計算結果: ' . $result; ?></p>
+    <div class="result">
+      <p><?php echo '計算内容: ' . $num_1 . ' ' . $op . ' ' . $num_2; ?></p>
+      <p><?php echo '計算結果: ' . $result; ?></p>
+    </div>
   <?php endif; ?>
   
 </body>

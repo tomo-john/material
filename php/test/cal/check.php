@@ -32,20 +32,23 @@ $result = '';
 switch ($op) {
   case '+':
     $result = $num_1 + $num_2;
+    $op = '+';
     break;
   case '-':
     $result = $num_1 - $num_2;
+    $op = '-';
     break;
   case '*':
     $result = $num_1 * $num_2;
+    $op = '*';
     break;
   case '/':
     $result = $num_1 / $num_2;
+    $op = '/';
     break;
 }
 
-$_SESSION['result'] = $result;
-
+// データ渡し
+$_SESSION['data'] = [$num_1,  $op, $num_2, $result];
 header('Location:index.php');
 exit;
-
