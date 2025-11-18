@@ -3,4 +3,33 @@
 body {
   background-image: url(images/bg.png);
 }
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+}
 
+header {
+  width: 1240px;
+  margin: 0 auto 44px;
+}
+header ul {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  margin: 10px;
+}
+header ul li {
+  padding: 10px;
+}
+header ul li a {
+  font-size: 22px;
+  font-weight: bold;
+  color; #7c5d48;
+}
+header ul li a:hover {
+  text-decoration: underline double;
+}
