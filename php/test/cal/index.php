@@ -18,7 +18,6 @@ if (isset($_SESSION['errors'])) {
 if (isset($_SESSION['result'])) {
   $result = $_SESSION['result'];
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -53,7 +52,7 @@ if (isset($_SESSION['result'])) {
 
   <br><hr>
 
-  <h2>結果表示エリア<h2>
+  <h2>結果表示エリア</h2>
 
   <?php if (!empty($result)): ?>
     <p><?php echo '計算結果: ' . $result; ?></p>
