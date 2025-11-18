@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   if (!empty($errors)) {
      $_SESSION['errors'] = $errors;
      $_SESSION['old_input'] = $_POST;
-     header('Location: input.php');
+     header('Location: index.php');
      exit;
   }
 
@@ -57,7 +57,7 @@ $content = nl2br(htmlspecialchars($_POST['content'], ENT_QUOTES, 'UTF-8'));
 
   <form action="confirm.php" method="post">
     <input type="hidden" name="file_name" value="<?php echo $_POST['file_name']; ?>">
-    <input type="hidden" name="content" value="<?php echo htmlspecialchars($_POST['content'], ENT_QUOTES, 'UTF-8'); ?>">
+    <input type="hidden" name="content" value="<?php echo $_POST['content']; ?>">
     <input type="submit" name="back" value="修正する🐶">
     <input type="submit" name="ok" value="OK🐶">
   </form>
