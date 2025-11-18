@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$errors = [];
+$errors = '';
 $old_num_1 = '';
 $old_num_2 = '';
 $num_1 = '';
@@ -9,7 +9,7 @@ $num_2 = '';
 $result = '';
 
 if (isset($_SESSION['errors'])) {
-  $errors[] = $_SESSION['errors'];
+  $errors = $_SESSION['errors'];
   $old_num_1 = $_SESSION['old_num_1'];
   $old_num_2 = $_SESSION['old_num_2'];
   unset($_SESSION['errors']);
@@ -18,15 +18,9 @@ if (isset($_SESSION['errors'])) {
 }
 
 if (isset($_SESSION['data'])) {
-  $num_1  = $_SESSION['data'][0];
-  $op     = $_SESSION['data'][1];
-  $num_2  = $_SESSION['data'][2];
-  $result = $_SESSION['data'][3];
+  [$num_1, $op, $num_2, $result] = $_SESSION['data'];
   unset($_SESSION['data']);
 }
-
-var_dump($_SESSION);
-
 ?>
 
 <!DOCTYPE html>
@@ -40,9 +34,11 @@ var_dump($_SESSION);
   <h2>🐾電卓app🐾</h2>
 
   <?php if(!empty($errors)): ?>
-    <?php foreach ($errors as $e): ?>
-      <ul class="error-list"><li><?= $e ?></li></ul>
-    <?php endforeach ?>
+    <ul class="error-list">
+      <?php foreach ($errors as $e): ?>
+        <li><?= $e ?></li>
+      <?php endforeach ?>
+    </ul>
   <?php endif; ?>
 
   <form class="cal" action="check.php" method="post">
