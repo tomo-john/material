@@ -12,10 +12,17 @@
       <li><a href="#">TEST</a></li>
       <li><a href="#">DOG</a></li>
       <li><a href="#">RABBIT</a></li>
-    <ul>
+    </ul>
   </header>
 
-  <h2>🐶ToDo App🐶</h2>
-
+  <div class="main">
+    <h2>🐶ToDo App🐶</h2>
+    <div class="menu">
+      <a href="#">新規作成</a>
+      <a href="#">一覧表示</a>
+      <a href="#">じょんの犬小屋</a>
+      <a href="#">テストページ</a>
+    </div>
+  </div>
 </body>
 </html>

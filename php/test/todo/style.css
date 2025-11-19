@@ -33,3 +33,26 @@ header ul li a {
 header ul li a:hover {
   text-decoration: underline double;
 }
+.main {
+  width: 1240px;
+  margin: 0 auto 44px;
+}
+.main h2 {
+  display: flex;
+  justify-content: center;
+}
+.menu {
+  width: 300px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 2px solid;
+}
+
+.menu a {
+  display: flex;
+  justify-content: center;
+  flex-basis: 120px;
+  padding: 20px;
+}
