@@ -66,6 +66,7 @@
 | [PHP組み込みWebサーバー](./php/php_server.md)     | `php -S`のやつ             |
 | [bin2hex](./php/bin2hex.md)                       | var_dumpとramdom_bytesも   |
 | [nl2br](./php/nl2br.md)                           | 改行文字に改行タグ         |
+| [json](./php/json.md)                             | JSONに変換                 |
 
 ## Laravel
 
