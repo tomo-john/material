@@ -12,10 +12,13 @@ if (empty($todo)) {
 }
 
 // 登録処理
-$dir_name = "storage";
-if (!is_dir($dir_name)) {
-  mkdir($dir_name, 0777, true);
-}
+$todos = [];
+$todos[] = [
+  'id' => 1, 'task' => $todo, 'done' => false
+];
+var_dump($todos);
+
+file_put_contents('todos.json', json_encode($todos, JSON_PRETTY_PRINT));
 
 ?>
 
