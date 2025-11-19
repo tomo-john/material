@@ -12,7 +12,7 @@ if (empty($todo)) {
 }
 
 // 登録処理
-$todos = [];
+$todos = json_decode(file_get_contents('todos.json', true)) ?? [];
 $todos[] = [
   'id' => 1, 'task' => $todo, 'done' => false
 ];
