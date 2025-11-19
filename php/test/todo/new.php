@@ -2,6 +2,13 @@
 // new.php 新規作成
 session_start();
 
+$errors = '';
+
+if (isset($_SESSION['errors'])){
+  $errors = $_SESSION['errors'];
+  unset($_SESSION['errors']);
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -16,12 +23,18 @@ session_start();
   <div class="new">
     <h2>新規作成🐶</h2>
 
+    <?php if(!empty($errors)): ?>
+      <p class="alert"><?php echo $errors; ?></p>
+    <?php endif; ?>
     <div class="form">
       <form action="create.php" method="post">
         <label for="">やること:</label>
         <input type="text" name="todo" placeholder="例: じょんに餌やり">
         <input type="submit" value="登録🐾">
       </form>
+    </div>
+    <div class="back">
+      <a href="index.php">🐾戻る🐾</a>
     </div>
   </div>
 
