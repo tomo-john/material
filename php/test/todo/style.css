@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+/* index.php*/
 body {
   background-image: url(images/bg.png);
 }
@@ -60,3 +61,23 @@ header ul li a:hover {
 .menu a:hover {
   color: blue;
 }
+
+/* new.php */
+.new form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 100px;
+  border: 2px solid;
+  padding: 10px;
+}
+
+.new label {
+  margin: 2px;
+}
+
+.new input {
+  margin: 2px;
+}
+

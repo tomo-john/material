@@ -9,11 +9,21 @@ session_start();
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css">
-  <title>新規作成</title>
+  <title>新規作成🐶</title>
 </head>
 <body>
-  
-  <h2>新規作成🐶</h2>
+
+  <div class="new">
+    <h2>新規作成🐶</h2>
+
+    <div class="form">
+      <form action="create.php" method="post">
+        <label for="">やること:</label>
+        <input type="text" name="todo" placeholder="例: じょんに餌やり">
+        <input type="submit" value="登録🐾">
+      </form>
+    </div>
+  </div>
 
 </body>
 </html>
