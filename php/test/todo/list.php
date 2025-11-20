@@ -8,8 +8,6 @@ if (file_exists('todos.json')) {
   $todos = [];
 }
 
-var_dump($todos);
-
 ?>
 
 <!DOCTYPE html>
@@ -35,7 +33,7 @@ var_dump($todos);
       <tbody>
         <?php if(!empty($todos)): ?>
           <?php foreach($todos as $todo): ?>
-            <tr>
+            <tr class="<?php echo $todo['done'] ? 'status-done' : ''; ?>">
               <td>
                 <?php echo htmlspecialchars($todo['id'], ENT_QUOTES, 'UTF-8'); ?>
               </td>

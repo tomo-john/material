@@ -28,7 +28,7 @@ $todos[] = [
   'id' => $new_id, 'task' => $todo, 'done' => false
 ];
 
-file_put_contents('todos.json', json_encode($todos, JSON_PRETTY_PRINT));
+file_put_contents('todos.json', json_encode($todos, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
 
 $_SESSION['notices'] = '登録が完了しました🐶 登録内容: 「'. $todo . '」';
 header('Location:new.php');

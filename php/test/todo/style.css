@@ -91,6 +91,13 @@ th, td {
 th {
   background-color: #f0f0f0;
 }
+.status-done {
+  background-color: #e0e0e0;
+  color: #888;
+}
+.status-done td {
+  text-decoration: line-through;
+}
 
 /* other */
 .alert {
