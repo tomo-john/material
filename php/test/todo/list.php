@@ -2,6 +2,18 @@
 // list.php 一覧表示画面
 session_start();
 
+$errors = '';
+if (isset($_SESSION['errors'])){
+  $errors = $_SESSION['errors'];
+  unset($_SESSION['errors']);
+}
+
+$notices = '';
+if (isset($_SESSION['notices'])){
+  $notices = $_SESSION['notices'];
+  unset($_SESSION['notices']);
+}
+
 if (file_exists('todos.json')) {
   $todos = json_decode(file_get_contents('todos.json'), true);
 } else {
@@ -21,6 +33,14 @@ if (file_exists('todos.json')) {
 
   <div class="list">
     <h2>一覧画面🐶</h2>
+
+    <?php if(!empty($errors)): ?>
+      <p class="alert"><?php echo $errors; ?></p>
+    <?php endif; ?>
+
+    <?php if(!empty($notices)): ?>
+      <p class="notice"><?php echo $notices; ?></p>
+    <?php endif; ?>
 
     <table>
       <thead>

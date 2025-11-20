@@ -2,6 +2,18 @@
 // edit.php 編集画面
 session_start();
 
+$errors = '';
+if (isset($_SESSION['errors'])){
+  $errors = $_SESSION['errors'];
+  unset($_SESSION['errors']);
+}
+
+$notices = '';
+if (isset($_SESSION['notices'])){
+  $notices = $_SESSION['notices'];
+  unset($_SESSION['notices']);
+}
+
 $todo_id = $_GET['id'] ?? '';
 if (empty($todo_id)) {
   exit('IDが指定されていません🐶💦');
@@ -20,8 +32,6 @@ foreach ($todos as $todo) {
 if (empty($current_todo)) {
   exit('そのIDのタスクは存在しません🐶💦');
 }
-
-var_dump($current_todo);
 
 ?>
 
@@ -46,10 +56,11 @@ var_dump($current_todo);
     <?php endif; ?>
     
     <div class="form">
-      <form action="create.php" method="post">
+      <form action="update.php" method="post">
         <label for="">Todo:</label>
-        <input type="text" name="todo" placeholder="例: じょんに餌やり"value="">
-        <input type="submit" value="登録🐾">
+        <input type="hidden" name="id" value="<?php echo $current_todo['id'] ?>">
+        <input type="text" name="todo" placeholder="例: じょんに餌やり"value="<?php echo $current_todo['task']; ?>">
+        <input type="submit" value="更新🐾">
       </form>
     </div>
 
