@@ -19,9 +19,9 @@
     <h2>🐶ToDo App🐶</h2>
     <div class="menu">
       <a href="new.php">新規作成</a>
-      <a href="#">一覧表示</a>
+      <a href="list.php">一覧表示</a>
       <a href="#">じょんの犬小屋</a>
-      <a href="#">テストページ</a>
+      <a href="test.php">テストページ</a>
     </div>
   </div>
 </body>

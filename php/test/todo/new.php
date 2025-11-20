@@ -1,5 +1,5 @@
 <?php
-// new.php 新規作成
+// new.php 新規作成画面
 session_start();
 
 $errors = '';
