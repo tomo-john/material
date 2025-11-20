@@ -30,6 +30,7 @@ $todos[] = [
 
 file_put_contents('todos.json', json_encode($todos, JSON_PRETTY_PRINT));
 
+$_SESSION['notices'] = '登録が完了しました🐶 登録内容: 「'. $todo . '」';
 header('Location:new.php');
 exit;
 

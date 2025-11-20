@@ -3,10 +3,15 @@
 session_start();
 
 $errors = '';
-
 if (isset($_SESSION['errors'])){
   $errors = $_SESSION['errors'];
   unset($_SESSION['errors']);
+}
+
+$notices = '';
+if (isset($_SESSION['notices'])){
+  $notices = $_SESSION['notices'];
+  unset($_SESSION['notices']);
 }
 
 ?>
@@ -26,6 +31,11 @@ if (isset($_SESSION['errors'])){
     <?php if(!empty($errors)): ?>
       <p class="alert"><?php echo $errors; ?></p>
     <?php endif; ?>
+
+    <?php if(!empty($notices)): ?>
+      <p class="notice"><?php echo $notices; ?></p>
+    <?php endif; ?>
+    
     <div class="form">
       <form action="create.php" method="post">
         <label for="">やること:</label>
