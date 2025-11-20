@@ -12,13 +12,26 @@ if (empty($todo)) {
 }
 
 // 登録処理
-$todos = json_decode(file_get_contents('todos.json', true)) ?? [];
+if (file_exists('todos.json')) {
+  $todos = json_decode(file_get_contents('todos.json'), true);
+} else {
+  $todos = [];
+}
+
+if (empty($todos)) {
+  $new_id = 1;
+} else {
+  $new_id = $todos[array_key_last($todos)]['id'] + 1;
+}
+
 $todos[] = [
-  'id' => 1, 'task' => $todo, 'done' => false
+  'id' => $new_id, 'task' => $todo, 'done' => false
 ];
-var_dump($todos);
 
 file_put_contents('todos.json', json_encode($todos, JSON_PRETTY_PRINT));
+
+header('Location:new.php');
+exit;
 
 ?>
 
