@@ -28,6 +28,7 @@ if (file_exists('todos.json')) {
           <th>ID</th>
           <th>タスク内容</th>
           <th>状態</th>
+          <th>操作</th>
         </tr>
       </thead>
       <tbody>
@@ -42,10 +43,13 @@ if (file_exists('todos.json')) {
               </td>
               <td>
                 <?php if($todo['done']): ?>
-                  <?php echo '完了'; ?>
+                  <?php echo '完了🐶'; ?>
                 <?php else: ?>
-                  <?php echo '未完了'; ?>
+                  <?php echo '未完了🐰'; ?>
                 <?php endif; ?>
+              </td>
+              <td>
+                <a class=btn-edit href="edit.php?id=<?php echo $todo['id']; ?>">編集🐄</a>
               </td>
             </tr>
           <?php endforeach; ?>

@@ -38,7 +38,7 @@ if (isset($_SESSION['notices'])){
     
     <div class="form">
       <form action="create.php" method="post">
-        <label for="">やること:</label>
+        <label for="">Todo:</label>
         <input type="text" name="todo" placeholder="例: じょんに餌やり">
         <input type="submit" value="登録🐾">
       </form>
