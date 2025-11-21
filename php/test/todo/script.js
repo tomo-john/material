@@ -1,13 +1,3 @@
-// test.php
-function checkAnswer() {
-  const result = confirm("あなたは犬派ですか？\n(OK=はい / キャンセル=いいえ ) ");
-  if (result === true) {
-    window.location.href = "test_js.php?answer=yes";
-  } else {
-    window.location.href = "test_js.php?answer=no";
-  }
-}
-
 // delete.php
 function delete_confirm(id) {
   const result = confirm("削除してよろしいですか？🐶 ");
@@ -17,3 +7,16 @@ function delete_confirm(id) {
     window.location.href = "delete.php?answer=no";
   }
 }
+
+// test.php
+function checkAnswer(id) {
+  const result = confirm("あなたは犬派ですか？\n(OK=はい / キャンセル=いいえ ) ");
+  if (result === true) {
+    document.getElementById('hidden-id').value = id;
+    document.getElementById('hidden-answer').value = 'yes';
+    document.getElementById('check-form').submit();
+  } else {
+    alert("ぴょーん🐰");
+  }
+}
+

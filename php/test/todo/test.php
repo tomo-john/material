@@ -43,9 +43,13 @@
 
   <!-- JS検証-->
   <h3>JS検証</h3>
+  <?php $id = 1; ?>
   <p>犬派ですか？🐶</p>
-  <button onclick="checkAnswer()">回答する</button>
-
+  <button onclick="checkAnswer(<?php echo $id?>)">回答する</button>
+  <form id="check-form" action="test_js.php" method="post">
+    <input id="hidden-id" type="hidden" name="id">
+    <input id="hidden-answer" type="hidden" name="answer">
+  </form>
   <hr>
 
   <!-- 戻るボタン -->

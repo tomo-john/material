@@ -1,11 +1,8 @@
 <?php
 // test_js.php JavaScript検証用
-$answer = $_GET['answer'];
+$id = $_POST['id'];
+$answer = $_POST['answer'];
 
-if ($answer === 'yes') {
-  echo '素晴らしいじょん🐶';
-} else {
-  echo 'ぴょーん🐰';
-}
+echo '$answer: ' . $answer  . ' / $id: ' . $id;
 
 ?>
