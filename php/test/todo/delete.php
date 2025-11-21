@@ -3,15 +3,15 @@
 session_start();
 
 // Yes or No
-$answer = $_GET['answer'];
+$answer = $_POST['answer'] ?? '';
 
-if ($answer == 'no') {
+if ($answer == 'no' || $answer == '') {
   header('Location:list.php');
   exit;
 }
 
 // 削除処理
-$todo_id = $_GET['id'] ?? '';
+$todo_id = $_POST['id'] ?? '';
 if (empty($todo_id)) {
   exit('IDが指定されていません🐶💦');
 }

@@ -2,9 +2,12 @@
 function delete_confirm(id) {
   const result = confirm("削除してよろしいですか？🐶 ");
   if (result === true) {
-    window.location.href = `delete.php?answer=yes&id=${id}`;
+    document.getElementById('hidden_id').value = id;
+    document.getElementById('hidden_answer').value = 'yes';
+    document.getElementById('check_delete_form').submit();
   } else {
-    window.location.href = "delete.php?answer=no";
+    document.getElementById('hidden_answer').value = 'no';
+    document.getElementById('check_delete_form').submit();
   }
 }
 
