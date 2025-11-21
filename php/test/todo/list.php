@@ -20,8 +20,6 @@ if (file_exists('todos.json')) {
   $todos = [];
 }
 
-var_dump($todos);
-
 ?>
 
 <!DOCTYPE html>
@@ -72,6 +70,7 @@ var_dump($todos);
               </td>
               <td>
                 <a class=btn-edit href="edit.php?id=<?php echo $todo['id']; ?>">編集🐄</a>
+                <a class=btn-edit href="delete.php?id=<?php echo $todo['id']; ?>">削除🐄</a>
               </td>
             </tr>
           <?php endforeach; ?>

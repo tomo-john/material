@@ -1,15 +1,16 @@
-<?php
-
-?>
+<?php?>
 
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
   <title>test page</title>
 </head>
 <body>
+  <!-- テーブルサンプル-->
+  <h3>テーブルサンプル</h3>
   <table>
     <thead>
       <tr>
@@ -38,6 +39,16 @@
     </tbody>
   </table>
 
+  <hr>
+
+  <!-- JS検証-->
+  <h3>JS検証</h3>
+  <p>犬派ですか？🐶</p>
+  <button onclick="checkAnswer()">回答する</button>
+
+  <hr>
+
+  <!-- 戻るボタン -->
   <div class="back"><a href="index.php">🐾戻る🐾</a></div>
 
 </body>
