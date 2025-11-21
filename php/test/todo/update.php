@@ -2,7 +2,7 @@
 // create.php 更新処理
 session_start();
 
-$id = $_POST['id'];
+$id = intval($_POST['id']);
 $todo = htmlspecialchars($_POST['todo'] ?? '', ENT_QUOTES, 'UTF-8');
 
 // 未入力チェック
@@ -20,6 +20,7 @@ if (file_exists('todos.json')) {
   exit('更新エラー🐶💦');
 }
 
+// 元のデータを取得
 $new_todos = [];
 foreach ($old_todos as $old_todo) {
   if ($id != $old_todo['id']) {
@@ -27,10 +28,17 @@ foreach ($old_todos as $old_todo) {
   }
 }
 
+// 更新したタスクを追加
 $new_todos[] = [
   'id' => $id, 'task' => $todo, 'done' => false
 ];
 
+// idを昇順で並び替え
+usort($new_todos, function ($a, $b) {
+  return $a['id'] <=> $b['id'];
+});
+
+// 書き込み
 file_put_contents('todos.json', json_encode($new_todos, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
 
 $_SESSION['notices'] = '登録が完了しました🐶 更新内容: 「'. $todo . '」';

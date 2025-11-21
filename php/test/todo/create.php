@@ -18,16 +18,19 @@ if (file_exists('todos.json')) {
   $todos = [];
 }
 
+// id付与
 if (empty($todos)) {
   $new_id = 1;
 } else {
   $new_id = $todos[array_key_last($todos)]['id'] + 1;
 }
 
+// 新規タスクを追加
 $todos[] = [
   'id' => $new_id, 'task' => $todo, 'done' => false
 ];
 
+// 書き込み
 file_put_contents('todos.json', json_encode($todos, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
 
 $_SESSION['notices'] = '登録が完了しました🐶 登録内容: 「'. $todo . '」';

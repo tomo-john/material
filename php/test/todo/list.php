@@ -20,6 +20,8 @@ if (file_exists('todos.json')) {
   $todos = [];
 }
 
+var_dump($todos);
+
 ?>
 
 <!DOCTYPE html>
