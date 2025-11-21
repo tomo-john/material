@@ -114,17 +114,22 @@ th {
   padding: 2px;
   border: 2px solid;
 }
-.btn-edit {
+.btn {
   display: inline-block;
   width: 66px;
   text-align: center;
+  margin: 0px 4px;
   border: 1px solid;
   border-radius: 20px;
   text-align: center;
   background-color: #fff;
   transition: all 0.3s ease;
 }
-.btn-edit:hover {
+.btn:hover {
   background-color: #fd7e00;
   transform: translateY(-2px);
+}
+.btn.delete {
+  border-radius: 0px;
+  background-color: #eee;
 }

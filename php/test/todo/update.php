@@ -13,7 +13,6 @@ if (empty($todo)) {
 }
 
 // 更新処理
-
 if (file_exists('todos.json')) {
   $old_todos = json_decode(file_get_contents('todos.json'), true);
 } else {
@@ -41,7 +40,7 @@ usort($new_todos, function ($a, $b) {
 // 書き込み
 file_put_contents('todos.json', json_encode($new_todos, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
 
-$_SESSION['notices'] = '登録が完了しました🐶 更新内容: 「'. $todo . '」';
+$_SESSION['notices'] = '更新が完了しました🐶 更新内容: 「'. $todo . '」';
 header('Location:list.php');
 exit;
 

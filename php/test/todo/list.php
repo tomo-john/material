@@ -27,6 +27,7 @@ if (file_exists('todos.json')) {
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
   <title>一覧画面🐶</title>
 </head>
 <body>
@@ -69,8 +70,8 @@ if (file_exists('todos.json')) {
                 <?php endif; ?>
               </td>
               <td>
-                <a class=btn-edit href="edit.php?id=<?php echo $todo['id']; ?>">編集🐄</a>
-                <a class=btn-edit href="delete.php?id=<?php echo $todo['id']; ?>">削除🐄</a>
+                <a class="btn" href="edit.php?id=<?php echo $todo['id']; ?>">編集🐄</a>
+                <button class="btn delete" onclick="delete_confirm(<?php echo $todo['id'] ?>)">削除❌</button>
               </td>
             </tr>
           <?php endforeach; ?>
