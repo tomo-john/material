@@ -7,9 +7,6 @@ $todo = htmlspecialchars($_POST['todo'] ?? '', ENT_QUOTES, 'UTF-8');
 $status = ($_POST['status'] === 'true');
 $status_str = $status ? '完了🐶' : '未完了🐰';
 
-
-var_dump($status);
-
 // 未入力チェック
 if (empty($todo)) {
   $_SESSION['errors'] = '未入力です🐶💦';

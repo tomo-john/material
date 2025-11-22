@@ -1,14 +1,15 @@
 // delete.php
 function delete_confirm(id) {
   const result = confirm("削除してよろしいですか？🐶 ");
-  if (result === true) {
-    document.getElementById('hidden_id').value = id;
-    document.getElementById('hidden_answer').value = 'yes';
-    document.getElementById('check_delete_form').submit();
+  const form = document.getElementById(`check_delete_form_${id}`);
+  form.hidden_id.value = id;
+
+  if (result) {
+    form.hidden_answer.value = 'yes';
   } else {
-    document.getElementById('hidden_answer').value = 'no';
-    document.getElementById('check_delete_form').submit();
+    form.hidden_answer.value = 'no';
   }
+  form.submit();
 }
 
 // test.php

@@ -72,7 +72,7 @@ if (file_exists('todos.json')) {
               <td>
                 <a class="btn" href="edit.php?id=<?php echo $todo['id']; ?>">編集🐄</a>
                 <button class="btn delete" onclick="delete_confirm(<?php echo $todo['id'] ?>)">削除❌</button>
-                <form id="check_delete_form" action="delete.php" method="post">
+                <form id="check_delete_form_<?php echo $todo['id'] ?>" action="delete.php" method="post">
                   <input id="hidden_id" type="hidden" name="id">
                   <input id="hidden_answer" type="hidden" name="answer">
                 </form>
