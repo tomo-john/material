@@ -1,29 +1,42 @@
 <?php
 class Doggy {
-  public $name;
-  public $hp = 100;
+  // プロパティをむやみにpublicにしない
+  private $name;
+  private $hp;
+  private $bark_cost = 10;
+
+  // コンストラクタ
+  // newした瞬間に自動で実行される特別なメソッド
+  // PHPでは __construct() を使用する
+  public function __construct($name, $hp = 300) {
+    $this->name = $name;
+    $this->hp = $hp;
+  }
 
   public function bark() {
+    if ($this->hp <= 10) {
+      echo $this->name . 'はもう吠えられない...🐶💤<br>';
+      return;
+    }
+    
     echo $this->name . 'がワン！と吠えた🐶<br>';
+    $this->hp -= $this->bark_cost;
+
+    if ($this->hp < 0) $this->hp = 0;
+
+    echo $this->name . 'の残りHP: ' . $this->hp . '<br>';
   }
 
-  public function damage($point) {
-    $this->hp -= $point;
-    echo $this->name . 'は ' . $point . ' のダメージ！残りHP: ' . $this->hp . '<br>';
-  }
 }
 
-$dogA = new Doggy();
-$dogA->name = 'じょん';
-
-$dogB = new Doggy();
-$dogB->name = 'ぴょんきち';
+$dogA = new Doggy('じょん', 20);
+$dogB = new Doggy('ぴょんきち');
 
 $dogA->bark();
+$dogA->bark();
+$dogA->bark();
 $dogB->bark();
-
-$dogA->damage(20);
-$dogB->damage(50);
-$dogA->damage(20);
+$dogB->bark();
+$dogB->bark();
 
 ?>
