@@ -33,6 +33,8 @@ if (empty($current_todo)) {
   exit('そのIDのタスクは存在しません🐶💦');
 }
 
+$current_status = $current_todo['done'];
+
 ?>
 
 <!DOCTYPE html>
@@ -57,9 +59,14 @@ if (empty($current_todo)) {
     
     <div class="form">
       <form action="update.php" method="post">
-        <label for="">Todo:</label>
+        <label for="status">Status:</label>
+        <select id="status" name="status">
+          <option value="false" <?php if (!$current_status) echo 'selected' ?>>未完了🐰</option>
+          <option value="true" <?php if ($current_status) echo 'selected' ?>>完了🐶</option>
+        </select>
+        <label for="todo">Todo:</label>
+        <input id="todo" type="text" name="todo" placeholder="例: じょんに餌やり"value="<?php echo $current_todo['task']; ?>">
         <input type="hidden" name="id" value="<?php echo $current_todo['id'] ?>">
-        <input type="text" name="todo" placeholder="例: じょんに餌やり"value="<?php echo $current_todo['task']; ?>">
         <input type="submit" value="更新🐾">
       </form>
     </div>

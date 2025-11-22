@@ -4,6 +4,11 @@ session_start();
 
 $id = intval($_POST['id']);
 $todo = htmlspecialchars($_POST['todo'] ?? '', ENT_QUOTES, 'UTF-8');
+$status = ($_POST['status'] === 'true');
+$status_str = $status ? '完了🐶' : '未完了🐰';
+
+
+var_dump($status);
 
 // 未入力チェック
 if (empty($todo)) {
@@ -29,7 +34,7 @@ foreach ($old_todos as $old_todo) {
 
 // 更新したタスクを追加
 $new_todos[] = [
-  'id' => $id, 'task' => $todo, 'done' => false
+  'id' => $id, 'task' => $todo, 'done' => $status
 ];
 
 // idを昇順で並び替え
@@ -40,7 +45,7 @@ usort($new_todos, function ($a, $b) {
 // 書き込み
 file_put_contents('todos.json', json_encode($new_todos, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
 
-$_SESSION['notices'] = '更新が完了しました🐶 更新内容: 「'. $todo . '」';
+$_SESSION['notices'] = '更新が完了しました🐶 更新内容: 「'. $todo . '」 / 状態: ' . $status_str;
 header('Location:list.php');
 exit;
 
