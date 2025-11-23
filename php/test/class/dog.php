@@ -13,8 +13,23 @@ class Doggy {
     $this->hp = $hp;
   }
 
+  // ゲッター(読み取り)
+  public function getHp() {
+    return $this->hp;
+  }
+
+  // セッター(書き換え)
+  public function setHp($value) {
+    if ($value < 0 ) {
+      $this->hp = 0;
+    } else {
+      $this->hp = $value;
+    }
+  }
+
+  // メソッド定義
   public function bark() {
-    if ($this->hp <= 10) {
+    if ($this->hp <= 0) {
       echo $this->name . 'はもう吠えられない...🐶💤<br>';
       return;
     }
