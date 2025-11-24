@@ -16,6 +16,7 @@ if (empty($_SESSION['data'])) {
 // データ取得
 $dog_name = $_SESSION['data']['dog_name'];
 $dog_point = $_SESSION['data']['dog_point'];
+unset($_SESSION['data']);
 
 // 今回は作成したインスタンスはセッションで保管
 if (!isset($_SESSION['dogs'])) {
