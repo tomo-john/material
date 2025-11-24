@@ -31,13 +31,12 @@ if (!empty($errors)) {
   exit;
 }
 
-// インスタンス生成
-$dog = new DogPointCard($dog_name);
+// OKならセッションにデータセット・次の処理へ
+$_SESSION['data'] = [
+  'dog_name' => $dog_name,
+  'dog_point' => $dog_point
+];
 
-// ポイント加算
-$dog->addPoint($dog_point);
+header('Location:main.php');
+exit;
 
-// 確認
-echo $dog->getInfo();
-
-?>

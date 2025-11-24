@@ -5,18 +5,26 @@ class DogPointCard {
   private $name;
   private $point;
 
-  public function __construct($name) {
+  // コンストラクタ
+  public function __construct(string $name, int $point = 0) {
     $this->name = $name;
-    $this->point = 0;
+    $this->point = $point;
   }
 
-  public function addPoint($p) {
+  // ポイント加算メソッド
+  public function addPoint(int $p) {
     $this->point += $p;
   }
 
-  public function getInfo() {
-    return $this->name . 'の合計ポイントは' . $this->point . 'だワン🐶<br>';
+  // nameを取得するメソッド(getter)
+  public function getName() {
+    return $this->name;
   }
-}
 
+  // pointを取得するメソッド(getter)
+  public function getPoint() {
+    return $this->point;
+  }
+
+}
 ?>

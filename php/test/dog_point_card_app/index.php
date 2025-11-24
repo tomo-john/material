@@ -12,6 +12,8 @@ if (!empty($_SESSION['errors'])) {
   unset($_SESSION['old_input']);
 }
 
+var_dump($_SESSION['dogs']);
+
 ?>
 
 <!DOCTYPE html>
