@@ -3,3 +3,6 @@
 .errors {
   color: red;
 }
+.notices {
+  color: blue;
+}

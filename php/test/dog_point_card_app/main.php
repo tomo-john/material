@@ -1,7 +1,10 @@
-<?php
-// main.php メイン処理
+<?php // main.php メイン処理
+
+// セッション前にクラス定義ファイルを読み込む
+require_once 'dog.php'; 
+
+// セッションスタート
 session_start();
-require_once 'dog.php';
 
 // データなしNG
 if (empty($_SESSION['data'])) {
@@ -20,7 +23,7 @@ if (!isset($_SESSION['dogs'])) {
 }
 
 // 既存のわんちゃんかチェック
-$current_dog = '';
+$current_dog = null;
 foreach ($_SESSION['dogs'] as $dog) {
   if ($dog->getName() === $dog_name) {
     $current_dog = $dog;
@@ -29,7 +32,7 @@ foreach ($_SESSION['dogs'] as $dog) {
 }
 
 // いなければ新規作成
-if ($current_dog === '') {
+if ($current_dog === null) {
   $current_dog = new DogPointCard($dog_name);
 
   // セッションデータに追加
@@ -39,6 +42,12 @@ if ($current_dog === '') {
 // ポイント加算
 $current_dog->addPoint($dog_point);
 
-// 確認
-var_dump($_SESSION['dogs']);
+// index.phpへ戻る
+$notices = [];
+$notices[] = $current_dog->getName() . 'わんちゃんのポイントを追加しました🐶';
+$notices[] = '追加したポイント: ' . $dog_point;
+$notices[] = '現在の' . $current_dog->getName() . 'わんちゃんの合計ポイントは' . $current_dog->getPoint() . 'ポイントです🐶';
+$_SESSION['notices'] = $notices;
+header('Location:index.php');
+exit;
 
