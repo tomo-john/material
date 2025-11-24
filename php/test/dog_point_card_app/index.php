@@ -1,20 +1,15 @@
 <?php
 // index.php
+session_start();
 
-// dog.php 読み込み
-require_once 'dog.php';
-
-// データ取得
-if (isset($_POST)) {
-  $dog_name = $_POST['dog_name'] ?? '';
-  $dog_point = intval($_POST['dog_point'] ?? '');
-}
-
-// 検証
-if ( !empty($dog_name) && !empty($dog_point) ) {
-  $dog = new DogPointCard($dog_name);
-  echo $dog->addPoint($dog_point);
-  echo $dog->getInfo();
+// エラーチェック
+$errors = [];
+$old_input = [];
+if (!empty($_SESSION['errors'])) {
+  $errors = $_SESSION['errors'];
+  $old_input = $_SESSION['old_input'] ?? [];
+  unset($_SESSION['errors']);
+  unset($_SESSION['old_input']);
 }
 
 ?>
@@ -30,12 +25,22 @@ if ( !empty($dog_name) && !empty($dog_point) ) {
 <body>
   <h2>Dog_App🐶</h2>
 
-  <form action="" method="post">
+  <?php if (!empty($errors)): ?>
+    <div class="errors">
+      <ul>
+        <?php foreach($errors as $error): ?>
+          <li><?= $error ?></li>
+        <?php endforeach; ?>
+      </ul>
+    </div>
+  <?php endif;?>
+
+  <form action="confirm.php" method="post">
     <label for="dog_name">犬の名前:</label>
-    <input id="dog_name" type="text" name="dog_name" placeholder="じょん">
+    <input id="dog_name" type="text" name="dog_name" placeholder="じょん" value="<?php echo htmlspecialchars($old_input['dog_name'] ?? '') ?>">
     <br>
     <label for="dog_point">今日のポイント:</label>
-    <input id="dog_point" type="number" name="dog_point" placeholder="10">
+    <input id="dog_point" type="number" name="dog_point" placeholder="10" value="<?php echo htmlspecialchars($old_input['dog_point'] ?? '') ?>">
     <br><br>
     <input type="submit" value="登録🐶">
   </form>
