@@ -1,9 +1,9 @@
 <?php
 class Dog {
   private $name;
-  private $level = 1;
+  private $level;
 
-  public function __construct($name, $level) {
+  public function __construct($name, $level = 1) {
     $this->name = $name;
     $this->level = $level;
   }
@@ -23,18 +23,15 @@ class Dog {
   public function levelUp() {
     $this->level += 1;
     echo $this->name . 'はレベルアップ!🐶<br>';
+    $this->bark();
+
+    echo $this->name . 'の現在のレベルは'  . $this->level . '<br>';
   }
 }
 
 
-$dog1 = new Dog('じょん', 2);
-
-echo $dog1->getName();
-echo '<br>';
-echo $dog1->getLevel();
-echo '<br>';
+$dog1 = new Dog('じょん');
 $dog1->levelUp();
-echo $dog1->getLevel();
-echo '<br>';
+$dog1->levelUp();
 
 ?>
