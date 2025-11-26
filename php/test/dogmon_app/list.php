@@ -22,7 +22,7 @@ $dogmons = $_SESSION['dogmon'] ?? [];
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css">
   <script src="scritp.js"></script>
-  <title></title>
+  <title>一覧画面</title>
 </head>
 
 <body>
@@ -59,6 +59,7 @@ $dogmons = $_SESSION['dogmon'] ?? [];
             <th>名前</th>
             <th>タイプ</th>
             <th>レベル</th>
+            <th>アクション</th>
           </tr>
         </thead>
         <tbody>
@@ -68,6 +69,12 @@ $dogmons = $_SESSION['dogmon'] ?? [];
                 <td><?php echo $dogmon->getName(); ?></td>
                 <td><?php echo $dogmon->getType(); ?></td>
                 <td><?php echo $dogmon->getLevel(); ?></td>
+                <td>
+                  <form action="rename.php" method="post">
+                    <input type="hidden" name="dogmon_name" value="<?php echo $dogmon->getName(); ?>">
+                    <input type="submit" value="名前変更">
+                  </form>
+                </td>
               </tr>
             <?php endforeach; ?>
           <?php else: ?>
@@ -83,5 +90,4 @@ $dogmons = $_SESSION['dogmon'] ?? [];
   </div>
 
 </body>
-
 </html>

@@ -1,17 +1,8 @@
 <?php
-// edit.php 編集画面
-session_start();
+// rename.php 名前変更画面
+$name = $_POST['dogmon_name'] ?? '';
 
-// エラーチェック
-$errors = $_SESSION['errors'] ?? [];
-unset($_SESSION['errors']);
-
-// メッセージ有無
-$notices = $_SESSION['notices'] ?? [];
-unset($_SESSION['notices']);
-
-// dogmonリスト取得
-$dogmons = $_SESSION['dogmon'] ?? [];
+var_dump($name);
 
 ?>
 
@@ -21,13 +12,13 @@ $dogmons = $_SESSION['dogmon'] ?? [];
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css">
   <script src="scritp.js"></script>
-  <title>育成画面</title>
+  <title>名前変更</title>
 </head>
 
 <body>
 
   <div class="edit">
-    <h2>dogmon育成画面🐶</h2>
+    <h2>名前変更画面🐶</h2>
 
     <div class="errors">
       <?php if(!empty($errors)): ?>

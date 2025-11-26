@@ -12,7 +12,7 @@ unset($_SESSION['notices']);
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css">
   <script src="scritp.js"></script>
-  <title></title>
+  <title>TEST</title>
 </head>
 
 <body>
@@ -40,5 +40,4 @@ unset($_SESSION['notices']);
   </div>
 
 </body>
-
 </html>
