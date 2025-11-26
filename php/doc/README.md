@@ -74,6 +74,7 @@
 | [コンストラクタ](./php/construct.md)              | オブジェクト生成時に実行     |
 | [static](./php/static.md)                         | クラス全体に属する           |
 | [名前空間](./php/namespace.md)                    | 名前空間はクラスの住所(?)    |
+| [クラス関連メモ](./php/class_memo.md)             | クラス関連のメモ             |
 
 ## Laravel
 
