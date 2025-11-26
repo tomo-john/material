@@ -2,10 +2,8 @@
 // test.php テストページ
 session_start();
 
-echo 'セッションクリア！';
-session_unset();
-session_destroy();
-
+$notices = $_SESSION['notices'] ?? [];
+unset($_SESSION['notices']);
 ?>
 
 <!DOCTYPE html>
@@ -19,11 +17,26 @@ session_destroy();
 
 <body>
 
-  <div class="new">
+  <div class="test">
     <h2>テストページ🐶🐾</h2>
 
-  <div class="back_btn">
-    <a class="btn" href="index.php">戻る</a>
+    <div class="notices">
+      <?php if(!empty($notices)): ?>
+        <ul>
+          <li>メッセージ:</li>
+          <?php foreach($notices as $notice): ?>
+            <li><?=$notice ?></li>
+          <?php endforeach; ?>
+        </ul>
+      <?php endif; ?>
+    </div>
+
+    <div class="reset_btn">
+      <a class="btn" href="session_reset.php">セッションリセット🐶</a>
+    </div>
+
+    <div class="back_btn">
+      <a class="btn" href="index.php">戻る🐶</a>
   </div>
 
 </body>
