@@ -2,8 +2,6 @@
 // rename.php 名前変更画面
 $name = $_POST['dogmon_name'] ?? '';
 
-var_dump($name);
-
 ?>
 
 <!DOCTYPE html>
@@ -42,9 +40,12 @@ var_dump($name);
       <?php endif; ?>
     </div>
 
-    <div class="edit_form">
+    <div class="rename_form">
       <form action="" method="post">
-        <input type="submit" value="育成開始🐶">
+        <label for="name">名前を入力してね🐶: </label>
+        <input id="name" type="text" name="name" placeholder="例: じょん" value="<?php echo $name;?>">
+        <br>
+        <input type="submit" value="名前変更🐶">
       </form>
     </div>
   </div>
