@@ -3,9 +3,21 @@
 ul {
   list-style: none;
 }
-
 a {
   text-decoration: none;
+}
+table {
+  width:100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+th {
+  background-color: #f0f0f0;
 }
 
 /* index.php */

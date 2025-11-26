@@ -8,7 +8,20 @@ class Dogmon {
 
   public function __construct($name, $type, $level = 1) {
     $this->name = $name;
-    $this->type = $type;
+
+    switch ($type) {
+      case 'normal': $this->type = 'ノーマル🐶';
+      break;
+      case 'fire': $this->type = '炎🔥';
+      break;
+      case 'water': $this->type = '水💧';
+      break;
+      case 'leaf': $this->type = '草🌿';
+      break;
+      case 'fight': $this->type = '格闘🐰';
+      break;
+    };
+
     $this->level = $level;
   }
 
