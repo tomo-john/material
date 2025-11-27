@@ -20,17 +20,22 @@ if (!empty($errors)) {
   exit;
 }
 
-// 作成
-if (empty($_SESSION['dogmon'])) {
-  $_SESSION['dogmon'] = [];
+// 作成(配列 => JSONファイル)
+$new_dogmon = new Dogmon($name, $type);
+
+$file_name = 'dogmons.json';
+if (file_exists($file_name) && !empty($file_name)) {
+  $dogmons = json_decode(file_get_contents($file_name), true);
+} else {
+  $dogmons = [];
 }
 
-$new_dogmon = new Dogmon($name, $type);
-$_SESSION['dogmon'][] = $new_dogmon;
+$dogmons[] = $new_dogmon;
+
+file_put_contents($file_name, json_encode($dogmons, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
 
 // 完了メッセージ&リダイレクト
-$notices = [];
-$notices[] = '新しいdogmonが作成されました！🐶';
+$notices = ['新しいdogmonが作成されました！🐶'];
 $notices[] = '名前: ' . $new_dogmon->getName() . ' / タイプ: ' . $new_dogmon->getType();
 $notices[] = '大事に育ててね🐶';
 $_SESSION['notices'] = $notices;
