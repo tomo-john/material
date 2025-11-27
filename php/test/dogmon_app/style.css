@@ -51,6 +51,19 @@ th {
 }
 
 /* new.php */
+.new_form {
+  margin: 20px;
+  padding: 20px;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+}
+.form_note {
+  display: block;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  color: #e0245e;
+  font-size: 0.8rem;
+}
 
 /* other */
 .errors {

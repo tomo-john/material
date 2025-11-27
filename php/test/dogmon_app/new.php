@@ -62,6 +62,8 @@ unset($_SESSION['notices']);
           <option value="fight">格闘🐰</option>
         </select>
         <br>
+        <small class="form_note">※タイプは後から変更できないよ🐶</small>
+        <br>
         <input type="submit" value="作成🐶">
       </form>
     </div>
