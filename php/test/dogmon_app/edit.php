@@ -1,5 +1,5 @@
 <?php
-// edit.php 編集画面
+// edit.php 育成画面
 session_start();
 
 // エラーチェック
