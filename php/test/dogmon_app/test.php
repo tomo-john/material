@@ -32,6 +32,10 @@ unset($_SESSION['notices']);
     </div>
 
     <div class="reset_btn">
+      <a class="btn" href="data_reset.php">データリセット🐶</a>
+    </div>
+
+    <div class="reset_btn">
       <a class="btn" href="session_reset.php">セッションリセット🐶</a>
     </div>
 

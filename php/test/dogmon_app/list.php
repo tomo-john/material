@@ -12,7 +12,16 @@ $notices = $_SESSION['notices'] ?? [];
 unset($_SESSION['notices']);
 
 // dogmonリスト取得
-$dogmons = $_SESSION['dogmon'] ?? [];
+$file_name = 'dogmons.json';
+$dogmons = [];
+
+if (file_exists($file_name)) {
+  $dogmons_json = json_decode(file_get_contents($file_name), true);
+
+  foreach ($dogmons_json as $d) {
+    $dogmons[] = new Dogmon($d['name'], $d['type'], $d['level']);
+  }
+}
 
 ?>
 
@@ -67,7 +76,7 @@ $dogmons = $_SESSION['dogmon'] ?? [];
             <?php foreach($dogmons as $dogmon): ?>
               <tr>
                 <td><?php echo $dogmon->getName(); ?></td>
-                <td><?php echo $dogmon->getType(); ?></td>
+                <td><?php echo $dogmon->getType_view(); ?></td>
                 <td><?php echo $dogmon->getLevel(); ?></td>
                 <td>
                   <form action="rename.php" method="post">

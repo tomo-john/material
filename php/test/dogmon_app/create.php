@@ -36,7 +36,7 @@ file_put_contents($file_name, json_encode($dogmons, JSON_PRETTY_PRINT | JSON_UNE
 
 // 完了メッセージ&リダイレクト
 $notices = ['新しいdogmonが作成されました！🐶'];
-$notices[] = '名前: ' . $new_dogmon->getName() . ' / タイプ: ' . $new_dogmon->getType();
+$notices[] = '名前: ' . $new_dogmon->getName() . ' / タイプ: ' . $new_dogmon->getType_view();
 $notices[] = '大事に育ててね🐶';
 $_SESSION['notices'] = $notices;
 header('Location:new.php');
