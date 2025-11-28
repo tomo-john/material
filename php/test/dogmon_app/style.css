@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+h2 {
+margin: 20px;
+}
+
 ul {
   list-style: none;
 }
@@ -7,9 +11,9 @@ a {
   text-decoration: none;
 }
 table {
-  width:100%;
+  width:75%;
   border-collapse: collapse;
-  margin-top: 20px;
+  margin: 20px;
 }
 th, td {
   border: 1px solid #ccc;
@@ -50,8 +54,8 @@ th {
   border-radius: 8px;
 }
 
-/* new.php */
-.new_form {
+/* form */
+.form {
   margin: 20px;
   padding: 20px;
   border: 2px dashed #ccc;
@@ -75,7 +79,7 @@ th {
 .btn {
   display: inline-block;
   padding: 4px 8px;
-  margin: 10px 0px;
+  margin: 10px 20px;
   background: #007bff;
   color: #fff;
   text-decoration: none;

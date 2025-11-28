@@ -48,7 +48,7 @@ unset($_SESSION['notices']);
       <?php endif; ?>
     </div>
 
-    <div class="new_form">
+    <div class="form">
       <form action="create.php" method="post">
         <label for="name">名前を入力してね🐶: </label>
         <input id="name" type="text" name="name" placeholder="例: じょん">

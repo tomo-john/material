@@ -51,7 +51,7 @@ $dogmons = $_SESSION['dogmon'] ?? [];
       <?php endif; ?>
     </div>
 
-    <div class="edit_form">
+    <div class="form">
       <form action="" method="post">
         <input type="submit" value="育成開始🐶">
       </form>
