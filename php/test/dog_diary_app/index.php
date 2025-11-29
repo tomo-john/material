@@ -15,6 +15,7 @@ if (!empty($_SESSION['old_input'])) {
 $notices = [];
 if (!empty($_SESSION['notices'])) {
   $notices = $_SESSION['notices'];
+  unset($_SESSION['notices']);
 }
 
 ?>
