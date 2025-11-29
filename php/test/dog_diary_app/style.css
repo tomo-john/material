@@ -1,0 +1,43 @@
+@charset 'utf-8';
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+label {
+  font-weight: bold;
+}
+input[type="text"], textarea {
+  width: 400px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+}
+textarea{
+  height: 300px;
+}
+.btn {
+  display: inline-block;
+  font-size: 12px;
+  width: 120px;
+  padding: 6px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  color: #000;
+  background: #eee;
+  text-decoration: none;
+  cursor: pointer;
+}
+.link-btn {
+  align-self: center;
+  margin-top: 20px;
+  background: #f8f8f8;
+}
