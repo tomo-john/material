@@ -4,6 +4,9 @@ session_start();
 
 $title = $_POST['title'] ?? '';
 $content = $_POST['content'] ?? '';
+$old_input = [];
+$old_input['title'] = $title;
+$old_input['content'] = $content;
 
 $errors = [];
 if (empty($title)) {
@@ -14,6 +17,7 @@ if (empty($content)) {
 }
 if (!empty($errors)) {
   $_SESSION['errors'] = $errors;
+  $_SESSION['old_input'] = $old_input;
   header('Location:index.php');
   exit;
 }

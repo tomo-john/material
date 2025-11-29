@@ -3,8 +3,14 @@
 session_start();
 
 $erros = [];
+$old_input = [];
 if (!empty($_SESSION['errors'])) {
   $errors = $_SESSION['errors'];
+  unset($_SESSION['errors']);
+}
+if (!empty($_SESSION['old_input'])) {
+  $old_input = $_SESSION['old_input'];
+  unset($_SESSION['old_input']);
 }
 $notices = [];
 if (!empty($_SESSION['notices'])) {
@@ -47,9 +53,9 @@ if (!empty($_SESSION['notices'])) {
 
     <form action="create.php" method="post">
       <label for="title">タイトル</label>
-      <input id="title" type="text" name="text" placeholder="タイトルの入力🐾" value="">
+      <input id="title" type="text" name="title" placeholder="タイトルの入力" value="<?php echo htmlspecialchars($old_input['title'] ?? '', ENT_QUOTES, 'UTF-8') ?>">
       <label for="content">内容</label>
-      <textarea id="content" name="content" placeholder="本文書いてね🐾"></textarea>
+      <textarea id="content" name="content" placeholder="本文書いてね🐾"><?php echo htmlspecialchars($old_input['content'] ?? '', ENT_QUOTES, 'UTF-8'); ?></textarea>
       <input class="btn" type="submit" value="登録🐶">
       <a class="btn link-btn" href="list.php">一覧画面へ🐶</a>
     </form>
