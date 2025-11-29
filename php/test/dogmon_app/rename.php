@@ -57,12 +57,12 @@ if (empty($name)) {
       <?php endif; ?>
     </div>
 
-    <div class="rename_form">
+    <div class="form">
       <form action="update_name.php" method="post">
         <label for="name">名前を入力してね🐶: </label>
         <input id="name" type="text" name="name" placeholder="例: じょん" value="<?php echo $name; ?>">
         <input type="hidden" name="old_name" value="<?php echo $old_name; ?>">
-        <br>
+        <br><br>
         <input type="submit" value="名前変更🐶">
       </form>
     </div>

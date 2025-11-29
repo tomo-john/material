@@ -11,12 +11,6 @@ $errors = [];
 if (empty($new_name)) {
   $errors[] = '名前を入力して下さい🐶💦';
 }
-if (!empty($errors)) {
-  $_SESSION['errors'] = $errors;
-  $_SESSION['old_name'] = $old_name;
-  header('Location:rename.php');
-  exit;
-}
 
 // 変更前のdogmonリスト取得
 $file_name = 'dogmons.json';
@@ -24,6 +18,26 @@ if (file_exists($file_name)) {
   $old_dogmons_json = json_decode(file_get_contents($file_name), true);
 } else {
   exit('更新エラー🐶💦');
+}
+
+// 名前重複チェック
+$uniq_flg = true;
+foreach ($old_dogmons_json as $d) {
+  if ($d['name'] == $new_name) {
+    $uniq_flg = false;
+    break;
+  }
+}
+if (!$uniq_flg) {
+  $errors[] = $new_name . 'はすでに存在しています🐶💦';
+}
+
+// エラーがあればもどる
+if (!empty($errors)) {
+  $_SESSION['errors'] = $errors;
+  $_SESSION['old_name'] = $old_name;
+  header('Location:rename.php');
+  exit;
 }
 
 // 変更するデータを除外

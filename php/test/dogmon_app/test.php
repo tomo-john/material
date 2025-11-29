@@ -4,6 +4,22 @@ session_start();
 
 $notices = $_SESSION['notices'] ?? [];
 unset($_SESSION['notices']);
+
+// $dogmons配列
+$file_name = 'dogmons.json';
+if (file_exists($file_name) && !empty($file_name)) {
+  $dogmons = json_decode(file_get_contents($file_name), true);
+} else {
+  $dogmons = [];
+}
+
+if (!empty($dogmons)) {
+  foreach ($dogmons as $d) {
+    var_dump($d);
+    echo '<br>';
+  }
+}
+
 ?>
 
 <!DOCTYPE html>
