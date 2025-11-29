@@ -1,5 +1,15 @@
 <?php
 // index.php
+session_start();
+
+$erros = [];
+if (!empty($_SESSION['errors'])) {
+  $errors = $_SESSION['errors'];
+}
+$notices = [];
+if (!empty($_SESSION['notices'])) {
+  $notices = $_SESSION['notices'];
+}
 
 ?>
 
@@ -14,8 +24,28 @@
   
   <div class="main">
     <h2>🐶犬日記app🐶</h2>
+    
+    <div class="error">
+      <?php if(!empty($errors)): ?>
+        <ul>
+          <?php foreach($errors as $error): ?>
+            <li><?=$error ?></li>
+          <?php endforeach; ?>
+        </ul>
+      <?php endif;?>
+    </div>
 
-    <form action="" method="post">
+    <div class="notice">
+      <?php if(!empty($notices)): ?>
+        <ul>
+          <?php foreach($notices as $notice): ?>
+            <li><?=$notice ?></li>
+          <?php endforeach; ?>
+        </ul>
+      <?php endif;?>
+    </div>
+
+    <form action="create.php" method="post">
       <label for="title">タイトル</label>
       <input id="title" type="text" name="text" placeholder="タイトルの入力🐾" value="">
       <label for="content">内容</label>

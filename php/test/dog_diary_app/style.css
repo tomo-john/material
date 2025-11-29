@@ -5,6 +5,15 @@
   flex-direction: column;
   align-items: center;
 }
+.main ul {
+  list-style: none;
+}
+.error {
+  color: red;
+}
+.notice {
+  color: blue;
+}
 form {
   display: flex;
   flex-direction: column;
