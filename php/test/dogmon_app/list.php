@@ -79,10 +79,16 @@ if (file_exists($file_name)) {
                 <td><?php echo $dogmon->getType_view(); ?></td>
                 <td><?php echo $dogmon->getLevel(); ?></td>
                 <td>
-                  <form action="rename.php" method="post">
-                    <input type="hidden" name="dogmon_name" value="<?php echo $dogmon->getName(); ?>">
-                    <input type="submit" value="名前変更">
-                  </form>
+                  <div class='form_group'>
+                    <form action="rename.php" method="post">
+                      <input type="hidden" name="dogmon_name" value="<?php echo $dogmon->getName(); ?>">
+                      <input type="submit" value="名前変更">
+                    </form>
+                    <form action="levelup.php" method="post">
+                      <input type="hidden" name="dogmon_name" value="<?php echo $dogmon->getName(); ?>">
+                      <input type="submit" value="レベルアップ">
+                    </form>
+                  </div>
                 </td>
               </tr>
             <?php endforeach; ?>
