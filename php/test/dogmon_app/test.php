@@ -13,13 +13,6 @@ if (file_exists($file_name) && !empty($file_name)) {
   $dogmons = [];
 }
 
-if (!empty($dogmons)) {
-  foreach ($dogmons as $d) {
-    var_dump($d);
-    echo '<br>';
-  }
-}
-
 ?>
 
 <!DOCTYPE html>
@@ -44,6 +37,17 @@ if (!empty($dogmons)) {
             <li><?=$notice ?></li>
           <?php endforeach; ?>
         </ul>
+      <?php endif; ?>
+    </div>
+
+    <div class='test'>
+      <?php if(!empty($dogmons)): ?>
+        <?php foreach($dogmons as $dogmon): ?>
+          <?php foreach($dogmon as $d): ?>
+            <?=$d ?>
+          <?php endforeach; ?>
+          <?php echo '<br>'; ?>
+        <?php endforeach; ?>
       <?php endif; ?>
     </div>
 
