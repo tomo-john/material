@@ -70,4 +70,21 @@ class DogDiary implements JsonSerializable {
     return $target_diary;
   }
 
+  // データ削除
+  public static function deleteDiary($title, $date) {
+    $old_diaries = self::getDiaries();
+    
+    if (!is_array($old_diaries)) {
+      return false;
+    }
+
+    $new_diaries = [];
+    foreach ($old_diaries as $d) {
+      if ($d['title'] != $title && $d['date'] != $date) {
+        $new_diaries[] = $d;
+      }
+    }
+    file_put_contents(self::$save_data, json_encode($new_diaries, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+  }
+
 }

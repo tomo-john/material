@@ -3,6 +3,12 @@
 require_once 'DogDiary.php'; 
 session_start();
 
+$notices = [];
+if (!empty($_SESSION['notices'])) {
+  $notices = $_SESSION['notices'];
+  unset($_SESSION['notices']);
+}
+
 // データ一覧取得
 $diaries = DogDiary::getDiaries();
 
@@ -48,7 +54,7 @@ $diaries = DogDiary::getDiaries();
         </tr>
       </thead>
       <tbody>
-        <?php if($diaries !== null): ?>
+        <?php if($diaries != null): ?>
           <?php foreach($diaries as $d): ?>
             <tr>
               <td><?php echo $d['title'] ?></td>
@@ -59,6 +65,11 @@ $diaries = DogDiary::getDiaries();
                     <input type="hidden" name="title" value="<?php echo $d['title']; ?>">
                     <input type="hidden" name="date" value="<?php echo $d['date']; ?>">
                     <input class="btn action-btn" type="submit" value="詳細">
+                  </form>
+                  <form action="delete.php" method="post">
+                    <input type="hidden" name="title" value="<?php echo $d['title']; ?>">
+                    <input type="hidden" name="date" value="<?php echo $d['date']; ?>">
+                    <input class="btn action-btn" type="submit" value="削除">
                   </form>
                   <a class="btn action-btn" href="test.php">テスト</a>
                 </div>
