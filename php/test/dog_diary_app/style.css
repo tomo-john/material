@@ -68,3 +68,7 @@ th, td {
 th {
   background-color: #f0f0f0;
 }
+.action {
+  display: flex;
+  gap: 6px;
+}

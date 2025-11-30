@@ -54,8 +54,14 @@ $diaries = DogDiary::getDiaries();
               <td><?php echo $d['title'] ?></td>
               <td><?php echo $d['date'] ?></td>
               <td>
-                <a class="btn action-btn" href="show.php">詳細</a>
-                <a class="btn action-btn" href="test.php">テスト</a>
+                <div class="action">
+                  <form action="show.php" method="post">
+                    <input type="hidden" name="title" value="<?php echo $d['title']; ?>">
+                    <input type="hidden" name="date" value="<?php echo $d['date']; ?>">
+                    <input class="btn action-btn" type="submit" value="詳細">
+                  </form>
+                  <a class="btn action-btn" href="test.php">テスト</a>
+                </div>
               </td>
             </tr>
           <?php endforeach; ?>
