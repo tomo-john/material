@@ -31,3 +31,11 @@ FLUSH PRIVILEGES;
 
 `FLUSH PRIVILEGES;`で設定を反映させている。
 
+### 削除するとき(DROP)
+
+```
+# rootにて
+DROP DATABASE dog_app;
+DROP USER 'tomo_user'@'localhost';
+```
+
