@@ -50,6 +50,11 @@ textarea{
   margin-top: 20px;
   background: #ffc0cb;
 }
+.action-btn {
+  width: 60px;
+  padding: 3px;
+  background: #ffffe0;
+}
 table {
   width: 75%;
   border-collapse: collapse;

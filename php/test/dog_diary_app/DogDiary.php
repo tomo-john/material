@@ -39,7 +39,7 @@ class DogDiary implements JsonSerializable {
       $file_content = file_get_contents(self::$save_data);
 
       if ($file_content !== false && $file_content !== '') {
-        return json_decode($file_content);
+        return json_decode($file_content, true);
       }
     return null;
     }

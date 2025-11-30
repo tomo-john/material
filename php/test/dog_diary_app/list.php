@@ -6,8 +6,6 @@ session_start();
 // データ一覧取得
 $diaries = DogDiary::getDiaries();
 
-var_dump($diaries);
-
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -50,11 +48,20 @@ var_dump($diaries);
         </tr>
       </thead>
       <tbody>
-        
-        <tr>
-          <td>a</td>
-          <td>b</td>
-        </tr>
+        <?php if($diaries !== null): ?>
+          <?php foreach($diaries as $d): ?>
+            <tr>
+              <td><?php echo $d['title'] ?></td>
+              <td><?php echo $d['date'] ?></td>
+              <td>
+                <a class="btn action-btn" href="show.php">詳細</a>
+                <a class="btn action-btn" href="test.php">テスト</a>
+              </td>
+            </tr>
+          <?php endforeach; ?>
+        <?php else: ?>
+          <p>作成された日記はありません🐶</p>
+        <?php endif; ?>
       <tbody>
     </table>
 
