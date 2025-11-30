@@ -5,7 +5,7 @@ session_start();
 
 $title = $_POST['title'] ?? '';
 $date = $_POST['date'] ?? '';
-if (empty($title) || empty($title)) {
+if (empty($title) || empty($date)) {
   exit('不正なアクセスです🐶💦');
 }
 

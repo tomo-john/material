@@ -3,6 +3,11 @@
 require_once 'DogDiary.php'; 
 session_start();
 
+$erros = [];
+if (!empty($_SESSION['errors'])) {
+  $errors = $_SESSION['errors'];
+  unset($_SESSION['errors']);
+}
 $notices = [];
 if (!empty($_SESSION['notices'])) {
   $notices = $_SESSION['notices'];
@@ -65,6 +70,11 @@ $diaries = DogDiary::getDiaries();
                     <input type="hidden" name="title" value="<?php echo $d['title']; ?>">
                     <input type="hidden" name="date" value="<?php echo $d['date']; ?>">
                     <input class="btn action-btn" type="submit" value="詳細">
+                  </form>
+                  <form action="edit.php" method="post">
+                    <input type="hidden" name="title" value="<?php echo $d['title']; ?>">
+                    <input type="hidden" name="date" value="<?php echo $d['date']; ?>">
+                    <input class="btn action-btn" type="submit" value="編集">
                   </form>
                   <form action="delete.php" method="post">
                     <input type="hidden" name="title" value="<?php echo $d['title']; ?>">
