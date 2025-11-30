@@ -16,6 +16,7 @@ class DogDiary implements JsonSerializable {
     $this->date = date("Y/m/d H:i:s");
   }
 
+  // privateプロパティをJSONに保存する
   public function jsonSerialize(): array {
     return [
       'title' => $this->title,
@@ -23,7 +24,8 @@ class DogDiary implements JsonSerializable {
       'date' => $this->date
     ];
   }
-
+  
+  // データ更新
   public static function addDiary($new_data) {
     $old_data = self::getDiaries();
 
@@ -34,6 +36,7 @@ class DogDiary implements JsonSerializable {
     file_put_contents(self::$save_data, json_encode($update_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
   }
 
+  // データ取得
   public static function getDiaries() {
     if (file_exists(self::$save_data)) {
       $file_content = file_get_contents(self::$save_data);
@@ -43,6 +46,28 @@ class DogDiary implements JsonSerializable {
       }
     return null;
     }
+  }
+
+  // データ探索
+  public static function searchDiary($title, $date) {
+    $diaries = self::getDiaries();  
+    
+    if (!is_array($diaries)) {
+      return null;
+    }
+    
+    $target_diary = [];
+    foreach ($diaries as $d) {
+      if ($d['title'] == $title && $d['date'] == $date) {
+        $target_diary = [
+          'title' => $d['title'],
+          'content' => $d['content'],
+          'date' => $d['date']
+        ];
+        break;
+      }
+    }
+    return $target_diary;
   }
 
 }
