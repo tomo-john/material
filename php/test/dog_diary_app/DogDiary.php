@@ -24,15 +24,24 @@ class DogDiary implements JsonSerializable {
     ];
   }
 
-  public static function addDiary($data) {
-    file_put_contents(self::$save_data, json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE), FILE_APPEND);
+  public static function addDiary($new_data) {
+    $old_data = self::getDiaries();
+
+    if (!is_array($old_data)) {
+      $old_data = [];
+    }
+    $update_data = array_merge($old_data, $new_data);
+    file_put_contents(self::$save_data, json_encode($update_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
   }
 
   public static function getDiaries() {
-    if (file_exists(self::$save_data) && !empty(self::$save_data)) {
-      return file_get_contents(self::$save_data, true);
-    } else {
-      return null;
+    if (file_exists(self::$save_data)) {
+      $file_content = file_get_contents(self::$save_data);
+
+      if ($file_content !== false && $file_content !== '') {
+        return json_decode($file_content);
+      }
+    return null;
     }
   }
 

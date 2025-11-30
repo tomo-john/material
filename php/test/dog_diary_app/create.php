@@ -23,8 +23,8 @@ if (!empty($errors)) {
   exit;
 }
 
-$diary = new DogDiary($title, $content);
-DogDiary::addDiary($diary);
+$new_data = [new DogDiary($title, $content)];
+DogDiary::addDiary($new_data);
 
 $notices = ['作成が完了しました🐶'];
 $notices[] = 'タイトル: ' . $title;

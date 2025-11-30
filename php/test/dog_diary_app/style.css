@@ -50,3 +50,16 @@ textarea{
   margin-top: 20px;
   background: #ffc0cb;
 }
+table {
+  width: 75%;
+  border-collapse: collapse;
+  margin: 20px;
+}
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+th {
+  background-color: #f0f0f0;
+}
