@@ -15,12 +15,14 @@
   
     <h2>PHP DB接続検証APP🐶</h2>
 
-    <h3>INDEX</h3>
+    <h3>🐾テストページ🐾</h3>
+
+    <div class="content">
+    
+    </div>
 
     <div class="menu-list">
-      <a class="link-btn" href='new.php'>作成画面</a>
-      <a class="link-btn" href='list.php'>一覧画面</a>
-      <a class="link-btn" href='test.php'>テストページ</a>
+      <a class="link-btn" href='index.php'>戻る🐶</a>
     </div>
   </div>
 

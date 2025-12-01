@@ -1,0 +1,30 @@
+@charset 'utf-8';
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1280px;
+  margin: auto;
+}
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.link-btn {
+  display: inline-block;
+  font-size: 12px;
+  text-decoration: none;
+  text-align: center;
+  width: 120px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  padding: 6px;
+  color: #000;
+  background: #ffc0cb;
+  cursor: pointer;
+}
+.link-btn:hover {
+  background: #ffb6c1;
+}
