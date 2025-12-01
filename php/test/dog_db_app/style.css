@@ -1,5 +1,11 @@
 @charset 'utf-8';
 
+.notice {
+  color: blue;
+}
+.error {
+  color: red;
+}
 .main {
   display: flex;
   flex-direction: column;
@@ -27,4 +33,9 @@
 }
 .link-btn:hover {
   background: #ffb6c1;
+}
+.content {
+  border: 2px solid #ccc;
+  padding: 0px 10px;
+  margin: 20px;
 }
