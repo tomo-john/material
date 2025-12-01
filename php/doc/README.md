@@ -75,6 +75,7 @@
 | [static](./php/static.md)                         | クラス全体に属する           |
 | [名前空間](./php/namespace.md)                    | 名前空間はクラスの住所(?)    |
 | [クラス関連メモ](./php/class_memo.md)             | クラス関連のメモ             |
+| [例外処理](./php/try.md)                          | try/cathc構文                |
 
 ## Laravel
 
