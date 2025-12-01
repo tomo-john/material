@@ -18,13 +18,13 @@ CREATE DATABASE dog_app CHARACTER SET utf8mb4;
 ### 開発用ユーザー作成(rootで直接は危険)
 
 ```
-CREATE USER 'tomo_user'@'localhost' IDENTIFIED BY 'password123';
-GRANT ALL PRIVILEGES ON dog_app.* TO 'tomo_user'@'localhost';
+CREATE USER 'john'@'localhost' IDENTIFIED BY 'john1234';
+GRANT ALL PRIVILEGES ON dog_app.* TO 'john'@'localhost';
 FLUSH PRIVILEGES;
 ```
 
-- ユーザー名: `tomo_user`
-- パスワード: `password123`
+- ユーザー名: `john`
+- パスワード: `john1234`
 - DB: `dog_appにフル権限`
 
 本番ではもっと強いパスワードにする必要あり。
@@ -36,6 +36,6 @@ FLUSH PRIVILEGES;
 ```
 # rootにて
 DROP DATABASE dog_app;
-DROP USER 'tomo_user'@'localhost';
+DROP USER 'john'@'localhost';
 ```
 
