@@ -1,7 +1,8 @@
 # メモ
 
 ```
-# MySQL設定
+# MySQL設定(rootにて)
+CREATE DATABASE dog_app CHARACTER SET utf8mb4;
 CREATE USER 'john'@'localhost' IDENTIFIED BY 'john1234';
 GRANT ALL PRIVILEGES ON dog_app.* TO 'john'@'localhost';
 FLUSH PRIVILEGES;
