@@ -35,6 +35,7 @@
   background: #ffe4b5;
 }
 .submit-btn {
+  margin: 10px 0px;
   background: #ffd700;
 }
 .submit-btn:hover {
@@ -44,4 +45,13 @@
   border: 2px solid #ccc;
   padding: 0px 10px;
   margin: 20px;
+}
+.form form{
+  display: flex;
+  flex-direction: column;
+  gap: 12px
+}
+.submit-container {
+  display: flex;
+  justify-content: center;
 }
