@@ -32,7 +32,13 @@
   cursor: pointer;
 }
 .link-btn:hover {
-  background: #ffb6c1;
+  background: #ffe4b5;
+}
+.submit-btn {
+  background: #ffd700;
+}
+.submit-btn:hover {
+  background: #ffe4b5;
 }
 .content {
   border: 2px solid #ccc;
