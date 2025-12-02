@@ -24,4 +24,16 @@ if (!empty($errors)) {
   exit;
 }
 
-exit('OK🐶');
+// 作成処理
+$dogrepo = new DogRepository();
+$result = $dogrepo->saveDog($name, intval($age));
+
+if ($result) {
+  $notices[] = '登録処理が完了しまいた🐶✨';
+  $notices[] = '登録されたワンちゃん: ' . $name . '(' . $age . '才)';
+  $_SESSION['notices'] = $notices;
+  header('Location:new.php');
+  exit;
+} else {
+  die('エラー: 登録処理に失敗しました🐶💦');
+}
