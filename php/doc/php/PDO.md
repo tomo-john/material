@@ -32,3 +32,17 @@ try {
 }
 ```
 
+### PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+
+| 定数                     | 意味                                                                |
+|--------------------------|---------------------------------------------------------------------|
+| `PDO::ATTR_ERRMODE`      | エラーの処理方法(エラーモード)を設定する属性                        |
+| `PDO::ERRMODE_EXCEPTION` | エラーが発生した場合に、PHP標準の 例外(PDOException)を投げる モード |
+
+### PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+
+| 定数                           | 意味                                                     |
+|--------------------------------|----------------------------------------------------------|
+| `PDO::ATTR_DEFAULT_FETCH_MODE` | データベースからデータを取り出すときの形式を設定する属性 |
+| `PDO::FETCH_ASSOC`             | データを 連想配列(Associative Array) の形式で取り出す    |
+
