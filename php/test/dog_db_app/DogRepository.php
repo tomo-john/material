@@ -38,4 +38,14 @@ class DogRepository {
 
     return $stmt->execute();
   }
+
+  // 全データ取得
+  public function getDog(): array {
+    $pdo = $this->getPdoConnection();
+    
+    $sql = 'SELECT * FROM dogs';
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+  }
 }
