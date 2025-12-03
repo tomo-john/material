@@ -7,20 +7,22 @@ $postId = 20;
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <link ref="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
   <title>Button</title>
 </head>
 <body>
   
-  <div class="content">
+  <div class="container">
 
-    <h2>ボタン🐶</h2>
+    <h2>INDEX</h2>
+
+    <h3>🐶ボタン🐶</h3>
     
-    <a href="receive.php">リンク</a>
-    <a href="receive.php?id=<?php echo $getId ?>">GET</a>
+    <a class="btn" href="receive.php">リンク</a>
+    <a class="btn" href="receive.php?id=<?php echo $getId ?>">GET</a>
     <form action="receive.php" method="post">
       <input type="hidden" name="id" value="<?php echo $postId ?>">
-      <input type="submit" value="POST">
+      <input class="btn" type="submit" value="POST">
     </form>
 
   </div>
