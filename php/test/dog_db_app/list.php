@@ -50,6 +50,7 @@ $dogs = $dogrepo->getDog();
             <th>名前</th>
             <th>年齢</th>
             <th>登録日時</th>
+            <th>アクション</th>
           </tr>
         </thead>
         <tbody>
@@ -60,6 +61,18 @@ $dogs = $dogrepo->getDog();
                 <td><?php echo $dog['name'] ?></td>
                 <td><?php echo $dog['age'] ?></td>
                 <td><?php echo $dog['created_at'] ?></td>
+                <td>
+                  <div class="action">
+                    <form action="edit.php" method="post">
+                      <input type="hidden" name="id" value="<?php echo $dog['id'] ?>">
+                      <input class="action-btn" type="submit" value="編集🐾">
+                    </form>
+                    <form action="edit.php" method="post">
+                      <input type="hidden" name="id" value="<?php echo $dog['id'] ?>">
+                      <input class="action-btn" type="submit" value="編集🐾">
+                    </form>
+                  </div>
+                </td>
               </tr>
             <?php endforeach; ?>
           <?php else: ?>

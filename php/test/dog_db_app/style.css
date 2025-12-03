@@ -64,7 +64,20 @@ th, td {
   border: 1px solid #ccc;
   padding: 10px;
   text-align: left;
+  vertical-align: middle;
 }
 th {
   background-color: #f0f0f0;
+}
+.action {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.action-btn {
+  background: #ffb6c1;
+  border-radius: 6px;
+}
+.action-btn:hover {
+  background: #ff69b4;
 }
