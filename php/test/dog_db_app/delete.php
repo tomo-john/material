@@ -12,12 +12,12 @@ if (empty($id)) {
 
 // 更新処理
 $dogrepo = new DogRepository();
-$dog = $dogrepo->searchDog(intval($id));
+$dog = $dogrepo->findDog(intval($id));
 $result = $dogrepo->deleteDog(intval($id));
 
 if ($result) {
   $notices[] = '削除処理が完了しました🐶✨';
-  $notices[] = '削除されたワンちゃん: ' . $dog['name'] . '(' . $dog['age'] . '歳)';
+  $notices[] = '削除されたワンちゃん: ' . htmlspecialchars($dog['name']) . '(' . htmlspecialchars($dog['age']) . '歳)';
   $_SESSION['notices'] = $notices;
   header('Location:list.php');
   exit;

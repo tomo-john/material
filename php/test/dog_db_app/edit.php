@@ -22,7 +22,7 @@ if (empty($id)) {
 }
 
 $dogrepo = new DogRepository();
-$dog = $dogrepo->searchDog(intval($id));
+$dog = $dogrepo->findDog(intval($id));
 
 ?>
 

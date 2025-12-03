@@ -52,7 +52,7 @@ class DogRepository {
   }
   
   // 指定データ取得
-  public function searchDog(int $id): array {
+  public function findDog(int $id): array {
     $pdo = $this->getPdoConnection();
 
     $sql = 'SELECT * FROM dogs WHERE id = :id';

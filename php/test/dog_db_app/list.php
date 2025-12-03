@@ -69,13 +69,13 @@ $dogs = $dogrepo->getDog();
           <?php if(!empty($dogs)): ?>
             <?php foreach($dogs as $dog): ?>
               <tr>
-                <td><?php echo $dog['id'] ?></td>
-                <td><?php echo $dog['name'] ?></td>
-                <td><?php echo $dog['age'] ?></td>
-                <td><?php echo $dog['created_at'] ?></td>
+                <td><?php echo htmlspecialchars($dog['id']) ?></td>
+                <td><?php echo htmlspecialchars($dog['name']) ?></td>
+                <td><?php echo htmlspecialchars($dog['age']) ?></td>
+                <td><?php echo htmlspecialchars($dog['created_at']) ?></td>
                 <td>
                   <div class="action">
-                    <a class="action-btn" href="edit.php?id=<?php echo $dog['id'] ?>">編集🐾<a>
+                    <a class="action-btn" href="<?php echo htmlspecialchars("edit.php?id={$dog['id']}") ?>">編集🐾<a>
                     <form action="delete_confirm.php" method="post">
                       <input type="hidden" name="id" value="<?php echo $dog['id'] ?>">
                       <input class="action-btn" type="submit" value="削除🐾">
