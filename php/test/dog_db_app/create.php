@@ -30,7 +30,7 @@ $result = $dogrepo->saveDog($name, intval($age));
 
 if ($result) {
   $notices[] = '登録処理が完了しました🐶✨';
-  $notices[] = '登録されたワンちゃん: ' . $name . '(' . $age . '才)';
+  $notices[] = '登録されたワンちゃん: ' . $name . '(' . $age . '歳)';
   $_SESSION['notices'] = $notices;
   header('Location:new.php');
   exit;

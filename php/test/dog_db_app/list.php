@@ -76,7 +76,7 @@ $dogs = $dogrepo->getDog();
                 <td>
                   <div class="action">
                     <a class="action-btn" href="edit.php?id=<?php echo $dog['id'] ?>">編集🐾<a>
-                    <form action="delete.php" method="post">
+                    <form action="delete_confirm.php" method="post">
                       <input type="hidden" name="id" value="<?php echo $dog['id'] ?>">
                       <input class="action-btn" type="submit" value="削除🐾">
                     </form>
