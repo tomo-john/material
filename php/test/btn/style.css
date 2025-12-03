@@ -1,5 +1,10 @@
 @charset 'utf-8';
 
+form {
+  margin: 0;
+  padding: 0;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -22,4 +27,7 @@
 }
 .btn:hover {
   background: #f0e68c;
+}
+.table-btn {
+  background: #e6e6fa;
 }
