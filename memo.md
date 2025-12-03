@@ -14,3 +14,9 @@ push前に直前のを修正したい:
 git commit --amend
 ```
 
+## コードレビュー用
+
+```
+for f in *.php *.css; do echo "--- FILE: $f ---"; cat "$f"; echo -e "\n--- END OF $f ---\n"; done > review_code.txt
+```
+
