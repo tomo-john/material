@@ -63,13 +63,10 @@ $dogs = $dogrepo->getDog();
                 <td><?php echo $dog['created_at'] ?></td>
                 <td>
                   <div class="action">
-                    <form action="edit.php" method="post">
+                    <a class="action-btn" href="edit.php?id=<?php echo $dog['id'] ?>">編集🐾<a>
+                    <form action="delete.php" method="post">
                       <input type="hidden" name="id" value="<?php echo $dog['id'] ?>">
-                      <input class="action-btn" type="submit" value="編集🐾">
-                    </form>
-                    <form action="edit.php" method="post">
-                      <input type="hidden" name="id" value="<?php echo $dog['id'] ?>">
-                      <input class="action-btn" type="submit" value="編集🐾">
+                      <input class="action-btn" type="submit" value="削除🐾">
                     </form>
                   </div>
                 </td>

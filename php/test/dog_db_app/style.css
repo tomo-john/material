@@ -64,20 +64,35 @@ th, td {
   border: 1px solid #ccc;
   padding: 10px;
   text-align: left;
-  vertical-align: middle;
 }
 th {
   background-color: #f0f0f0;
 }
 .action {
   display: flex;
-  align-items: center;
   gap: 12px;
 }
 .action-btn {
-  background: #ffb6c1;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 12px;
+  width: 80px;
+  text-align: center;
+  border: 2px solid #ccc;
   border-radius: 6px;
+  padding: 6px 0;
+  line-height: 1.5;
+  color: #000;
+  background: #ffc0cb;
+  cursor: pointer;
+  box-sizing: border-box;
 }
 .action-btn:hover {
   background: #ff69b4;
+}
+.action input[type="submit"].action-btn {
+  line-height: 1.5;
+}
+.action form {
+  margin: 0;
 }
