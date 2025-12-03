@@ -16,8 +16,9 @@
   line-height: 1.5;
   color: black;
   background: #ffe4b5;
-  padding: 2px 0;
+  padding: 4px 0;
   margin: 10px 0;
+  box-sizing: border-box;
 }
 .btn:hover {
   background: #f0e68c;

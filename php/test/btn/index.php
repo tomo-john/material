@@ -24,6 +24,7 @@ $postId = 20;
       <input type="hidden" name="id" value="<?php echo $postId ?>">
       <input class="btn" type="submit" value="POST">
     </form>
+    <a class="btn" href="table.php">テーブル</a>
 
   </div>
 
