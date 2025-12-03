@@ -113,7 +113,7 @@ public function saveDog(string $name, int $age): bool {
 
 このメソッドでは、その真偽値をそのまま呼び出し元に返している。
 
-## SQL実行の流れ2(SELECT)
+## SQL実行の流れ2(SELECT【複数行】)
 
 ```
 public function getDog(): array {
@@ -148,4 +148,25 @@ public function getDog(): array {
 一応Laravelでは安全性を最優先するために、たとえ固定のSQLでもほとんどの場合`$pdo->prepare()`を通すように設計されている。(らしい)
 
 コードの統一性や拡張性の面からも、`$pdo->prepare($sql)`の書き方で統一しておくのがようさそう。
+
+## SQL実行の流れ3(SELECT【単一行】)
+
+```
+public function searchDog($id): array {
+  $pdo = $this->getPdoConnection();
+
+  $sql = 'SELECT * FROM dogs WHERE id = :id';
+  $stmt = $pdo->prepare($sql);
+  $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+  $stmt->execute();
+  return $stmt->fetch(PDO::FETCH_ASSOC);
+}
+```
+
+## fetchとfetchALL
+
+`FETCH_ASSOC`はそのまま残し、`fetchAll`を`fetch`に返るだけで、単一の連想配列が返される。
+
+- `fetchAll(PDO::FETCH_ASSOC` : `[[id=>1, name=>'A'], [id=>2, name=>'B']]`
+- `fetch(PDO::FETCH_ASSOC)` : `[id=>1, name=>'A']`
 
