@@ -1,13 +1,17 @@
 <?php
-// create.php
+// update.php
 require_once 'DogRepository.php';
 session_start();
 
+$id = $_POST['id'] ?? '';
 $name = $_POST['name'] ?? '';
 $age = $_POST['age'] ?? '';
 $notices = [];
 $errors = [];
 
+if (empty($id)) {
+  die('不正なアクセスです🐶💦');
+}
 if (empty($name)) {
   $errors[] = '名前が未入力です🐶💦';
 }
@@ -16,24 +20,20 @@ if (empty($age)) {
 }
 if (!empty($errors)) {
   $_SESSION['errors'] = $errors;
-  $_SESSION['old_input'] = [
-    'name' => $name,
-    'age' => $age
-  ];
-  header('Location:new.php');
+  header("Location:edit.php?id={$id}");
   exit;
 }
 
-// 作成処理
+// 更新処理
 $dogrepo = new DogRepository();
-$result = $dogrepo->saveDog($name, intval($age));
+$result = $dogrepo->updateDog(intval($id), $name, intval($age));
 
 if ($result) {
-  $notices[] = '登録処理が完了しました🐶✨';
+  $notices[] = '更新処理が完了しました🐶✨';
   $notices[] = '登録されたワンちゃん: ' . $name . '(' . $age . '才)';
   $_SESSION['notices'] = $notices;
-  header('Location:new.php');
+  header('Location:list.php');
   exit;
 } else {
-  die('エラー: 登録処理に失敗しました🐶💦');
+  die('エラー: 更新処理に失敗しました🐶💦');
 }

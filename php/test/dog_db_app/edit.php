@@ -15,17 +15,14 @@ if (!empty($_SESSION['errors'])) {
   unset($_SESSION['errors']);
 }
 
-$old_input = [];
-if (!empty($_SESSION['old_input'])) {
-  $old_input = $_SESSION['old_input'];
-  unset($_SESSION['old_input']);
-}
-
+// データ取得
 $id = $_GET['id'] ?? '';
 if (empty($id)) {
   exit('不正なアクセスです🐶💦');
 }
 
+$dogrepo = new DogRepository();
+$dog = $dogrepo->searchDog(intval($id));
 
 ?>
 
@@ -65,10 +62,11 @@ if (empty($id)) {
 
     <div class="form">
       <form action="update.php" method="post">
+        <input name="id" type="hidden" value="<?php echo $dog['id']; ?>">
         <label for="name">名前: </label>
-        <input id="name" name="name" type="text" placeholder="犬の名前を入力してね🐾" value="<?php echo htmlspecialchars($old_input['name'] ?? '', ENT_QUOTES, 'UTF-8'); ?>">
+        <input id="name" name="name" type="text" placeholder="犬の名前を入力してね🐾" value="<?php echo htmlspecialchars($dog['name'] ?? '', ENT_QUOTES, 'UTF-8'); ?>">
         <label for="age">年齢: </label>
-        <input id="age" name="age" type="number" placeholder="犬の年齢を入力してね🐾" value="<?php echo htmlspecialchars($old_input['age'] ?? '', ENT_QUOTES, 'UTF-8'); ?>">
+        <input id="age" name="age" type="number" placeholder="犬の年齢を入力してね🐾" value="<?php echo htmlspecialchars($dog['age'] ?? '', ENT_QUOTES, 'UTF-8'); ?>">
         <div class="submit-container">
           <input class="link-btn submit-btn" type="submit" value="更新🐶">
         </div>

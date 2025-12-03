@@ -3,6 +3,18 @@
 require_once 'DogRepository.php';
 session_start();
 
+$notices = [];
+if (!empty($_SESSION['notices'])) {
+  $notices = $_SESSION['notices'];
+  unset($_SESSION['notices']);
+}
+$errors = [];
+if (!empty($_SESSION['errors'])) {
+  $errors = $_SESSION['errors'];
+  unset($_SESSION['errors']);
+}
+
+// データ取得
 $dogrepo = new DogRepository();
 $dogs = $dogrepo->getDog();
 

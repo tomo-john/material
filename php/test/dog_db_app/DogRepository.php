@@ -31,8 +31,8 @@ class DogRepository {
     $pdo = $this->getPdoConnection();
 
     $sql = 'INSERT INTO dogs (name, age) VALUES (:name, :age)';
+    
     $stmt = $pdo->prepare($sql);
-
     $stmt->bindParam(':name', $name, PDO::PARAM_STR);
     $stmt->bindParam(':age', $age, PDO::PARAM_INT);
 
@@ -44,8 +44,36 @@ class DogRepository {
     $pdo = $this->getPdoConnection();
     
     $sql = 'SELECT * FROM dogs';
+    
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
+    
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
+  }
+  
+  // 指定データ取得
+  public function searchDog(int $id): array {
+    $pdo = $this->getPdoConnection();
+
+    $sql = 'SELECT * FROM dogs WHERE id = :id';
+    
+    $stmt = $pdo->prepare($sql);
+    $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+    $stmt->execute();
+    
+    return $stmt->fetch(PDO::FETCH_ASSOC);
+  }
+
+  // 指定データ更新
+  public function updateDog (int $id, string $name, int $age): bool {
+    $pdo = $this->getPdoConnection();
+
+    $sql = 'UPDATE dogs SET name = :name, age = :age WHERE id = :id';
+    $stmt = $pdo->prepare($sql);
+    $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+    $stmt->bindParam(':name', $name, PDO::PARAM_STR);
+    $stmt->bindParam(':age', $age, PDO::PARAM_INT);
+
+    return $stmt->execute();
   }
 }
