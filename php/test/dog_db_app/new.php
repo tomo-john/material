@@ -68,6 +68,7 @@ if (!empty($_SESSION['old_input'])) {
       </form>
     </div>
     <div class="menu-list">
+      <a class="link-btn" href='list.php'>一覧画面へ🐶</a>
       <a class="link-btn" href='index.php'>戻る🐶</a>
     </div>
 

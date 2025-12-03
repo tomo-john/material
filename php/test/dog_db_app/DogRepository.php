@@ -69,10 +69,23 @@ class DogRepository {
     $pdo = $this->getPdoConnection();
 
     $sql = 'UPDATE dogs SET name = :name, age = :age WHERE id = :id';
+    
     $stmt = $pdo->prepare($sql);
     $stmt->bindParam(':id', $id, PDO::PARAM_INT);
     $stmt->bindParam(':name', $name, PDO::PARAM_STR);
     $stmt->bindParam(':age', $age, PDO::PARAM_INT);
+
+    return $stmt->execute();
+  }
+
+  // 指定データ削除
+  public function deleteDog(int $id): bool {
+    $pdo = $this->getPdoConnection();
+
+    $sql = 'DELETE FROM dogs WHERE id = :id';
+
+    $stmt = $pdo->prepare($sql);
+    $stmt->bindParam(':id', $id, PDO::PARAM_INT);
 
     return $stmt->execute();
   }

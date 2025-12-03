@@ -91,6 +91,7 @@ $dogs = $dogrepo->getDog();
       </table>
     </div>
     <div class="menu-list">
+      <a class="link-btn" href='new.php'>作成画面へ🐶</a>
       <a class="link-btn" href='index.php'>戻る🐶</a>
     </div>
 
