@@ -20,6 +20,7 @@ $dog = $dogrepo->findDog(intval($id));
 if (!$dog) {
   $_SESSION['errors'] = ['編集対象のワンちゃんが見つかりませんでした🐶💦'];
   header('Location:list.php');
+  exit;
 }
 
 // フォーム表示用データ

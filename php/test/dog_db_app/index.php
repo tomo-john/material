@@ -20,6 +20,7 @@
     <div class="menu-list">
       <a class="link-btn" href='new.php'>作成画面</a>
       <a class="link-btn" href='list.php'>一覧画面</a>
+      <a class="link-btn" href='search.php'>検索画面</a>
       <a class="link-btn" href='test.php'>テストページ</a>
     </div>
   </div>

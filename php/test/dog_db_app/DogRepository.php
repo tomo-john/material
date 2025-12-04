@@ -90,6 +90,20 @@ class DogRepository {
     return $stmt->execute();
   }
 
+  // データ検索
+  public function searchDog(string $keyword): array {
+    $pdo = $this->getPdoConnection();
+
+    $sql = 'SELECT * FROM dogs WHERE name LIKE :keyword';
+    $keyword = '%' . $keyword . '%';
+
+    $stmt = $pdo->prepare($sql);
+    $stmt->bindParam(':keyword', $keyword, PDO::PARAM_STR);
+    $stmt->execute();
+
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+  }
+
   // テーブルリセット
   public function tableReset(): bool {
     $pdo = $this->getPdoConnection();
