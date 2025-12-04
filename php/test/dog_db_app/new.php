@@ -1,24 +1,11 @@
 <?php
 // new.php
-session_start();
+require_once 'Session.php';
 
-$notices = [];
-if (!empty($_SESSION['notices'])) {
-  $notices = $_SESSION['notices'];
-  unset($_SESSION['notices']);
-}
-
-$errors = [];
-if (!empty($_SESSION['errors'])) {
-  $errors = $_SESSION['errors'];
-  unset($_SESSION['errors']);
-}
-
-$old_input = [];
-if (!empty($_SESSION['old_input'])) {
-  $old_input = $_SESSION['old_input'];
-  unset($_SESSION['old_input']);
-}
+$session_data = Session::getAndClearSession();
+$notices = $session_data['notices'];
+$errors = $session_data['errors'];
+$old_input = $session_data['old_input'];
 
 ?>
 

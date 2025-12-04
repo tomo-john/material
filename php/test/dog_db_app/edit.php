@@ -1,19 +1,12 @@
 <?php
 // edit.php
 require_once 'DogRepository.php';
-session_start();
+require_once 'Session.php';
 
-$notices = [];
-if (!empty($_SESSION['notices'])) {
-  $notices = $_SESSION['notices'];
-  unset($_SESSION['notices']);
-}
-
-$errors = [];
-if (!empty($_SESSION['errors'])) {
-  $errors = $_SESSION['errors'];
-  unset($_SESSION['errors']);
-}
+$session_data = Session::getAndClearSession();
+$notices = $session_data['notices'];
+$errors = $session_data['errors'];
+$old_input = $session_data['old_input'];
 
 // データ取得
 $id = $_GET['id'] ?? '';
@@ -23,6 +16,16 @@ if (empty($id)) {
 
 $dogrepo = new DogRepository();
 $dog = $dogrepo->findDog(intval($id));
+
+if (!$dog) {
+  $_SESSION['errors'] = ['編集対象のワンちゃんが見つかりませんでした🐶💦'];
+  header('Location:list.php');
+}
+
+// フォーム表示用データ
+$display_name = $old_input['name'] ?? $dog['name'];
+$display_age = $old_input['age'] ?? $dog['age'];
+$hidden_id = htmlspecialchars($dog['id']);
 
 ?>
 
@@ -62,11 +65,11 @@ $dog = $dogrepo->findDog(intval($id));
 
     <div class="form">
       <form action="update.php" method="post">
-        <input name="id" type="hidden" value="<?php echo $dog['id']; ?>">
+        <input name="id" type="hidden" value="<?php echo $hidden_id; ?>">
         <label for="name">名前: </label>
-        <input id="name" name="name" type="text" placeholder="犬の名前を入力してね🐾" value="<?php echo htmlspecialchars($dog['name'] ?? '', ENT_QUOTES, 'UTF-8'); ?>">
+        <input id="name" name="name" type="text" placeholder="犬の名前を入力してね🐾" value="<?php echo htmlspecialchars($display_name, ENT_QUOTES, 'UTF-8'); ?>">
         <label for="age">年齢: </label>
-        <input id="age" name="age" type="number" placeholder="犬の年齢を入力してね🐾" value="<?php echo htmlspecialchars($dog['age'] ?? '', ENT_QUOTES, 'UTF-8'); ?>">
+        <input id="age" name="age" type="number" placeholder="犬の年齢を入力してね🐾" value="<?php echo htmlspecialchars($display_age, ENT_QUOTES, 'UTF-8'); ?>">
         <div class="submit-container">
           <input class="link-btn submit-btn" type="submit" value="更新🐶">
         </div>

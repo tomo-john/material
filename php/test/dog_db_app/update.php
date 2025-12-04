@@ -20,6 +20,7 @@ if (empty($age)) {
 }
 if (!empty($errors)) {
   $_SESSION['errors'] = $errors;
+  $_SESSION['old_input'] = ['name' => $name, 'age' => $age];
   header("Location:edit.php?id={$id}");
   exit;
 }

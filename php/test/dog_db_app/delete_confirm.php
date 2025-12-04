@@ -28,7 +28,7 @@ $dog = $dogrepo->findDog(intval($id));
     <h4>本当に削除してよろしいですか？🐶</h4>
 
     <div class="confirm">
-      <?php echo '削除するワンちゃん: ' . $dog['name'] . '(' . $dog['age'] . '歳)'; ?>
+      <?php echo '削除するワンちゃん: ' . htmlspecialchars($dog['name']) . '(' . htmlspecialchars($dog['age']) . '歳)'; ?>
     </div>
 
     <div class="form">
