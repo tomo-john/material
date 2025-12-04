@@ -89,4 +89,15 @@ class DogRepository {
 
     return $stmt->execute();
   }
+
+  // テーブルリセット
+  public function tableReset(): bool {
+    $pdo = $this->getPdoConnection();
+
+    $sql = 'TRUNCATE dogs';
+
+    $stmt = $pdo->prepare($sql);
+    
+    return $stmt->execute();
+  }
 }

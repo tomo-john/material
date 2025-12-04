@@ -61,6 +61,7 @@ $htmlContent = $Parsedown->text($markdownContent);
 
     <div class="menu-list">
       <a class="link-btn" href='table_create.php'>テーブル作成🐶</a>
+      <a class="link-btn" href='table_reset.php'>テーブルリセット🐶</a>
       <a class="link-btn" href='index.php'>戻る🐶</a>
     </div>
   </div>

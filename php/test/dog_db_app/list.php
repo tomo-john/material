@@ -48,19 +48,19 @@ $dogs = $dogrepo->getDog();
       </div>
     <?php endif; ?>
 
-    <div class="list">
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>名前</th>
-            <th>年齢</th>
-            <th>登録日時</th>
-            <th>アクション</th>
-          </tr>
-        </thead>
-        <tbody>
-          <?php if(!empty($dogs)): ?>
+    <?php if(!empty($dogs)): ?>
+      <div class="list">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>名前</th>
+              <th>年齢</th>
+              <th>登録日時</th>
+              <th>アクション</th>
+            </tr>
+          </thead>
+          <tbody>
             <?php foreach($dogs as $dog): ?>
               <tr>
                 <td><?php echo htmlspecialchars($dog['id']) ?></td>
@@ -78,12 +78,13 @@ $dogs = $dogrepo->getDog();
                 </td>
               </tr>
             <?php endforeach; ?>
-          <?php else: ?>
-            <p>登録されたワンちゃんはいません🐶</p>
-          <?php endif; ?>
-        </tbody>
-      </table>
-    </div>
+          </tbody>
+        </table>
+      </div>
+    <?php else: ?>
+      <p>登録されたワンちゃんはいません🐶</p>
+    <?php endif; ?>
+
     <div class="menu-list">
       <a class="link-btn" href='new.php'>作成画面へ🐶</a>
       <a class="link-btn" href='index.php'>戻る🐶</a>
