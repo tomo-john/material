@@ -54,14 +54,35 @@ class UserRepository {
     return $stmt->execute();
   }
 
+  // ユーザー更新
+  public function update(int $id, string $name, string $password): bool {
+  
+    $hasedPassword = password_hash($password, PASSWORD_DEFAULT);
+
+    $sql = 'UPDATE users SET name = :name, password = :password WHERE id = :id';
+    $stmt = $this->db->prepare($sql);
+    $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+    $stmt->bindParam(':name', $name, PDO::PARAM_STR);
+    $stmt->bindParam(':password', $hasedPassword, PDO::PARAM_STR);
+    return $stmt->execute();
+  }
+
   // ユーザー名の重複チェック 
   public function checkUserNameUniq(string $name): bool {
     $sql = 'SELECT COUNT(*) FROM users WHERE name = :name';
     $stmt = $this->db->prepare($sql);
     $stmt->bindParam(':name', $name, PDO::PARAM_STR);
     $stmt->execute();
-
     $count = $stmt->fetchColumn();
     return $count > 0;
+  }
+
+  // IDによるユーザー検索
+  public function findById(int $id): array {
+    $sql = 'SELECT id, name FROM users WHERE id = :id';
+    $stmt = $this->db->prepare($sql);
+    $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+    $stmt->execute();
+    return $stmt->fetch(PDO::FETCH_ASSOC);
   }
 }

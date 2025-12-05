@@ -26,6 +26,26 @@ $users = $user_repo->getUsers();
     
     <h2>TABLE VIEW</h2>
 
+    <?php if(!empty($notices)): ?>
+      <div class="notice">
+        <ul>
+          <?php foreach($notices as $n): ?>
+            <li><?=$n ?></li>
+          <?php endforeach; ?>
+        </ul>
+      </div>
+    <?php endif; ?>
+
+    <?php if(!empty($errors)): ?>
+      <div class="error">
+        <ul>
+          <?php foreach($errors as $e): ?>
+            <li><?=$e ?></li>
+          <?php endforeach; ?>
+        </ul>
+      </div>
+    <?php endif; ?>
+
     <?php if(empty($users)): ?>
       <p>登録されたユーザーはいません</p>
     <?php else: ?>
