@@ -35,14 +35,24 @@ $users = $user_repo->getUsers();
             <th>ID</th>
             <th>USER_NAME</th>
             <th>CREATED_AT</th>
+            <th>ACTION</th>
           </tr>
         </thead>
         <tbody>
           <?php foreach($users as $user): ?>
             <tr>
-              <td><?php echo $user['id'] ?></td>
-              <td><?php echo $user['name'] ?></td>
-              <td><?php echo $user['created_at'] ?></td>
+              <td><?php echo htmlspecialchars($user['id']) ?></td>
+              <td><?php echo htmlspecialchars($user['name']) ?></td>
+              <td><?php echo htmlspecialchars($user['created_at']) ?></td>
+              <td>
+                <div class="action">
+                  <a class="btn action-btn" href="<?php echo htmlspecialchars("user_edit.php?id={$user['id']}") ?>">編集</a>
+                  <form action="user_delete.php" method="post">
+                    <input type="hidden" name="user_id" value="<?php echo $user['id'] ?>">
+                    <input class="btn action-btn" type="submit" value="削除">
+                  </form>
+                </div>
+              </td>
             </tr>
           <?php endforeach; ?>
         </tbody>
