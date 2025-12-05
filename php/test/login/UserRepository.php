@@ -27,4 +27,14 @@ class UserRepository {
     return $stmt->execute();
   }
 
+  // ユーザー名の重複チェック 
+  public function checkUserNameUniq(string $name): bool {
+    $sql = 'SELECT COUNT(*) FROM users WHERE name = :name';
+    $stmt = $this->db->prepare($sql);
+    $stmt->bindParam(':name', $name, PDO::PARAM_STR);
+    $stmt->execute();
+
+    $count = $stmt->fetchColumn();
+    return $count > 0;
+  }
 }
