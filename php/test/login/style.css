@@ -16,6 +16,7 @@ form {
   align-items: center;
   width: 1280px;
   margin: 20px auto;
+  gap: 10px;
 }
 .menu {
   display: flex;
@@ -45,4 +46,15 @@ form {
 }
 .test-btn {
   background: #d2b48c;
+}
+.submit-btn {
+  background: #ffd700;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.submit-wrapper {
+  align-self: center;
 }
