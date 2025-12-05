@@ -6,12 +6,12 @@ session_start();
 $db = new DbManager();
 $pdo = $db->getPdoConnection();
 $user_repo = new UserRepository($pdo);
-$result = $user_repo->createUsers();
+$result = $user_repo->resetUsers();
 
 if ($result === true) {
-  $_SESSION['notices'] = ['Usersテーブルの作成に成功しました🐶'];
+  $_SESSION['notices'] = ['Usersテーブルのリセットに成功しました🐶'];
 } else {
-  $_SESSION['errors'] = ['Usersテーブルの作成に失敗しました🐶💦'];
+  $_SESSION['errors'] = ['Usersテーブルのリセットに失敗しました🐶💦'];
 }
 
 header('Location: test.php');

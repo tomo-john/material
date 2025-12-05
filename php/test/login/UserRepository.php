@@ -15,6 +15,25 @@ class UserRepository {
     $this->db = $dbConnection;
   }
 
+  // Usersテーブル作成
+  public function createUsers(): bool {
+    $sql = 'CREATE TABLE IF NOT EXISTS users (
+              id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+              name VARCHAR(255) NOT NULL UNIQUE,
+              password VARCHAR(255) NOT NULL,
+              created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+            )';
+    $stmt = $this->db->prepare($sql);
+    return $stmt->execute();
+  }
+
+  // Usersテーブルリセット
+  public function resetUsers(): bool {
+    $sql = 'TRUNCATE users;';
+    $stmt = $this->db->prepare($sql);
+    return $stmt->execute();
+  }
+
   // ユーザー登録
   public function create(string $name, string $password): bool {
     
