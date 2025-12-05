@@ -42,9 +42,8 @@ $old_input = $session_data['old_input'];
 
     <form class="form" action="user_create.php" method="post">
       <label for="user_name">Username:</label>
-      <input id="user_name" name="user_name" type="text" placeholder="john" value="<?php echo htmlspecialchars($old_input['name'] ?? '', ENT_QUOTES, 'UTF-8') ?>">
-      <label for="password">Password:</label>
-      <input id="password" name="password" type="password" placeholder="john1234">
+      <input id="user_name" name="user_name" type="text" placeholder="john" value="<?php echo htmlspecialchars($old_input['user_name'] ?? '', ENT_QUOTES, 'UTF-8') ?>">
+      <input id="password" name="password" type="password" placeholder="john1234" value="<?php echo htmlspecialchars($old_input['password'] ?? '' , ENT_QUOTES, 'UTF-8') ?>">
       <div class="submit-wrapper">
         <input class="btn submit-btn" type="submit" value="登録">
       </div>
