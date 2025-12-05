@@ -41,6 +41,7 @@ $errors = $session_data['errors'];
 
     <a class="btn test-btn" href="table_create.php">テーブル作成</a>
     <a class="btn test-btn" href="table_reset.php">テーブルリセット</a>
+    <a class="btn test-btn" href="table_view.php">テーブル一覧</a>
 
   </div>
 

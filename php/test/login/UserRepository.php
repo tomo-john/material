@@ -34,6 +34,14 @@ class UserRepository {
     return $stmt->execute();
   }
 
+  // ユーザー一覧取得
+  public function getUsers(): array {
+    $sql = 'SELECT id, name, created_at FROM users';
+    $stmt = $this->db->prepare($sql);
+    $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+  }
+
   // ユーザー登録
   public function create(string $name, string $password): bool {
     
