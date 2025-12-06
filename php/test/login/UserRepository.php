@@ -67,6 +67,14 @@ class UserRepository {
     return $stmt->execute();
   }
 
+  // ユーザー削除
+  public function delete(int $id): bool {
+    $sql = 'DELETE FROM users WHERE id = :id';
+    $stmt = $this->db->prepare($sql);
+    $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+    return $stmt->execute();
+  }
+
   // ユーザー名の重複チェック 
   public function checkUserNameUniq(string $name, ?int $id = null): bool {
     if ($id === null) {

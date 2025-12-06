@@ -67,7 +67,7 @@ $users = $user_repo->getUsers();
               <td>
                 <div class="action">
                   <a class="btn action-btn" href="<?php echo htmlspecialchars("user_edit.php?id={$user['id']}") ?>">編集</a>
-                  <form action="user_delete.php" method="post">
+                  <form action="user_delete_confirm.php" method="post">
                     <input type="hidden" name="user_id" value="<?php echo $user['id'] ?>">
                     <input class="btn action-btn" type="submit" value="削除">
                   </form>

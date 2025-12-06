@@ -67,6 +67,10 @@ th {
   background: #98fb98;
   width: 80px;
 }
+.delete-btn {
+  background: #cd5c5c;
+  width: 80px;
+}
 .form {
   display: flex;
   flex-direction: column;
