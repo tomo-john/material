@@ -31,7 +31,7 @@ $db = new DbManager();
 $pdo = $db->getPdoConnection();
 $user_repo = new UserRepository($pdo);
 
-$uniq_check = $user_repo->checkUserNameUniq($user_name);
+$uniq_check = $user_repo->checkUserNameUniq($user_name, intval($user_id));
 if ($uniq_check === true) {
   $_SESSION['errors'] = ['ユーザー名: 「' . $user_name . '」は既に存在します'];
   header("Location: user_edit.php?id={$user_id}");
@@ -43,7 +43,7 @@ $result = $user_repo->update(intval($user_id), $user_name, $password);
 if ($result === true) {
   $_SESSION['notices'] = [
     'ユーザー更新が完了しました',
-    '登録されたユーザー: ' . htmlspecialchars($user_name, ENT_QUOTES, 'UTF-8')
+    '更新されたユーザー: ' . htmlspecialchars($user_name, ENT_QUOTES, 'UTF-8')
     ];
 } else {
   $_SESSION['errors'] = ['ユーザー更新に失敗しました'];

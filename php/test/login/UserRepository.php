@@ -68,10 +68,15 @@ class UserRepository {
   }
 
   // ユーザー名の重複チェック 
-  public function checkUserNameUniq(string $name): bool {
-    $sql = 'SELECT COUNT(*) FROM users WHERE name = :name';
+  public function checkUserNameUniq(string $name, ?int $id = null): bool {
+    if ($id === null) {
+      $sql = 'SELECT COUNT(*) FROM users WHERE name = :name';
+    } else {
+      $sql = 'SELECT COUNT(*) FROM users WHERE name = :name AND id != :id';
+    }
     $stmt = $this->db->prepare($sql);
     $stmt->bindParam(':name', $name, PDO::PARAM_STR);
+    if ($id !== null) { $stmt->bindParam(':id', $id, PDO::PARAM_INT); }
     $stmt->execute();
     $count = $stmt->fetchColumn();
     return $count > 0;
