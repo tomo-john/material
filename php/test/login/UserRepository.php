@@ -91,7 +91,7 @@ class UserRepository {
   }
 
   // IDによるユーザー検索
-  public function findById(int $id): array {
+  public function findById(int $id): ?array {
     $sql = 'SELECT id, name FROM users WHERE id = :id';
     $stmt = $this->db->prepare($sql);
     $stmt->bindParam(':id', $id, PDO::PARAM_INT);

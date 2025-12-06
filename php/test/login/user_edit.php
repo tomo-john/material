@@ -27,7 +27,7 @@ if (!$user_data) {
   exit;
 }
 
-$display_user_name = $old_input['user_name'] ?? $user_data['name']
+$display_user_name = $old_input['user_name'] ?? $user_data['name'];
 
 ?>
 
