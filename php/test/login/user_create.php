@@ -24,7 +24,7 @@ $db = new DbManager();
 $pdo = $db->getPdoConnection();
 $user_repo = new UserRepository($pdo);
 
-$uniq_check = $user_repo->checkUserNameUniq($user_name);
+$uniq_check = $user_repo->isNameExists($user_name);
 if ($uniq_check === true) {
   $_SESSION['errors'] = ['ユーザー名: 「' . $user_name . '」は既に存在します'];
   header('Location: user_new.php');

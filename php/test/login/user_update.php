@@ -31,7 +31,7 @@ $db = new DbManager();
 $pdo = $db->getPdoConnection();
 $user_repo = new UserRepository($pdo);
 
-$uniq_check = $user_repo->checkUserNameUniq($user_name, intval($user_id));
+$uniq_check = $user_repo->isNameExists($user_name, intval($user_id));
 if ($uniq_check === true) {
   $_SESSION['errors'] = ['ユーザー名: 「' . $user_name . '」は既に存在します'];
   header("Location: user_edit.php?id={$user_id}");

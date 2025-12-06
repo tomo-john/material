@@ -76,7 +76,7 @@ class UserRepository {
   }
 
   // ユーザー名の重複チェック 
-  public function checkUserNameUniq(string $name, ?int $id = null): bool {
+  public function isNameExists(string $name, ?int $id = null): bool {
     if ($id === null) {
       $sql = 'SELECT COUNT(*) FROM users WHERE name = :name';
     } else {
