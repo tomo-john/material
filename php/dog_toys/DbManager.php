@@ -4,6 +4,8 @@
  *  DB管理全般
  */
 
+require_once 'Config.php';
+
 class DbManager {
   private static ?PDO $pdo = null;
 

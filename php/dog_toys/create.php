@@ -23,4 +23,20 @@ if (!$validator->validate($input)) {
   exit;
 }
 
-echo 'OK🐶';
+$db = new DbManager();
+$pdo = $db->getPdoConnection();
+$dog_toy_repo = new DogToysRepository($pdo);
+$result = $dog_toy_repo->create($input['name'], intval($input['price']));
+
+if ($result === true) {
+  $notices = ['登録に成功しました'];
+  $notices[] = '登録されたおもちゃ: ' . $input['name'] . '(' . $input['price'] . '円)';
+  $_SESSION['notices'] = $notices;
+  header('Location: new.php');
+  exit;
+} else {
+  $errors = ['登録に失敗しました'];
+  $_SESSION['errors'] = $errors;
+  header('Location: new.php');
+  exit;
+}
