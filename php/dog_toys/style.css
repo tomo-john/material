@@ -1,0 +1,85 @@
+@charset 'utf-8';
+
+form {
+  margin: 0;
+  padding: 0;
+}
+table {
+  width: 75%;
+  border-collapse: collapse;
+  margin: 20px;
+}
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+th {
+  background-color: #f0f0f0;
+}
+.notice {
+  color: blue;
+}
+.error {
+  color: red;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1280px;
+  margin: 20px auto;
+  gap: 10px;
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1280px;
+  margin: 20px auto;
+}
+.btn {
+  display: inline-block;
+  width: 150px;
+  margin: 6px 0;
+  padding: 6px 0;
+  text-decoration: none;
+  text-align: center;
+  font-size: 12px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  color: #000;
+  background: #ffc0cb;
+  cursor: pointer;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+.btn:hover {
+  background: #ffe4b5;
+}
+.test-btn {
+  background: #d2b48c;
+}
+.submit-btn {
+  background: #ffd700;
+}
+.action-btn {
+  background: #98fb98;
+  width: 80px;
+}
+.delete-btn {
+  background: #cd5c5c;
+  width: 80px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.submit-wrapper {
+  align-self: center;
+}
+.action {
+  display: flex;
+  gap: 10px;
+}

@@ -5,11 +5,11 @@
  */
 
 class DbManager {
-  private statice ?PDO $pdo = null;
+  private static ?PDO $pdo = null;
 
   // DBコネクション確率
   public function getPdoConnection(): PDO {
-    if (self::$pdo instanceof PDO {
+    if (self::$pdo instanceof PDO) {
       return self::$pdo;
     }
 
