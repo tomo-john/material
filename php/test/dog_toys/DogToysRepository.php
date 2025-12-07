@@ -82,7 +82,7 @@ class DogToysRepository {
     } else {
       $sql = 'SELECT COUNT(*) FROM dog_toys WHERE name = :name AND id != :id';
     }
-    $stmt = $this->db->prepare($sql);
+    $stmt = $this->pdo->prepare($sql);
     $stmt->bindParam(':name', $name, PDO::PARAM_STR);
     if ($id !== null) { $stmt->bindParam(':id', $id, PDO::PARAM_INT); }
     $stmt->execute();
