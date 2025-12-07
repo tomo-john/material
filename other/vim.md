@@ -102,11 +102,16 @@ O : カーソルの上の行から
 
 ## vim-plug
 
+Vimにプラグインを簡単に追加・削除できる管理ツール。
+
+
 ### インストール
 
 ```
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
+
+### .vimrcにプラグインの設定枠を作る
 
 ```
 # ~/.vimrc編集
@@ -117,10 +122,20 @@ call plug#begin('~/.vim/plugged')
 call plug#end()
 ```
 
+plugにここにプラグイン一覧を書くよと教えている場所。
+
+`plug#begin` 〜 `plug#end` の間だけがプラグイン宣言のエリア。
+
+今回はBlade用の構文ハイライトを追加。
+
+### プラグインをダウンロード
+
 ```
 # vimを起動して下記を実行
 :PlugInstall
 ```
+
+plugがGitHubからプラグインを取ってきて`~/.vim/plugged/vim-blade`の中に保存。
 
 これで`xxx.blade.php`に色がつくようになった。
 
