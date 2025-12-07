@@ -33,6 +33,26 @@ $dog_toys = $dog_toy_repo->getAll();
     
     <h2>おもちゃ一覧</h2>
 
+    <?php if(!empty($notices)): ?>
+      <div class="notice">
+        <ul>
+          <?php foreach($notices as $n): ?>
+            <li><?=$n ?></li>
+          <?php endforeach; ?>
+        </ul>
+      </div>
+    <?php endif; ?>
+
+    <?php if(!empty($errors)): ?>
+      <div class="error">
+        <ul>
+          <?php foreach($errors as $e): ?>
+            <li><?=$e ?></li>
+          <?php endforeach; ?>
+        </ul>
+      </div>
+    <?php endif; ?>
+
     <?php if(empty($dog_toys)): ?>
       <p>登録されたおもちゃはありません</p>
     <?php else: ?>

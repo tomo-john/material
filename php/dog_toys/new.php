@@ -25,7 +25,7 @@ $old_price = htmlspecialchars($old_input['price'] ?? '', ENT_QUOTES, 'UTF-8');
 
   <div class="main">
     
-    <h2>NEW</h2>
+    <h2>新規作成画面</h2>
 
     <p>おもちゃの名前と価格を入力して下さい</p>
 
