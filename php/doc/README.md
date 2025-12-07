@@ -85,6 +85,7 @@
 |---------------------------------------------------|------------------------------|
 | [Composer](./laravel/composer.md)                 | Laravelで必要なやつ          |
 | [MVC](./laravel/mvc.md)                           | Laravelの設計パターン        |
+| [artisan](./laravel/artisan.md)                   | Laravel標準のCLI             |
 
 ## JavaScrip
 
