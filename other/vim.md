@@ -98,3 +98,29 @@ O : カーソルの上の行から
 
 末尾に追加する場合なら`^`の部分を`$`に変えるとok
 
+---
+
+## vim-plug
+
+### インストール
+
+```
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
+```
+# ~/.vimrc編集
+# 先頭に以下の3行を追加
+
+call plug#begin('~/.vim/plugged')
+ Plug 'jwalton512/vim-blade'
+call plug#end()
+```
+
+```
+# vimを起動して下記を実行
+:PlugInstall
+```
+
+これで`xxx.blade.php`に色がつくようになった。
+
