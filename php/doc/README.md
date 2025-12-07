@@ -84,6 +84,7 @@
 | リンク                                            | 内容                         |
 |---------------------------------------------------|------------------------------|
 | [Composer](./laravel/composer.md)                 | Laravelで必要なやつ          |
+| [MVC](./laravel/mvc.md)                           | Laravelの設計パターン        |
 
 ## JavaScrip
 
