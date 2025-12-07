@@ -76,8 +76,8 @@ $dog_toys = $dog_toy_repo->getAll();
               <td>
                 <div class="action">
                   <a class="btn action-btn" href="<?php echo htmlspecialchars("edit.php?id={$dog_toy['id']}") ?>">編集</a>
-                  <form action="user_delete_confirm.php" method="post">
-                    <input type="hidden" name="user_id" value="<?php echo $dog_toy['id'] ?>">
+                  <form action="delete_confirm.php" method="post">
+                    <input type="hidden" name="id" value="<?php echo $dog_toy['id'] ?>">
                     <input class="btn action-btn" type="submit" value="削除">
                   </form>
                 </div>
