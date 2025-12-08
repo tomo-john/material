@@ -87,6 +87,7 @@
 | [MVC](./laravel/mvc.md)                           | Laravelの設計パターン        |
 | [artisan](./laravel/artisan.md)                   | Laravel標準のCLI             |
 | [CRUD](./laravel/crud.md)                         | RESTfulな設計                |
+| [Blade](./laravel/blade.md)                       | Bladeテンプレート            |
 
 ## JavaScrip
 
