@@ -43,3 +43,19 @@ composer create-project laravel/laravel wan_app
 - composer.json: 何のライブラリを使うかのリスト
 - composer.lock: 実際にインストールされたバージョンの記録
 
+## globalとinstaller
+
+```
+composer global require laravel/installer
+```
+
+`laravel/installer`は新しいLaravelプロジェクトをゼロから作るための、たっと1つの専用ツール。
+
+`composer create-project laravel/laravel project-name`の代わりに`laravel new project-name`が使えるようになる。
+
+通常、`composer require`でパッケージをインストールすると、カレントディレクトリでしか使用することはできない。
+
+しかし、`global`をつけることで、そのパッケージ(今回は`laravel/installer`)をOS全体 = どのディレクトリからでも使用できる場所にインストールされる。
+
+なので、どのディレクトリでも`laravel new project-name`が使用できるようになる。
+
