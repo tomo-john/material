@@ -222,4 +222,12 @@ class DogController extends Controller
 </body>
 </html>
 ```
+---
+
+# CSSメモ
+
+- `npm install`で環境をセットアップ
+- `npm run dev`を実行して、監視モードで開発サーバーを起動
+- Bladeファイル内で、TailwindのクラスをHTMLタグに直接書いていく
+- Bladeテンプレートの`<head>`内で`@vite(...)`を使ってCSSを読込む
 
