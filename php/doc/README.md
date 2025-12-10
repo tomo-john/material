@@ -94,8 +94,14 @@
 | [Route Mode Binding](./laravel/rmb.md)            | Laravelの便利なやつ          |
 | [Eloquent ORM](./laravel/eorm.md)                 | オブジェクトとRDBをつなぐ    |
 | [URL作成](./laravel/url_generator.md)             | URLジェネレータ              |
-| [Tailwind(基本)](./laravel/tailwind.md)           | LaravelのCSS                 |
-| [Tailwind(めも)](./laravel/tailwind_memo.md)      | 使い方めも                   |
+
+### Tailwind CSS
+
+| リンク                                            | 内容                         |
+|---------------------------------------------------|------------------------------|
+| [Tailwind(基本)](./tailwind/tailwind.md)          | LaravelのCSS                 |
+| [Tailwind(めも)](./tailwind/memo.md)              | 使い方めも                   |
+| [flex](./tailwind/flex.md)                        | flex関連                     {
 
 ## JavaScrip
 
