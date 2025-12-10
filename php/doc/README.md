@@ -16,8 +16,9 @@
 
 | リンク                                            | 内容                         |
 |---------------------------------------------------|------------------------------|
+| [head](./html/head.md)                            | headタグ                     |
 | [CSS](./html/css.md)                              | CSS適用の為の基本            |
-| [preタグ](./html/pre.md)                          | brとpre                      |
+| [pre](./html/pre.md)                              | brとpre                      |
 | [リスト](./html/list.md)                          | ul, ol, dl                   |
 | [画像](./html/img.md)                             | 画像を読み込んで表示         |
 | [input](./html/input.md)                          | `<input>`タグいろいろ        |
@@ -89,9 +90,12 @@
 | [CRUD](./laravel/crud.md)                         | RESTfulな設計                |
 | [Blade](./laravel/blade.md)                       | Bladeテンプレート            |
 | [View](./laravel/view.md)                         | Viewの命名規則など           |
+| [routes](./laravel/routes.md)                     | ルーティング                 |
 | [Route Mode Binding](./laravel/rmb.md)            | Laravelの便利なやつ          |
 | [Eloquent ORM](./laravel/eorm.md)                 | オブジェクトとRDBをつなぐ    |
-| [Tailwind](./laravel/tailwind.md)                 | LaravelのCSS                 |
+| [URL作成](./laravel/url_generator.md)             | URLジェネレータ              |
+| [Tailwind(基本)](./laravel/tailwind.md)           | LaravelのCSS                 |
+| [Tailwind(めも)](./laravel/tailwind_memo.md)      | 使い方めも                   |
 
 ## JavaScrip
 
