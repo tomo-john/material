@@ -75,3 +75,59 @@
 
 superdog :dog::sparkles:
 
+---
+
+# .vimrc
+
+```bash
+# ~/.vimrc
+let g:markdown_fenced_languages = ['bash=sh', 'html', 'css', 'php', 'javascript', 'sql']
+```
+
+## test
+
+```bash
+for f in $( ls *.php *.css | grep -v 'Parsedown.php' ); do echo "--- FILE: $f ---"; cat "$f"; echo -e "\n--- END OF $f ---\n"; done > review_code.txt
+```
+
+```html
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>たいとる</title>
+</head>
+<body>
+  <h1>Hello🐶</h1>
+</body>
+</html>
+```
+
+```css
+@charset 'utf-8';
+
+body { 
+  width:100%
+}
+
+.class {
+  padding: 4px;
+  margin: 4px;
+}
+```
+
+```javascript
+const msg = 'Hello';
+console.log(msg);
+```
+
+```php
+<?php
+$var = dog;
+echo $var;
+```
+
+```sql
+SELECT * FROM dogs WHERE id = '1';
+```
+
