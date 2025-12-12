@@ -26,6 +26,7 @@
 | [label](./html/label.md)                          | 名札(ラベル)をつける         |
 | [表](./html/table.md)                             | `<table>`タグ                |
 | [ブロックとインライン](./html/block.md)           | 領域の違い                   |
+| [required属性](./html/required.md)                | HTML5バリデーション          |
  
 ## CSS
 
@@ -95,6 +96,8 @@
 | [Route Mode Binding](./laravel/rmb.md)            | Laravelの便利なやつ          |
 | [Eloquent ORM](./laravel/eorm.md)                 | オブジェクトとRDBをつなぐ    |
 | [URL作成](./laravel/url_generator.md)             | URLジェネレータ              |
+| [バリデーション](./laravel/validate.md)           | `validate()`メソッド         |
+| [エラーメッセージ](./laravel/error_message.md)    | `@error`ディレクティブなど   |
 
 ### Tailwind CSS
 
@@ -102,7 +105,10 @@
 |---------------------------------------------------|------------------------------|
 | [Tailwind(基本)](./tailwind/tailwind.md)          | LaravelのCSS                 |
 | [Tailwind(めも)](./tailwind/memo.md)              | 使い方めも                   |
-| [flex](./tailwind/flex.md)                        | flex関連                     {
+| [スケール](./tailwind/scale.md)                   | Tailwindの指定方法           |
+| [flex](./tailwind/flex.md)                        | flex関連                     |
+| [spacing](./tailwind/spacing.md)                  | 余白関連                     |
+| [sizing](./tailwind/sizing.md)                    | サイズ関連                   |
 
 ## JavaScrip
 
