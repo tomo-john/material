@@ -59,3 +59,41 @@ public function sotre(Request $request)
 
 セッションに保存された古い入力値を取り出して、ユーザーの入力し直す手間を省ける。
 
+## sample
+
+```php
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Models\Dog;
+
+class DogController extends Controller
+{
+  // index
+  public function index()
+  {
+    $dogs = Dog::all();
+    return view('dogs.index', compact('dogs'));
+  }
+  // create
+  public function create()
+  {
+    return view('dogs.create');
+  }
+  // store
+  public function store(Request $request)
+  {
+    $validated = $request->validate(
+      [
+        'name' => ['required', 'string', 'max:255'],
+        'age' => ['required', 'integer', 'min:0', 'max:100'],
+      ]
+    );
+    Dog::create($validated);
+    return redirect()->route('dogs.index')->with('success', '登録しました');
+  }
+}
+```
+
