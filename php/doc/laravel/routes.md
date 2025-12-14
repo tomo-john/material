@@ -1,5 +1,7 @@
 # ルーティング
 
+## memo
+
 ```php
 <?php
 # routes/web.php
