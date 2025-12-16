@@ -176,3 +176,177 @@ return view('dogs.index', compact('dogs', 'count'));
 // 生成される配列: ['dogs' => $dogsの値, 'count' => $countの値]
 ```
 
+## create
+
+```php
+<?php
+public function create()
+{
+  return view('dogs.create');
+}
+```
+
+createメソッドは超シンプル。`view()`メソッドでHTML(`resources/views/dogs/create.blade.php`)を返す。
+
+### view()メソッド
+
+`view()`メソッドは画面の表示を目的とするメソッド。
+
+DBから取得したデータをBladeテンプレートに流し込み、HTMLとしてユーザーに返す。
+
+CRUDでは、`index`, `show`, `create`, `edit`で主に使用。
+
+- `redirect()`メソッドとは併用できない
+
+## store
+
+```php
+<?php
+public function store(Request $request)
+{
+  $validated = $request->validate(
+    [
+      'name' => ['required', 'string', 'max:255'],
+      'age' => ['required', 'integer', 'min:0', 'max:100'],
+    ]
+  );
+  Dog::create($validated);
+  return redirect()->route('dogs.index')->with('success', '登録しました');
+}
+```
+
+フォームから送られてきたデータを受け取り、データベースに保存し、ユーザーを次の画面へ誘導する、という役割を担っている。
+
+### public function store(Request $request)
+
+フォームから`POST`メソッドで送られてきた、ユーザーの入力データを全て`$request`というオブジェクトとして受け取る。
+
+=> コントローラファイルに`use Illuminate\Http\Request;`がちゃんと記述されている...!
+
+### $validated = $request->validate(...)
+
+`$request`オブジェクトが持つ`validate()`メソッドを実行。
+
+- 成功: バリデーションをクリアした安全なデータだけが`$validated`変数に代入される
+- 失敗: 1つでもルールに違反した場合、即座に処理を中止 => フォーム画面にリダイレクト
+
+### Dog::create($validated)
+
+Eloquentの静的メソッド`Dog::create()`を使用し、DBに新しいレコードを挿入。
+
+`$validated`はバリデーション済みのデータのため不要なデータが保存される心配ない。
+
+この処理が成功するために、`Dog.php`モデルで`$fillable`プロパティが設定されている必要がる。
+
+`create()`メソッドが受け取るデータは、`['カラム名' => '値', 'カラム名' => '値' ...]`というシンプルな連想配列の形。
+
+### return redirect()...
+
+処理が`POST`リクエストだったので、二重送信を防ぐために移動命令をブラウザに送る。
+
+移動先を`route('dogs.index')`で一覧画面(`resources/views/dogs/index.blade.php`)に指定している。
+
+`->with('success', 'サクセスメッセージ')`で`success`というキーでメッセージをセッションに一次保存している。
+
+## show
+
+```php
+<?php
+public function show(Dog $dog)
+{
+  return view('dogs.show', compact('dog'));
+}
+```
+
+`compact('dog')`で単一のデータが`$dog`という変数名でビューに渡される。
+
+この`$dog`の情報はRoute Model Bindingにより`URL`から得ている。
+
+### Route Model Binding
+
+ルーティングが `Route::get('dogs/{dog}', [DogController::class, 'show'])->name('dogs.show');`と定義している。
+
+=> `GET /dogs/{dog}`というルートが定義される
+
+ユーザーが`/dogs/123`にアクセスする。
+
+コントローラの引数`(Dog $dog)`に`Dog`型ヒントがある。
+
+LaravelがURLの`123`を見て、`Dog::findOrFail(123)`を実行し、その結果の`Dog`オブジェクトを`$dog`にセットする。
+
+=> 今回はeditも同じ仕組み
+
+```php
+<?php
+public function edit(Dog $dog)
+{
+  return view('dogs.edit', compact('dog'));
+}
+```
+
+## update
+
+```php
+<?php
+public function update(Request $request, Dog $dog)
+{
+  $validated = $request->validate(
+    [
+      'name' => ['required', 'string', 'max:255'],
+      'age' => ['required', 'integer', 'min:0', 'max:100'],
+    ]
+  );
+  $dog->update($validated);
+  return redirect()->route('dogs.show', $dog)->with('success', '更新しました');
+}
+```
+
+基本的な仕組みは`store`メソッドと同じ。(Request受け取ってバリデーションして更新してリダイレクト)
+
+違うのは、単一のデータを更新するためどのデータを更新するかの`$dog`も引数に必要。
+
+`edig.blade.php`でも引数で`$dog`を渡している:
+
+```blade
+<form action="{{ route('dogs.update', $dog) }}" method="post">
+  @csrf
+  @method('PUT')
+  ...
+```
+
+### store と update の使い分け
+
+- `Dog::create()`
+- `$dog->update()`
+
+これは静的メソッド(`::`)とインスタンスメソッド(`->`)の違い。
+
+この違いは、誰に対して命令を出しているか？でイメージする :dog:
+
+- 静的メソッド(`::`): クラス(設計図・テーブル全体)に対して命令を出す
+- インスタンスメソッド: 特定のオブジェクトに対して命令を出す
+
+静的メソッドはインスタンスを生成しなくても呼び出せるが、インスタンスメソッドは生成されたインスタンスからしか呼び出せない。
+
+## destory
+
+```php
+<?php
+public function destroy(Dog $dog)
+{
+  $dog->delete();
+  return redirect()->route('dogs.index')->with('success', '削除しました');
+}
+```
+
+```blade
+<form action="{{ route('dogs.destroy', $dog) }}" method="post" onsubmit="return confirm('本当に削除してよろしいですか？');">
+  @csrf
+  @method('DELETE')
+  <input type="submit" value="削除" class="bg-pink-200">
+</form>
+```
+
+- 単一のデータを削除するのでインスタンスメソッド(`$dog->delete()`)を使用
+- DB変更後は二重送信を防ぐために、一覧画面にリダイレクト
+
