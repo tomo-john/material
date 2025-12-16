@@ -1,9 +1,6 @@
+# memo
 
-```
-# 1. Laravelの全てのキャッシュを削除
-php artisan optimize:clear
-
-# 2. PHPのオートロードマップを再構築
-composer dump-autoload
-```
+- CRUDの仕組み(ルーティング、コントローラ、モデル、ビュー)
+- Bladeテンプレートの書き方
+- Tailwindデザイン
 

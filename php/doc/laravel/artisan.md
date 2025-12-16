@@ -39,3 +39,13 @@ DBのテーブル構造(スキーマ)をPHPのコードで管理する機能を`
 | `php artisan migrate` | マイグレーションファイルに基づいて、DBにテーブルを一括で作成 |
 | `php artisan db:seed` | テーブルにテスト用の初期データを流し込む                     |
 
+## memo
+
+```
+# 1. Laravelの全てのキャッシュを削除
+php artisan optimize:clear
+
+# 2. PHPのオートロードマップを再構築
+composer dump-autoload
+```
+
