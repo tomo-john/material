@@ -28,6 +28,7 @@
 | [ブロックとインライン](./html/block.md)           | 領域の違い                   |
 | [required属性](./html/required.md)                | HTML5バリデーション          |
 | [プルダウン](./html/select.md)                    | `<select>`タグ               |
+| [span](./html/span.md)                            | `<span>`タグ                 |
  
 ## CSS
 
