@@ -29,6 +29,7 @@
 | [required属性](./html/required.md)                | HTML5バリデーション          |
 | [プルダウン](./html/select.md)                    | `<select>`タグ               |
 | [span](./html/span.md)                            | `<span>`タグ                 |
+| [HTMLエンティティ](./html/entity.md)              | 特別な文字や記号             |
  
 ## CSS
 
@@ -113,6 +114,7 @@
 | [flex](./tailwind/flex.md)                        | flex関連                     |
 | [spacing](./tailwind/spacing.md)                  | 余白関連                     |
 | [sizing](./tailwind/sizing.md)                    | サイズ関連                   |
+| [height](./tailwind/height.md)                    | 高さを確保する               |
 
 ## JavaScrip
 
