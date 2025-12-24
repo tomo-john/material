@@ -66,3 +66,45 @@ FlexBoxでアイテムを並べるときは`gap-*`を使用するのが最も推
 | `shrink`    | 縮小を許可           | コンテナにスペースがない場合、縮むことを許可         |
 | `shrink-0`  | 縮小を禁止           | スペースがなくても縮まない(はみ出す原因になることも) |
 
+---
+
+# 子要素がコンテンツの幅に合わせようとする性質
+
+通常のブロック要素(`div`など)は、何も指定しなくても横幅いっぱい(100%)に広がる。
+
+しかし、親に`flex`を指定するとその中にある子要素は`Flexアイテム`という特別な状態に変わる。
+
+```blade
+<body class="flex flex-col gap-4 items-center min-h-screen bg-gray-200">
+  <header class="text-center text-lg text-gray-500 bg-gray-400 py-6">
+    <h1>Hello Laravle <i class="fa-solid fa-dog"></i></h1>
+  </header>
+
+  <main class="flex-grow max-w-4xl">
+    <p class="text-center bg-pink-200">メインコンテンツ</p>
+  </main>
+
+  <footer class="text-center text-xs text-gray-500 py-6">
+    &copy; 2025 This is footer-like content. 🐶
+  </footer>
+```
+
+このような場合、`<body>`に指定している`flex-col`は子要素を中身のコンテンツが必要な分だけの幅になろうとする。
+
+`<header>`, `<body>`, `<footer>`はそれぞれ、自身のコンテンツに必要な大きさにしかならない。
+
+これを回避するために、子要素に`w-full`を追加してあげる。
+
+=> 横幅いっぱい(100%)を明示的に指定する
+
+```blade
+<header class="w-full text-center text-lg text-gray-500 bg-gray-400 py-6">
+```
+
+=> 画面の横幅いっぱいに広がる
+
+```blade
+<main class="w-full max-w-4xl flex-grow">
+```
+=> 横幅いっぱいに広がるが`max-w-4xl`も効く
+
