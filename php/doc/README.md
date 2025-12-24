@@ -112,6 +112,7 @@
 | [Tailwind(めも)](./tailwind/memo.md)              | 使い方めも                   |
 | [スケール](./tailwind/scale.md)                   | Tailwindの指定方法           |
 | [flex](./tailwind/flex.md)                        | flex関連                     |
+| [grid](.tailwind/grid.md)                         | 枠を作ってから入れる         |
 | [spacing](./tailwind/spacing.md)                  | 余白関連                     |
 | [sizing](./tailwind/sizing.md)                    | サイズ関連                   |
 | [height](./tailwind/height.md)                    | 高さを確保する               |
