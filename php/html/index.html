@@ -1,33 +1,113 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>犬小屋</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform Behavior Demo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            border-radius: 12px;
+        }
+    </style>
 </head>
-<body>
-  <div class="container">
-    <div class="item">
-      <h1>じょんの犬小屋</h1>
-      <p>いぬ</p>
-      <i class="fa-solid fa-dog icon-dog"></i>
+<body class="bg-slate-50 p-8 font-sans">
+    <div class="max-w-2xl mx-auto space-y-12">
+        <header class="text-center">
+            <h1 class="text-2xl font-bold text-slate-800">Transform の上書き実験室 🧪</h1>
+            <p class="text-slate-500">ボタンを押して、回転が消える現象を確認しよう！</p>
+        </header>
+
+        <!-- 実験セクション 1: 従来の上書き -->
+        <section class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+            <h2 class="text-lg font-semibold mb-4 flex items-center gap-2">
+                <span class="bg-amber-100 p-1 rounded">⚠️</span> 
+                従来の方法 (transform プロパティ)
+            </h2>
+            
+            <div class="h-40 flex items-center justify-center bg-slate-100 rounded-xl mb-6 relative overflow-hidden">
+                <div id="boxOld" class="box bg-amber-500 shadow-lg shadow-amber-200">🐶</div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <button onclick="applyCombined()" class="bg-slate-800 text-white px-4 py-3 rounded-lg hover:bg-slate-700 transition">
+                    1. 移動 + 回転をセット<br>
+                    <code class="text-xs text-slate-300">"translateX(100px) rotate(45deg)"</code>
+                </button>
+                <button onclick="applyOverride()" class="bg-rose-500 text-white px-4 py-3 rounded-lg hover:bg-rose-600 transition">
+                    2. 移動のみに変更（上書き）<br>
+                    <code class="text-xs text-slate-100">"translateX(50px)"</code>
+                </button>
+            </div>
+            <p class="mt-4 text-sm text-slate-600 italic">※ 2を押すと、回転がリセットされて「真っ直ぐ」に戻ってしまいます。</p>
+        </section>
+
+        <!-- 実験セクション 2: 個別プロパティ -->
+        <section class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+            <h2 class="text-lg font-semibold mb-4 flex items-center gap-2">
+                <span class="bg-emerald-100 p-1 rounded">✅</span> 
+                最新の方法 (Individual properties)
+            </h2>
+            
+            <div class="h-40 flex items-center justify-center bg-slate-100 rounded-xl mb-6 relative overflow-hidden">
+                <div id="boxNew" class="box bg-emerald-500 shadow-lg shadow-emerald-200">🐶</div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <button onclick="setTranslateAndRotate()" class="bg-slate-800 text-white px-4 py-3 rounded-lg hover:bg-slate-700 transition">
+                    1. 移動と回転を別々に指定
+                </button>
+                <button onclick="changeOnlyTranslate()" class="bg-emerald-600 text-white px-4 py-3 rounded-lg hover:bg-emerald-700 transition">
+                    2. 移動だけ変更（回転は維持！）
+                </button>
+            </div>
+            <p class="mt-4 text-sm text-slate-600 italic">※ 近年のブラウザでは <code class="bg-slate-100 px-1">translate</code> や <code class="bg-slate-100 px-1">rotate</code> を個別に指定できるようになりました！</p>
+        </section>
+
+        <button onclick="resetAll()" class="w-full py-2 border-2 border-dashed border-slate-300 text-slate-400 rounded-lg hover:border-slate-400 hover:text-slate-500 transition">
+            リセット
+        </button>
     </div>
-    <div class="item">
-      <h1>ぴょんきちの犬小屋</h1>
-      <p>うさぎ</p>
-      <i class="fa-solid fa-dragon"></i>
-    </div>
-    <div class="list">
-      <ul>
-        <li>いぬ</li>
-        <li>うさぎ</li>
-      </ul>
-      <ol>
-        <li>いぬ</li>
-        <li>うさぎ</li>
-      </ol>
-    </div>
-  </div>
+
+    <script>
+        const boxOld = document.getElementById('boxOld');
+        const boxNew = document.getElementById('boxNew');
+
+        // --- 旧来の transform プロパティを使う方法 ---
+        function applyCombined() {
+            boxOld.style.transform = "translateX(100px) rotate(45deg)";
+        }
+
+        function applyOverride() {
+            // ここで rotate を書き忘れると、回転が消える！
+            boxOld.style.transform = "translateX(-100px)";
+        }
+
+        // --- 最新の個別プロパティを使う方法 ---
+        function setTranslateAndRotate() {
+            // 個別のプロパティなので混ざらない！
+            boxNew.style.translate = "100px";
+            boxNew.style.rotate = "45deg";
+        }
+
+        function changeOnlyTranslate() {
+            // translate だけ変えても、rotate はそのまま残る！
+            boxNew.style.translate = "-100px";
+        }
+
+        function resetAll() {
+            boxOld.style.transform = "none";
+            boxNew.style.translate = "0";
+            boxNew.style.rotate = "0deg";
+            boxNew.style.scale = "1";
+        }
+    </script>
 </body>
 </html>
