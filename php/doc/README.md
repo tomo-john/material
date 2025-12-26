@@ -116,6 +116,7 @@
 | [spacing](./tailwind/spacing.md)                  | 余白関連                     |
 | [sizing](./tailwind/sizing.md)                    | サイズ関連                   |
 | [height](./tailwind/height.md)                    | 高さを確保する               |
+| [animate](./tailwind/animation.md)                | アニメーション
 
 ## JavaScrip
 
