@@ -109,3 +109,21 @@ protected function casts(): array
 - 自動で`bcrypt`される
 - `Hash::make(...)`を書かなくていい
 
+## sizeをenumっぽく
+
+```php
+<?php
+const SIZE_SMALL  = 'small';
+const SIZE_MEDIUM = 'medium';
+const SIZE_LARGE  = 'large';
+
+public static function sizes(): array
+{
+    return [
+        self::SIZE_SMALL  => '小型',
+        self::SIZE_MEDIUM => '中型',
+        self::SIZE_LARGE  => '大型',
+    ];
+}
+```
+
