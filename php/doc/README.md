@@ -118,6 +118,17 @@
 | [height](./tailwind/height.md)                    | 高さを確保する               |
 | [animate](./tailwind/animation.md)                | アニメーション
 
+### Live Wire
+
+| リンク                                            | 内容                         |
+|---------------------------------------------------|------------------------------|
+| [Livewire](./livewire/livewire.md)                | 初めてのLivewire(超基礎)     |
+| [wire:model](./livewire/wire_model.md)            | リアルタイム処理             |
+| [wire:clickとwire:submit](./livewire/click.md)    | 両者の違い                   |
+| [バリデーション](./livewire/validation.md)        | Livewireでのバリデーション   |
+| [命名規則](./livewire/name.md)                    | Livewire Componentの命名規則 |
+| [Action](./livewire/action.md)                    | Livewire Componentとの違い   |
+
 ## JavaScrip
 
 | リンク                                            | 内容                         |
