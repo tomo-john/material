@@ -95,6 +95,7 @@
 | [CRUD](./laravel/crud.md)                         | RESTfulな設計                |
 | [Blade](./laravel/blade.md)                       | Bladeテンプレート            |
 | [View](./laravel/view.md)                         | Viewの命名規則など           |
+| [マイグレーション](./laravel/migration.md)        | マイグレーション             |
 | [routes](./laravel/routes.md)                     | ルーティング                 |
 | [Route Mode Binding](./laravel/rmb.md)            | Laravelの便利なやつ          |
 | [Eloquent ORM](./laravel/eorm.md)                 | オブジェクトとRDBをつなぐ    |
