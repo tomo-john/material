@@ -99,3 +99,41 @@ php artisan migrate:reset
 php artisan migrate:refresh
 ```
 
+## カラムの追加
+
+```bash
+php artisan make:migration マイグレーションファイル名 --tabel=編集するテーブル名
+```
+
+```bash
+php artisan make:migration add_name_column_to_tests --table=tests
+```
+
+=> `database/migrations/xxxx_xx_xx_xxxxxx_add_name_column_to_tests.php` が生成
+
+マイグレーションファイルの`up`に追加するカラムの情報、`down`に取り消す処理を記載。
+
+後からテーブル内容を変更する場合は`down`メソッドにコードを入れる必要がある点注意🐶
+
+=> `down`メソッドには`up`メソッドと逆の内容を記述しておく
+
+```php
+<?php
+return new class extends Migration
+{
+    public function up(): void
+    {
+        Schema::table('tests', function (Blueprint $table) {
+            $table->string('name')->nullable();
+        });
+    }
+
+    public function down(): void
+    {
+        Schema::table('tests', function (Blueprint $table) {
+            $table->dropColumn('name');
+        });
+    }
+};
+```
+
