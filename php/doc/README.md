@@ -102,6 +102,7 @@
 | [バリデーション](./laravel/validate.md)           | `validate()`メソッド         |
 | [エラーメッセージ](./laravel/error_message.md)    | `@error`ディレクティブなど   |
 | [old()メソッド](./laravel/old.md)                 | グローバルヘルパー関数       |
+| [head](./laravel/head.md)                         | `<Header>`関連               |
 | [memo](./laravel/memo.md)                         | いろいろメモ                 |
 
 ### Tailwind CSS
@@ -128,6 +129,7 @@
 | [バリデーション](./livewire/validation.md)        | Livewireでのバリデーション   |
 | [命名規則](./livewire/name.md)                    | Livewire Componentの命名規則 |
 | [Action](./livewire/action.md)                    | Livewire Componentとの違い   |
+| [Flux](./livewire/flux.md)                        | UIコンポーネントライブラリ   |
 
 ## JavaScrip
 
