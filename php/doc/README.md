@@ -104,6 +104,7 @@
 | [エラーメッセージ](./laravel/error_message.md)    | `@error`ディレクティブなど   |
 | [old()メソッド](./laravel/old.md)                 | グローバルヘルパー関数       |
 | [head](./laravel/head.md)                         | `<Header>`関連               |
+| [Tinker](./laravel/tinker.md)                     | PHP対話実行ツール            |
 | [SQlite](./laravel/sqlite.md)                     | LaravelデフォルトDB          |
 | [memo](./laravel/memo.md)                         | いろいろメモ                 |
 
