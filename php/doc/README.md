@@ -105,6 +105,7 @@
 | [old()メソッド](./laravel/old.md)                 | グローバルヘルパー関数       |
 | [head](./laravel/head.md)                         | `<Header>`関連               |
 | [Tinker](./laravel/tinker.md)                     | PHP対話実行ツール            |
+| [リレーション](./laravel/relation.md)             | 関係                         |
 | [Collection芸](./laravel/collection.md)           | Collection芸                 |
 | [SQlite](./laravel/sqlite.md)                     | LaravelデフォルトDB          |
 | [memo](./laravel/memo.md)                         | いろいろメモ                 |
