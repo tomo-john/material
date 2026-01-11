@@ -110,6 +110,7 @@
 | [ゲート](./laravel/gate.md)                       | 門                           |
 | [Collection芸](./laravel/collection.md)           | Collection芸                 |
 | [SQlite](./laravel/sqlite.md)                     | LaravelデフォルトDB          |
+| [EditorConfig](./laravel/editor.md)               | `.editorconfig`              |
 | [memo](./laravel/memo.md)                         | いろいろメモ                 |
 
 ### Tailwind CSS
