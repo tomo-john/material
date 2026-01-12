@@ -147,6 +147,7 @@
 | [GET&POST](./js/get_post.md)                      | 送り方の違い(一例)           |
 | [setTImeout()](./js/set_timeout.md)               | 指定時間後、一度だけ処理     |
 | [Alpine.js](./js/alpin_js.md)                     | 超軽量なJSフレームワーク     |
+| [LaravelでAlpine](./js/aplin_la.md)               | Laravelでの使用・基本        |
 
 ## Other
 
