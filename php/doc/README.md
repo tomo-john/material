@@ -108,6 +108,9 @@
 | [リレーション](./laravel/relation.md)             | 関係                         |
 | [ミドルウェア](./laravel/middleware.md)           | ミドルウェア                 |
 | [ゲート](./laravel/gate.md)                       | 門                           |
+| [Seeder](./laravel/seeder.md)                     | 種まき                       |
+| [Factory](./laravel/factory.md)                   | 工場                         |
+| [Test](./laravel/test.md)                         | テスト機能                   |
 | [Collection芸](./laravel/collection.md)           | Collection芸                 |
 | [SQlite](./laravel/sqlite.md)                     | LaravelデフォルトDB          |
 | [EditorConfig](./laravel/editor.md)               | `.editorconfig`              |
