@@ -111,6 +111,7 @@
 | [Seeder](./laravel/seeder.md)                     | 種まき                       |
 | [Factory](./laravel/factory.md)                   | 工場                         |
 | [Test](./laravel/test.md)                         | テスト機能                   |
+| [ページネーション](./laravel/pagination.md)       | ページ分割                   |
 | [Collection芸](./laravel/collection.md)           | Collection芸                 |
 | [SQlite](./laravel/sqlite.md)                     | LaravelデフォルトDB          |
 | [EditorConfig](./laravel/editor.md)               | `.editorconfig`              |
