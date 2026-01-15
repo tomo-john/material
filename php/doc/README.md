@@ -113,6 +113,7 @@
 | [Test](./laravel/test.md)                         | テスト機能                   |
 | [ページネーション](./laravel/pagination.md)       | ページ分割                   |
 | [コンポーネント](./laravel/component.md)          | コンポーネント               |
+| [クエリビルダ](./laravel/query_builder.md)        | メソッドチェーンでSQL        |
 | [Collection芸](./laravel/collection.md)           | Collection芸                 |
 | [SQlite](./laravel/sqlite.md)                     | LaravelデフォルトDB          |
 | [EditorConfig](./laravel/editor.md)               | `.editorconfig`              |
