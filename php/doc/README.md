@@ -103,6 +103,7 @@
 | [バリデーション](./laravel/validate.md)           | `validate()`メソッド         |
 | [エラーメッセージ](./laravel/error_message.md)    | `@error`ディレクティブなど   |
 | [old()メソッド](./laravel/old.md)                 | グローバルヘルパー関数       |
+| [言語設定](./laravel/lang.md)                     | 日本語化にするには           |
 | [head](./laravel/head.md)                         | `<Header>`関連               |
 | [Tinker](./laravel/tinker.md)                     | PHP対話実行ツール            |
 | [リレーション](./laravel/relation.md)             | 関係                         |
