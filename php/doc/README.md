@@ -104,6 +104,7 @@
 | [エラーメッセージ](./laravel/error_message.md)    | `@error`ディレクティブなど   |
 | [old()メソッド](./laravel/old.md)                 | グローバルヘルパー関数       |
 | [言語設定](./laravel/lang.md)                     | 日本語化にするには           |
+| [storage](./laravel/storage.md)                   | 画像ファイルなど             |
 | [head](./laravel/head.md)                         | `<Header>`関連               |
 | [Tinker](./laravel/tinker.md)                     | PHP対話実行ツール            |
 | [リレーション](./laravel/relation.md)             | 関係                         |
@@ -114,6 +115,7 @@
 | [Test](./laravel/test.md)                         | テスト機能                   |
 | [ページネーション](./laravel/pagination.md)       | ページ分割                   |
 | [コンポーネント](./laravel/component.md)          | コンポーネント               |
+| [Breeze/Fortify](./laravel/breeze.md)             | 認証                         |
 | [クエリビルダ](./laravel/query_builder.md)        | メソッドチェーンでSQL        |
 | [Collection芸](./laravel/collection.md)           | Collection芸                 |
 | [SQlite](./laravel/sqlite.md)                     | LaravelデフォルトDB          |
