@@ -118,6 +118,7 @@
 | [Breeze/Fortify](./laravel/breeze.md)             | 認証                         |
 | [クエリビルダ](./laravel/query_builder.md)        | メソッドチェーンでSQL        |
 | [Collection芸](./laravel/collection.md)           | Collection芸                 |
+| [日付操作](./laravel/date.md)                     | Carbon                       |
 | [dd](./laravel/dd.md)                             | Dump and Die                 |
 | [SQlite](./laravel/sqlite.md)                     | LaravelデフォルトDB          |
 | [EditorConfig](./laravel/editor.md)               | `.editorconfig`              |
