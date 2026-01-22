@@ -138,7 +138,7 @@
 | [height](./tailwind/height.md)                    | 高さを確保する               |
 | [animate](./tailwind/animation.md)                | アニメーション
 
-### Live Wire
+### Livewire
 
 | リンク                                            | 内容                         |
 |---------------------------------------------------|------------------------------|
@@ -150,6 +150,7 @@
 | [Action](./livewire/action.md)                    | Livewire Componentとの違い   |
 | [Flux](./livewire/flux.md)                        | UIコンポーネントライブラリ   |
 | [LivewireとAlpine.js](./livewire/alpine.md)       | 両者の違い                   |
+| [Volt](./livewire/volt.md)                        | 怒りの雷                     |
 
 ## JavaScrip
 
