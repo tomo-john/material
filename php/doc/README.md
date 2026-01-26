@@ -151,6 +151,7 @@
 | [Flux](./livewire/flux.md)                        | UIコンポーネントライブラリ   |
 | [LivewireとAlpine.js](./livewire/alpine.md)       | 両者の違い                   |
 | [Volt](./livewire/volt.md)                        | 怒りの雷                     |
+| [VoltでCRUD](./livewire/volt_crud.md)             | サンプルコード               |
 
 ## JavaScrip
 
