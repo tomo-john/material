@@ -1,6 +1,23 @@
-# doc
+# 🐶 Web関連ドキュメント 🐶
 
-:dog: Web関連ドキュメント :dog:
+<p align="left">
+  <img src="https://img.shields.io/badge/Laravel-11.x-FF2D20?style=for-the-badge&logo=laravel" alt="Laravel">
+  <img src="https://img.shields.io/badge/PHP-8.3-777BB4?style=for-the-badge&logo=php" alt="PHP">
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind">
+  <img src="https://img.shields.io/badge/Status-Developing-yellow?style=for-the-badge" alt="Status">
+</p>
+
+```mermaid
+graph LR
+    HTML --> CSS
+    CSS --> Tailwind
+    HTML --> JS
+    JS --> Alpine
+    PHP --> Laravel
+    Laravel --> Livewire
+    Livewire --> Volt
+    Laravel --> MySQL[SQLite/MySQL]
+```
 
 | 言語                        | Webでの役割              |
 |-----------------------------|--------------------------|
@@ -73,10 +90,11 @@
 | [path操作](./php/path_op.md)                      | mkdir, basename              |
 | [ファイル読み書き](./php/write_read.md)           | `file_xxx_contents()`        |
 | [PHP組み込みWebサーバー](./php/php_server.md)     | `php -S`のやつ               |
-| [bin2hex](./php/bin2hex.md)                       | var_dumpとramdom_bytesも     |
+| [bin2hex](./php/bin2hex.md)                       | `var_dump`と`ramdom_bytes`も |
 | [nl2br](./php/nl2br.md)                           | 改行文字に改行タグ           |
 | [json](./php/json.md)                             | JSONに変換                   |
 | [usort](./php/usort.md)                           | ユーザー指定の並び替え       |
+| [match式](./php/match.md)                         | swithc文の進化版             |
 | [オブジェクト指向](./php/oop.md)                  | PHPのオブジェクト指向(基本)  |
 | [コンストラクタ](./php/construct.md)              | オブジェクト生成時に実行     |
 | [static](./php/static.md)                         | クラス全体に属する           |
@@ -132,7 +150,7 @@
 | [Tailwind(めも)](./tailwind/memo.md)              | 使い方めも                   |
 | [スケール](./tailwind/scale.md)                   | Tailwindの指定方法           |
 | [flex](./tailwind/flex.md)                        | flex関連                     |
-| [grid](.tailwind/grid.md)                         | 枠を作ってから入れる         |
+| [grid](./tailwind/grid.md)                         | 枠を作ってから入れる         |
 | [spacing](./tailwind/spacing.md)                  | 余白関連                     |
 | [sizing](./tailwind/sizing.md)                    | サイズ関連                   |
 | [height](./tailwind/height.md)                    | 高さを確保する               |
@@ -153,7 +171,7 @@
 | [Volt](./livewire/volt.md)                        | 怒りの雷                     |
 | [VoltでCRUD](./livewire/volt_crud.md)             | サンプルコード               |
 
-## JavaScrip
+## JavaScript
 
 | リンク                                            | 内容                         |
 |---------------------------------------------------|------------------------------|
@@ -161,6 +179,7 @@
 | [setTImeout()](./js/set_timeout.md)               | 指定時間後、一度だけ処理     |
 | [Alpine.js](./js/alpin_js.md)                     | 超軽量なJSフレームワーク     |
 | [LaravelでAlpine](./js/aplin_la.md)               | Laravelでの使用・基本        |
+| [toast](./js/toast.md)                            | Alpineでトースト作成         |
 
 ## Other
 
@@ -169,4 +188,4 @@
 | [developer_tools](./other/developer_tools.md)     | デベロッパーツール           |
 | [SVG](./other/SVG.md)                             | Scalable Vector Graphics     |
 | [font_awesome](./other/font_awesome.md)           | アイコン                     |
-
+| [vim](./other/vim.md)                             | HTMLなどで便利な小技         |
