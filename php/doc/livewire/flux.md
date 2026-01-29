@@ -35,4 +35,5 @@ HTML + Tailwindを直接書かせない。
 ## 学習リンク
 
 - [基本タグ](./flux/basic.md)
+- [flux:input](./flux/input.md)
 
