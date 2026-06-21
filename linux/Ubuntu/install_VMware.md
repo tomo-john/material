@@ -24,3 +24,18 @@ mokutil --sb-state
 
 ## VMwareをインストール
 
+[https://support.broadcom.com/](Broadcom Support Portal)よりダウンロード
+
+=> `VMware-Workstation-Full-17.6.4-xxxxxxxx.x86_64.bundle`
+
+
+```bash
+# 実行権限付与
+chmod +x VMware-Workstation-Full-*.bundle
+```
+
+```bash
+# インストール実行
+sudo ./VMware-Workstation-Full-*.bundle
+```
+
