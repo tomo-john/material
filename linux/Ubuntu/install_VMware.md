@@ -39,3 +39,62 @@ chmod +x VMware-Workstation-Full-*.bundle
 sudo ./VMware-Workstation-Full-*.bundle
 ```
 
+起動:
+
+```bash
+vmware
+```
+
+=> VMware kernel Module Updater が出たので、installをクリック
+
+=> 失敗した
+
+## VMware 17.6.4が Linux 6.171に追いついていない
+
+有名な有志パッチ、`mkubecek/vmware-host-modules`を使用する。
+
+必要なものを追加:
+
+```bash
+sudo apt install git build-essential dkms -y
+```
+
+ホームディレクトリで実行:
+
+```
+git clone https://github.com/mkubecek/vmware-host-modules.git
+
+cd vmware-host-modules
+
+git branch -a
+```
+
+=> 対応モジュールなかったので作戦変更
+
+---
+
+## VMware
+
+インストール済み:
+
+```
+VMware Workstation 17.6.4
+build-24832109
+```
+
+Linux kernel:
+
+```
+Linux kernel 6.17.0-35
+```
+
+17.6.4をアンインストール:
+
+```
+sudo vmware-installer -u vmware-workstation
+```
+
+=> 26H1の方をダウンロード
+
+=> これで普通にいけた
+
