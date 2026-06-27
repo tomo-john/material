@@ -85,5 +85,43 @@ openssl req -new -x509 -newkey rsa:2048 \
 
 ```bash
 find /lib/modules/$(uname -r) -name "vmmon.ko*" -o -name "vmnet.ko*"
+
+# /lib/modules/6.17.0-35-generic/misc/vmnet.ko
+# /lib/modules/6.17.0-35-generic/misc/vmmon.ko
+```
+
+## sign-fileがどこにあるか探す
+
+Linuxカーネルには`scripts/sign-file`というカーネルモジュールに電子署名するための道具が用意されている。
+
+```bash
+find /usr/src -name sign-file
+
+# /usr/src/linux-header-6.17.0-35-generic/script/sign-file
+```
+
+こんな感じ:
+
+```bash
+~/wk/vmware-signing/
+  |---- MOK.priv # 秘密鍵(ハンコ)
+  |---- MOK.der  # 公開鍵(見本)
+
+/lib/modules/6.17.0-35-generic/misc
+  |---- vmmon.ko  # VMwareのカーネルモジュール
+  |---- vmnet.ko  # VMwareのネットワークモジュール
+
+/usr/src/linux-header-6.17.0-35-generic/scripts/
+  |---- sign-file  # 署名専用プログラム
+```
+
+## 署名する
+
+```
+sudo /usr/src/linux-headers-$(uname -r)/scripts/sign-file \
+sha256 \
+~/wk/vmware-signing/MOK.priv \
+~/wk/vmware-signing/MOK.der \
+/lib/modules/$(uname -r)/misc/vmmon.ko
 ```
 
