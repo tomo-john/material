@@ -125,3 +125,17 @@ sha256 \
 /lib/modules/$(uname -r)/misc/vmmon.ko
 ```
 
+## 署名されたか確認
+
+```bash
+modinfo /lib/modules/$(uname -r)/misc/vmmon.ko | grep signer
+```
+
+成功していれば:
+
+```bash
+signer: VMware Module Signing
+```
+
+## 公開鍵をLinuxに信頼してもらう
+
