@@ -177,3 +177,53 @@ sudo depmod -a
 sudo modprobe vmnet
 ```
 
+---
+
+# VMware内でubuntu-server-01を起動
+
+=> 最初なのでインストールが始まった
+
+- Keyboard レイアウト: Japanese
+- Network: DHCPv4 (NAT)
+
+## Guided storage configuration
+
+- [x] User an entire disk
+  
+  [ /dev/sda local disk 20.000G
+
+  - [x] Set up this disk as an LVM group
+
+## Storage Configuration
+
+```bash
+/                10.000G  ext4 (LVM)
+/boot             1.771G  ext4
+
+/dev/sda 20.000G
+├─ partition1 BIOS grub 1MB
+├─ partition2 /boot ext4
+└─ partition3 LVM PV 18.225G
+```
+
+## Profile Configuration
+
+- Your name: ubuntu-john
+- Your servers name: ubuntu-server-01
+- Pick a username: ubuntu
+- password: ubundu-dev1234
+
+```
+Your name：人間向けの表示名
+Server name：サーバーそのものの名前
+Username：ログインに使うアカウント名
+```
+
+## SSH Configuration
+
+ここは、`Install OpenSSH server`にチェックを入れる。
+
+## Featured server snaps
+
+=> 自分でとりたいので、すべてスキップ
+
