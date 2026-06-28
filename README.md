@@ -1,6 +1,6 @@
 # :closed_book: material
 
-> 学習した内容や技術資料をまとめるための個人用リポジトリ:dog:
+> 学習した内容や技術資料をまとめるための個人用リポジトリ🐶
 
 ## :memo: このリポジトリについて
 
@@ -8,7 +8,7 @@
 
 備忘録としてだけでなく、後から振り返りやすい形でアウトプットを残すことを目的としています。
 
-## :bone Contents 
+## :bone: Contents 
 
 - 🐘 PHP
 - 🚀 Laravel
@@ -20,7 +20,7 @@
 - 💻 Linux
 - 📖 その他
 
-## test
+## :rabbit: Test
 
-[Last Commit] [Repo Size] [License]
+![GitHub last commit](https://img.shields.io/github/last-commit/tomo-john/material)
 
