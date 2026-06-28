@@ -137,5 +137,43 @@ modinfo /lib/modules/$(uname -r)/misc/vmmon.ko | grep signer
 signer: VMware Module Signing
 ```
 
+=> `vmnet.ko`も同様に署名する
+
 ## 公開鍵をLinuxに信頼してもらう
+
+```bash
+sudo mokutil --import ~/wk/vmware-signing/MOK.der
+```
+
+- `mokutil`: MOK(Machine Owner Key)を管理するためのツール
+- `--import`: この公開鍵を登録したいですの意味
+
+実行すると、sudoのパスワード入力後に`input password:`が出てくるが、これはUbuntuのログインパスではない。
+
+次回再起動時に本人確認するための一時的なパスワード。
+
+今回は、`vmware1234`にしてみた。
+
+コマンドが成功しても、まだ登録自体は完了していない。
+
+再起動すると`MOK Manager`(青い画面)の画面が出てくるので、`Enroll MOK` => `Continue`を選択し、上記で設定したパスワードを入力する。(最後にreboot)
+
+## 登録後
+
+```bash
+lsmod | grep vm
+```
+
+`vmmon`, `vmnet`が表示されたらOK。
+
+=> VMwareのカーネルモジュールが正常にロードされた
+
+## vmnet.koの署名を忘れていた
+
+`sign-file`でvmmon.koを同じように署名。その後:
+
+```bash
+sudo depmod -a
+sudo modprobe vmnet
+```
 
