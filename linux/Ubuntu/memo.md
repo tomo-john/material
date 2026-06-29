@@ -2,7 +2,7 @@
 
 wrapper-softdev / we3ieD6bee
 
-## cront
+## cron
 
 ```bash
 cat /etc/crontab
