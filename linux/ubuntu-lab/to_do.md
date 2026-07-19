@@ -7,4 +7,7 @@
 - [x] SSH鍵認証(ssh conohaログイン)
 - [x] Nginxインストール
 - [x] Git -> GitHub SSH認証
+- [x] /var/www/apps作成
+- [x] git clone (pawverse)
+- [ ] composer install
 
