@@ -100,3 +100,17 @@ Nginx -- index.phpお願い --> php8.3-fpm.sock --> PHP-FPM --> PHP実行
 
 => [ここ](permission.md)で対応
 
+## npm
+
+権限エラー解消後に出たエラー:
+
+```bash
+Illuminate\Foundation\ViteManifestNotFoundException
+
+vendor/laravel/framework/src/Illuminate/Foundation/Vite.php:946
+
+Vite manifest not found at: /var/www/apps/pawverse/public/build/manifest.json
+```
+
+=> [ここ](npm.md)で対応
+
