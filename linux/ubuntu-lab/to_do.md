@@ -9,5 +9,7 @@
 - [x] Git -> GitHub SSH認証
 - [x] /var/www/apps作成
 - [x] git clone (pawverse)
-- [ ] composer install
+- [x] composer install(PHPバージョン対応)
+- [x] .env
+- [x] マイグレーション
 
