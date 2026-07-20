@@ -54,5 +54,3 @@ drwxrwxr-x 2 john www-data   4096 Jul 19 17:38 migrations
 drwxrwxr-x 2 john www-data   4096 Jul 19 17:38 seeders
 ```
 
-# manifest.jsonありませんエラー
-
