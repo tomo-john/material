@@ -37,3 +37,7 @@ PHPは1つの大きなパッケージではなく、役割ごとに小さなパ�
 - php8.3-sqlite3 … SQLiteデータベース
 - php8.3-bcmath … 高精度な数値計算
 
+## composer install
+
+エラーが出たのでcomposer関連の対応を実施 => [ここ](php_8.3.md)
+
