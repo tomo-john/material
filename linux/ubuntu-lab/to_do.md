@@ -12,4 +12,6 @@
 - [x] composer install(PHPバージョン対応)
 - [x] .env
 - [x] マイグレーション
+- [x] nginxの設定ファイル編集
+- [ ] 権限確認
 
