@@ -18,3 +18,16 @@ ConoHa VPS で契約したUbuntu 24.04(x86_84) サーバー
 - プラン: 2GB
 - ネームタグ: ubuntu-lab
 
+---
+
+# 初回デプロイで詰まったポイント
+
+- composer.lockとPHPバージョン
+- Symfony 8(PHP8.4問題)
+- storage権限
+- database.sqlite権限
+- Vite manifest.json
+- Node.js / npm
+- php-fpm
+- nginx root
+
