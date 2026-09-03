@@ -182,3 +182,20 @@ sudo chmod -R 775 database
 
 => これでブラウザから(http://だけど...)アクセスできた
 
+---
+
+## その他めも
+
+`npm install`実施後にVPS側のgitが変わっていた。
+
+- .gitignoreの実行権限変更
+- package-lock.jsonの内容変更
+
+今回は、GitHubを正としたいのでVPSをクリーンな状態に戻す。
+
+```bash
+git restore .
+```
+
+=> その後、ローカルからの修正分など`git pull`を実施
+
