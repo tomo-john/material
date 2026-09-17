@@ -18,12 +18,12 @@ REST: Representational State Transfer の略。
 
 ## RESTの6つの制約
 
-- 1. Client-Server
-- 2. Stateless
-- 3. Cacheable
-- 4. Uniform Interface
-- 5. Layered System
-- 6. Code-On-Demand(任意)
+- Client-Server
+- Stateless
+- Cacheable
+- Uniform Interface
+- Layered System
+- Code-On-Demand(任意)
 
 => 今回の学習では、`Stateless`と`Uniform Interface`を重点的に
 
@@ -107,10 +107,10 @@ Uniform Interfaceは、リソースを操作するためのインターフェー
 
 この考えを実現するために4つの制約がある。
 
-- 1. リソースの識別
-- 2. リソースの表現を通じた操作
-- 3. 自己記述的メッセージ
-- 4. HATEOAS
+- リソースの識別
+- リソースの表現を通じた操作
+- 自己記述的メッセージ
+- HATEOAS
 
 ### 1. リソースの識別
 
@@ -122,7 +122,7 @@ RESTでは、URLによってリソースを識別する。
 
 サーバー上にある実際のリソースそのものを、クライアントが直接操作するわけではない。
 
-クライアント側がサーバーに送るRequest, Responseを通じて、実際にサーバー上のDBにあるテーブルデータがJSONで返ってくる。
+クライアント側がサーバーに送るRequest, Responseを通じて、実際にサーバー上のDBにあるテーブルデータがJSONで返ってくる。(一例)
 
 => リソースがこんな状態ですよとJSONで表現
 

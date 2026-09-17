@@ -2,6 +2,8 @@
 
 API: Application Programming Interface
 
+検証用プロジェクト: `ApiSandbox`
+
 ## 学習ロードマップ
 
 | Step | Title            |
