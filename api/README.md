@@ -54,6 +54,9 @@ APIではよくJSONが登場する🐶
 
 - curl
 - Postman
+- LaravelでのテストAPI
+  - APIルーティング
+  - Query Parameterの扱い
 
 ### Step5: APIの設計
 
