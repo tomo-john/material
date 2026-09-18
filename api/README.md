@@ -67,6 +67,8 @@ APIではよくJSONが登場する🐶
 
 ### Step6: API認証
 
+- APIトークン認証
+
 ### Step7: API仕様
 
 - OpenAPI
