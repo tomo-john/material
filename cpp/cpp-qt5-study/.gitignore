@@ -1,0 +1,31 @@
+# Qt Creator build directories
+build*/
+
+# Qt Creator per-user settings
+*.pro.user
+*.pro.user.*
+CMakeLists.txt.user*
+*.autosave
+
+# qmake / compiler outputs
+Makefile*
+*.o
+*.obj
+*.exe
+*.dll
+moc_*.cpp
+moc_*.h
+ui_*.h
+qrc_*.cpp
+.qmake.stash
+object_script.*
+debug/
+release/
+
+# Materials shared only with Claude (not tracked)
+share/
+
+# Vim swap files
+*.swp
+*.swo
+*~
