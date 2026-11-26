@@ -6,7 +6,7 @@
 
 | 項目 | 内容 |
 |---|---|
-| 目的 | メイン学習（Windows 側の [docs/ROADMAP.md](../../docs/ROADMAP.md)）と重ならない方向で、知識や技術を広げる |
+| 目的 | メイン学習（Windows の `cpp-qt5-study` リポジトリ。このリポジトリには入っていない）と重ならない方向で、知識や技術を広げる |
 | 背景 | 2027年に開発部への異動を希望している。ラベルプリンターのソフトウェアでは Linux と C++ が使われているらしい |
 | 環境 | MacBook Pro（Apple Silicon）、Qt 5.15.19（Homebrew）、Qt Creator 20.0.2。詳しくは [setup-mac.md](setup-mac.md) |
 | ペース | メイン学習の合間に、気が向いたときに進める。期限は決めない |
@@ -16,7 +16,7 @@
 - メインの Phase 4 でやる内容（`QMainWindow`、`QFile`、`QThread`、Qt Test、Qt4 との違いなど）は、ここでは扱わない。
 - Linux や組み込みの開発でも役立つように、**IDE に頼らない力**（ターミナル、ビルドの仕組み）を意識する。
 - コードは自分で書く。わん先生は、レッスン資料・ヒント・レビューでサポートする。
-- レッスン資料は `mac-sub/docs/lessons/`、コードは `mac-sub/projects/` に置く。
+- レッスン資料は `docs/lessons/`、コードは `projects/` に置く。
 
 ---
 
@@ -37,7 +37,7 @@
 - [x] C++（Apple clang）の動作確認（`projects/00_hello`）
 - [x] Qt 5.15.19 と Qt Creator のインストール、キットの設定
 - [x] 新しい Qt Widgets アプリの作成（`projects/01_qt_hello`）
-- [x] Windows 側のプロジェクト（`phase3-qt/01_memo_rows`）を Mac でビルド
+- [x] Windows 側のプロジェクト（`phase3-qt/01_memo_rows`）を Mac でビルド（移設前の確認。今はこのリポジトリにない）
 
 記録: [setup-mac.md](setup-mac.md)
 

@@ -73,10 +73,10 @@ MacBook Pro でサブ学習を始めるための環境構築の記録です。
 
 ### Step 1: C++ が動くか確認する
 
-- [x] 簡単な `hello.cpp` を書いて、ターミナルでコンパイルして実行する（2026-11-14 完了。`mac-sub/projects/00_hello/hello.cpp`）
+- [x] 簡単な `hello.cpp` を書いて、ターミナルでコンパイルして実行する（2026-11-14 完了。`projects/00_hello/hello.cpp`）
 
 ```bash
-cd ~/cpp-qt5-study/mac-sub/projects/00_hello
+cd ~/material/cpp/cpp-qt5-study/mac/projects/00_hello
 mkdir -p build
 clang++ -std=c++17 -Wall hello.cpp -o build/hello
 ./build/hello
@@ -166,7 +166,7 @@ brew install --cask qt-creator
 
 #### 6-1: 新しい Qt Widgets アプリ
 
-- [x] Qt Widgets アプリを新しく作って、ウィンドウが表示されるか確認する（2026-11-14 完了。`mac-sub/projects/01_qt_hello/`）
+- [x] Qt Widgets アプリを新しく作って、ウィンドウが表示されるか確認する（2026-11-14 完了。`projects/01_qt_hello/`）
   - `Create Project...` > `Application (Qt)` > `Qt Widgets Application`
   - ビルドシステムは **qmake** を選ぶ（Qt Creator 20 では CMake が初期設定になっていることがある）
   - キットは `Desktop Qt 5.15.19 clang arm64`

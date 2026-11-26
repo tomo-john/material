@@ -1,6 +1,6 @@
 # Mac サブ学習 M1-1: ターミナルで qmake → make
 
-> 対応: [mac-sub ROADMAP](../ROADMAP.md) Part 1 / 練習: `mac-sub/projects/00_hello`、`mac-sub/projects/01_qt_hello`
+> 対応: [ROADMAP](../ROADMAP.md) Part 1 / 練習: `projects/00_hello`、`projects/01_qt_hello`
 
 ## このレッスンのゴール
 
@@ -157,7 +157,7 @@ clean:
 Qt Creator は、ソースのフォルダとは別の `build/...` フォルダの中でビルドしています。ソースとビルド結果が混ざらないようにするためで、これを **シャドウビルド** と呼びます。ターミナルでも同じようにします。
 
 ```bash
-cd ~/cpp-qt5-study/mac-sub/projects/01_qt_hello
+cd ~/material/cpp/cpp-qt5-study/mac/projects/01_qt_hello
 mkdir build-terminal
 cd build-terminal
 qmake ../01_qt_hello.pro
@@ -238,7 +238,7 @@ qmake ../01_qt_hello.pro CONFIG+=debug
 
 ## 練習1：`00_hello` に Makefile を書く
 
-`mac-sub/projects/00_hello/` に、自分で `Makefile` を書きます。
+`projects/00_hello/` に、自分で `Makefile` を書きます。
 
 ### 仕様
 
@@ -273,7 +273,7 @@ qmake ../01_qt_hello.pro CONFIG+=debug
 3章の手順で、`build-terminal/` に `Makefile` を作り、ビルドして実行します。
 
 ```bash
-cd ~/cpp-qt5-study/mac-sub/projects/01_qt_hello/build-terminal
+cd ~/material/cpp/cpp-qt5-study/mac/projects/01_qt_hello/build-terminal
 make
 open 01_qt_hello.app
 ```
@@ -299,7 +299,7 @@ open 01_qt_hello.app
    - Mac のときだけ効くように、qmake の **`macx:`**（Mac のときだけ）という書き方を使う
    - `.pro` の最後にある `unix:!android:`（Unix 系で、Android 以外のとき）と同じ仕組みです
 
-> ⚠️ 練習3で `.pro` を変えるのは、自分の `01_qt_hello` だけにしてください。Windows 側のプロジェクト（`phase2-qt/` など）の `.pro` は変えません。
+> ⚠️ 練習3で `.pro` を変えるのは、自分の `01_qt_hello` だけにしてください。ほかのプロジェクト（`../qt-tasks/` など）の `.pro` は変えません。
 
 ---
 
@@ -315,6 +315,6 @@ open 01_qt_hello.app
 
 ## 提出
 
-できたら「できた」と伝えてください。練習2の観察結果や、クイズの答えを `mac-sub/projects/01_qt_hello/README.md` などにメモしておくと、次の M1-2（moc の正体）で役立ちます。
+できたら「できた」と伝えてください。練習2の観察結果や、クイズの答えを `projects/01_qt_hello/memo.md` などにメモしておくと、次の M1-2（moc の正体）で役立ちます。
 
 M1-2 では、練習2でできた **`moc_mainwindow.cpp` の中身**を読んで、シグナル／スロットがどうやって動いているのかを見ていきます🐶
